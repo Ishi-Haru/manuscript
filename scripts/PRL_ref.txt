@@ -1,0 +1,48 @@
+[1]	P. Huang and K. S. Breuer, Direct measurement of slip length in electrolyte solutions, Phys. Fluids (1994) 19, 028104 (2007).
+[2]	K.-T. Chen, Q.-Y. Li, T. Omori, Y. Yamaguchi, T. Ikuta, and K. Takahashi, Slip length measurement in rectangular graphene nanochannels with a 3D flow analysis, Carbon N. Y. 189, 162 (2022).
+[3]	B. Cross, C. Barraud, C. Picard, L. Léger, F. Restagno, and É. Charlaix, Wall slip of complex fluids: Interfacial friction versus slip length, Phys. Rev. Fluids 3, 062001 (2018).
+[4]	L. Zhu, P. Attard, and C. Neto, Reconciling slip measurements in symmetric and asymmetric systems, Langmuir 28, 7768 (2012).
+[5]	O. I. Vinogradova, Drainage of a Thin Liquid Film Confined between Hydrophobic Surfaces, Langmuir 11, 2213 (1995).
+[6]	O. I. Vinogradova and G. E. Yakubov, Dynamic Effects on Force Measurements. 2. Lubrication and the Atomic Force Microscope, Langmuir 19, 1227 (2003).
+[7]	H. Li, Z. Xu, C. Ma, and M. Ma, Translucency and negative temperature-dependence for the slip length of water on graphene, Nanoscale 14, 14636 (2022).
+[8]	H. Navier, Mémoire sur les lois du mouvement des fluides, Mémoires de l’Académie Des Sciences 389 (1827).
+[9]	J. K. Holt, H. G. Park, Y. Wang, M. Stadermann, A. B. Artyukhin, C. P. Grigoropoulos, A. Noy, and O. Bakajin, Fast mass transport through sub-2-nanometer carbon nanotubes, Science 312, 1034 (2006).
+[10]	Y. Itoh et al., Ultrafast water permeation through nanochannels with a densely fluorous interior surface, Science 376, 738 (2022).
+[11]	A. A. Shuvo, L. E. Paniagua-Guerra, J. Choi, S. H. Kim, and B. Ramos-Alvarado, Hydrodynamic slip in nanoconfined flows: a review of experimental, computational, and theoretical progress, Nanoscale 17, 635 (2025).
+[12]	G. Laucirica, M. E. Toimil-Molares, C. Trautmann, W. Marmisollé, and O. Azzaroni, Nanofluidic osmotic power generators - advanced nanoporous membranes and nanochannels for blue energy harvesting, Chem. Sci. 12, 12874 (2021).
+[13]	L. Ma, K. Lin, Y. Qiu, J. Zhuang, X. An, Z. Yuan, and C. Huang, Significantly enhanced performance of nanofluidic osmotic power generation by slipping surfaces of nanopores, J. Phys. Chem. C Nanomater. Interfaces 125, 14195 (2021).
+[14]	S. Sarvar, P. Kabirzadeh, and N. Miljkovic, Combining pin-fins and superhydrophobic surfaces to enhance the performance of microchannel heat sinks, Int. Commun. Heat Mass Transf. 160, 108351 (2025).
+[15]	R. van Erp, R. Soleimanzadeh, L. Nela, G. Kampitsis, and E. Matioli, Co-designing electronics with microfluidics for more sustainable cooling, Nature 585, 211 (2020).
+[16]	D. M. Huang, C. Sendner, D. Horinek, R. R. Netz, and L. Bocquet, Water slippage versus contact angle: a quasiuniversal relationship, Phys. Rev. Lett. 101, 226101 (2008).
+[17]	O. I. Vinogradova and G. E. Yakubov, Surface roughness and hydrodynamic boundary conditions, Phys. Rev. E Stat. Nonlin. Soft Matter Phys. 73, 045302 (2006).
+[18]	Y. Xie, L. Fu, T. Niehaus, and L. Joly, Liquid-Solid Slip on Charged Walls: The Dramatic Impact of Charge Distribution, Phys. Rev. Lett. 125, 014501 (2020).
+[19]	G. Tocci, L. Joly, and A. Michaelides, Friction of water on graphene and hexagonal boron nitride from ab initio methods: very different slippage despite very similar interface structures, Nano Lett. 14, 6872 (2014).
+[20]	D. Li, Y. Wang, Y. Pan, and X. Zhao, Measurements of slip length for flows over graphite surface with gas domains, Appl. Phys. Lett. 109, 151602 (2016).
+[21]	T. Nishino, M. Meguro, K. Nakamae, M. Matsushita, and Y. Ueda, The lowest surface free energy based on −CF3 alignment, Langmuir 15, 4321 (1999).
+[22]	K. Wu, Z. Chen, J. Xu, Y. Hu, J. Li, X. Dong, Y. Liu, and M. Chen, A Universal Model of Water Flow through Nanopores in Unconventional Reservoirs: Relationships between Slip, Wettability and Viscosity, in Day 2 Tue, September 27, 2016 (SPE, 2016), p. D021S027R009.
+[23]	C. D. F. Honig and W. A. Ducker, Thin Film Lubrication for Large Colloidal Particles: Experimental Test of the No-Slip Boundary Condition, J. Phys. Chem. C 111, 16300 (2007).
+[24]	C. Cottin-Bizonne, B. Cross, A. Steinberger, and E. Charlaix, Boundary slip on smooth hydrophobic surfaces: intrinsic effects and possible artifacts, Phys. Rev. Lett. 94, 056102 (2005).
+[25]	D. C. Tretheway and C. D. Meinhart, Apparent fluid slip at hydrophobic microchannel walls, Phys. Fluids (1994) 14, L9 (2002).
+[26]	D. Pradhan, J. Lee, R. Prakash, A. Chauhan, and J. Lee, Tailored slip length: Investigating the effect of solid–liquid interfacial tension, Phys. Fluids (1994) 37, 022146 (2025).
+[27]	N. J. Lund, X. P. Zhang, K. Mahelona, and S. C. Hendy, Calculation of effective slip on rough chemically heterogeneous surfaces using a homogenization approach, Phys. Rev. E Stat. Nonlin. Soft Matter Phys. 86, 046303 (2012).
+ [28]	T. R. Albrecht, P. Grütter, D. Horne, and D. Rugar, Frequency modulation detection using high‐Q cantilevers for enhanced force microscope sensitivity, J. Appl. Phys. 69, 668 (1991).
+[29]	H.-J. Butt and M. Jaschke, Calculation of thermal noise in atomic force microscopy, Nanotechnology 6, 1 (1995).
+[30]	B. Pottier and L. Bellon, “Noiseless” Thermal Noise Measurement of Atomic Force Microscopy Cantilevers, https://doi.org/10.1063/1.4977790.
+[31]	H. Chang and A. J. Bard, Observation and characterization by scanning tunneling microscopy of structures generated by cleaving highly oriented pyrolytic graphite, Langmuir 7, 1143 (1991).
+[32]	R. E. Franklin, The structure of graphitic carbons, Acta Crystallogr. 4, 253 (1951).
+[33]	H. Teshima, K. Takahashi, Y. Takata, and T. Nishiyama, Wettability of AFM tip influences the profile of interfacial nanobubbles, J. Appl. Phys. 123, 054303 (2018).
+[34]	H. Teshima, Q.-Y. Li, Y. Takata, and K. Takahashi, Gas molecules sandwiched in hydration layers at graphite/water interfaces, Phys. Chem. Chem. Phys. 22, 13629 (2020).
+[35]	X. Zhang and D. Lohse, Perspectives on surface nanobubbles, Biomicrofluidics 8, 041301 (2014).
+[36]	X. Wang, B. Zhao, W. Ma, Y. Wang, X. Gao, R. Tai, X. Zhou, and L. Zhang, Interfacial nanobubbles on atomically flat substrates with different hydrophobicities, Chemphyschem 16, 1003 (2015).
+[37]	C. Ybert, C. Barentin, C. Cottin-Bizonne, P. Joseph, and L. Bocquet, Achieving large slip with superhydrophobic surfaces: Scaling laws for generic geometries, Phys. Fluids (1994) 19, 123601 (2007).
+[38]	I. Sas, R. E. Gorga, J. A. Joines, and K. A. Thoney, Literature review on superhydrophobic self-cleaning surfaces produced by electrospinning, J. Polym. Sci. B Polym. Phys. 50, 824 (2012).
+[39]	C. R. Crick and I. P. Parkin, Preparation and characterisation of super-hydrophobic surfaces, Chemistry 16, 3568 (2010).
+[40]	E. Wagemann, E. Oyarzua, J. H. Walther, and H. A. Zambrano, Slip divergence of water flow in graphene nanochannels: the role of chirality, Phys. Chem. Chem. Phys. 19, 8646 (2017).
+[41]	S. K. Kannam, B. D. Todd, J. S. Hansen, and P. J. Daivis, Slip length of water on graphene: limitations of non-equilibrium molecular dynamics simulations, J. Chem. Phys. 136, 024705 (2012).
+[42]	L. Mu, Y. Yang, J. Liu, W. Du, J. Chen, G. Shi, and H. Fang, Hydrated cation-π interactions of π-electrons with hydrated Li+, Na+, and K+ cations, Phys. Chem. Chem. Phys. 23, 14662 (2021).
+[43]	V. K. Paruchuri, A. V. Nguyen, and J. D. Miller, Zeta-potentials of self-assembled surface micelles of ionic surfactants adsorbed at hydrophobic graphite surfaces, Colloids Surf. A Physicochem. Eng. Asp. 250, 519 (2004).
+[44]	See Supplemental Material for theoretical analysis of the relation between amplitude decay and damping coefficient, evaluation of slip length sensitivity between contact mode and frequency modulation mode, details of substrate fabrication, and slip length mapping results of mica, FDTS, Teflon and HOPG, which includes Refs. [45-48].
+[45]	M. Gauthier and M. Tsukada, Theory of noncontact dissipation force microscopy, Phys. Rev. B Condens. Matter 60, 11716 (1999).
+[46]	P. Thissen, O. Seitz, and Y. J. Chabal, Wet chemical surface functionalization of oxide-free silicon, Prog. Surf. Sci. 87, 272 (2012).
+[47]	K. Jo, H.-Z. Yu, and H. Yang, Formation kinetics and stability of phosphonate self-assembled monolayers on indium–tin oxide, Electrochim. Acta 56, 4828 (2011).
+[48]	S. A. Makohliso, L. Giovangrandi, D. Léonard, H. J. Mathieu, M. Ilegems, and P. Aebischer, Application of Teflon-AF® thin films for bio-patterning of neural cell adhesion1S.A. Makholiso and L. Giovangrandi contributed equally to this work.1, Biosens. Bioelectron. 13, 1227 (1998).

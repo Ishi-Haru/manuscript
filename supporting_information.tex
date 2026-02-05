@@ -123,7 +123,7 @@ The total damping coefficient, \(\gamma_{\text{total}}\), acting on the probe ca
   \label{eqn:s1}
 \end{equation}
 
-where \(h\) is probe-substrate distance, and \(b_t\) and \(b_s\) are the slip lengths at the probe and substrate surfaces, respectively. The background damping \(\gamma_{\text{bulk}}\) originates from various sources, such as viscous drag on the cantilever beam and friction due to thermal fluctuations \cite{Gauthier1999-su}. However, it remains nearly constant and is therefore treated as a constant here. Using the definition of the quality factor \(Q(h) = k/(\omega\gamma_{\text{total}}(h))\), (Eq.~\ref{eqn:s1}) can be rewritten as:
+where \(h\) is probe-substrate distance, and \(b_t\) and \(b_s\) are the slip lengths at the probe and substrate surfaces, respectively. The background damping \(\gamma_{\text{bulk}}\) originates from various sources, such as viscous drag on the cantilever beam and friction due to thermal fluctuations \cite{Gauthier1999-su}. However, it remains nearly constant and is therefore treated as a constant here. Using the definition of the quality factor \(Q(h) = k/(\omega\gamma_{\text{total}}(h))\), Eq.~\ref{eqn:s1} can be rewritten as:
 
 \begin{equation}
   \frac{k}{\omega Q(h)} = \gamma_{\text{tip}}(h, b_t, b_s) + \gamma_{\text{bulk}}.
@@ -139,7 +139,7 @@ At sufficiently large \(h \gg R\), the influence of the substrate becomes neglig
   \label{eqn:s3}
 \end{equation}
 
-Combining (Eqs.~\ref{eqn:s2} and \ref{eqn:s3}) yields:
+Combining Eqs.~\ref{eqn:s2} and \ref{eqn:s3} yields:
 
 \begin{equation}
   \frac{Q_{\text{bulk}}}{Q(h)} = \frac{\gamma_{\text{tip}}(h, b_t, b_s)}{\gamma_{\text{bulk}}} + 1.
@@ -155,7 +155,7 @@ In normal FM-AFM, the oscillation amplitude is stabilized by automatic gain cont
   \label{eqn:s5}
 \end{equation}
 
-Therefore, from (Eqs.~\ref{eqn:s4} and \ref{eqn:s5}), the following relation connecting the ratio of amplitude attenuation to the damping coefficient is obtained:
+Therefore, from Eqs.~\ref{eqn:s4} and \ref{eqn:s5}, the following relation connecting the ratio of amplitude attenuation to the damping coefficient is obtained:
 
 \begin{equation}
   \gamma_{\text{tip}}(h, b_t, b_s) = \gamma_{\text{bulk}}\left(\frac{A_{\text{bulk}}}{A(h)} - 1\right).
@@ -165,7 +165,7 @@ Therefore, from (Eqs.~\ref{eqn:s4} and \ref{eqn:s5}), the following relation con
 
 \subsection{Comparison of Sensitivity between Conventional and Proposed Methods}
 
-We compared the sensitivity of slip length measurements between conventional contact-mode AFM and our newly proposed FM-AFM. With contact-mode AFM, the cantilever deflection \(x\) is measured as a sensor voltage, and the relationship between the deflection sensor voltage \(V_x\) and \(x\) is expressed using the sensitivity \(s\) as \(x = sV_x\). Furthermore, to determine the viscous drag in (Eq.~\ref{eqn:hydrodynamic force}) from the restoring force of the cantilever, \(kx\) (\(k\) is the spring constant), the following relation holds:
+We compared the sensitivity of slip length measurements between conventional contact-mode AFM and our newly proposed FM-AFM. With contact-mode AFM, the cantilever deflection \(x\) is measured as a sensor voltage, and the relationship between the deflection sensor voltage \(V_x\) and \(x\) is expressed using the sensitivity \(s\) as \(x = sV_x\). Furthermore, to determine the viscous drag in Eq.~\ref{eqn:hydrodynamic force} from the restoring force of the cantilever, \(kx\) (\(k\) is the spring constant), the following relation holds:
 
 \begin{equation}
   F = -ksV_x = -\frac{6\pi\eta R^2 \dot{h}}{h} f^{*}(b_t, b_s).
@@ -173,7 +173,7 @@ We compared the sensitivity of slip length measurements between conventional con
   \label{eqn:s7}
 \end{equation}
 
-In contrast, in the FM-AFM method, the oscillation amplitude \(A\) is recorded as a sensor voltage \(V_A\), with the relationship \(A = sV_A/\sqrt{2}\). From (Eqs.~\ref{eqn:damping coefficient amplitude} and \ref{eqn:damping coefficient slip}) of the manuscript, the following relation is obtained:
+In contrast, in the FM-AFM method, the oscillation amplitude \(A\) is recorded as a sensor voltage \(V_A\), with the relationship \(A = sV_A/\sqrt{2}\). From Eqs.~\ref{eqn:damping coefficient amplitude} and \ref{eqn:damping coefficient slip} of the manuscript, the following relation is obtained:
 
 \begin{equation}
   \frac{6\pi\eta R^2}{h} f^{*}(b_t, b_s) = \gamma_{\text{bulk}}\left(\frac{V_{A,\text{bulk}}}{V_A(h)} - 1\right).
@@ -181,7 +181,7 @@ In contrast, in the FM-AFM method, the oscillation amplitude \(A\) is recorded a
   \label{eqn:s8}
 \end{equation}
 
-Here, the measurement sensitivity is defined as the change in signal voltage with respect to the slip length, \(\partial V/\partial b_s\). Differentiating (Eqs.~\ref{eqn:s7} and \ref{eqn:s8}) yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
+Here, the measurement sensitivity is defined as the change in signal voltage with respect to the slip length, \(\partial V/\partial b_s\). Differentiating Eqs.~\ref{eqn:s7} and \ref{eqn:s8} yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
 
 \begin{equation}
   S_{\text{contact}} = \frac{\partial V_x}{\partial b_s} = -\frac{6\pi\eta R^2 \dot{h}}{k s h}\frac{\partial f^{*}}{\partial b_s}.
@@ -195,7 +195,7 @@ Here, the measurement sensitivity is defined as the change in signal voltage wit
   \label{eqn:s10}
 \end{equation}
 
-From (Eqs.~\ref{eqn:s9} and \ref{eqn:s10}), the ratio of sensitivities is given by:
+From Eqs.~\ref{eqn:s9} and \ref{eqn:s10}, the ratio of sensitivities is given by:
 
 \begin{equation}
   \frac{S_{\text{FM}}}{S_{\text{contact}}} = \frac{V_{A,\text{bulk}} k s}{\gamma_{\text{bulk}} \dot{h}}\left(1 + \frac{6\pi\eta R^2 f^{*}}{h\gamma_{\text{bulk}}}\right)^{-2}.

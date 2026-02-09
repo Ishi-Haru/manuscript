@@ -58,8 +58,8 @@
 ---
 
 ## 6. The cover letter should include the following:
-- [ ] Manuscript title
-- [ ] Corresponding author’s name and e-mail address
-- [ ] 以下を明確に説明している
-  - [ ] Statement on the manuscript’s significance
-  - [ ] Comments on the manuscript’s novelty, impact, urgency
+- [x] Manuscript title
+- [x] Corresponding author’s name and e-mail address
+- [x] 以下を明確に説明している
+  - [x] Statement on the manuscript’s significance
+  - [x] Comments on the manuscript’s novelty, impact, urgency

@@ -1,7 +1,8 @@
-doi, title, substrate, liquid, contact_angle [degree], slip_length [nm], slip_length_error [nm], author, checked
-https://doi.org/10.3390/colloids5040044, AFM Slip Length Measurements for Water at Selected Phyllosilicate Surfaces, Mica, Water, 10, 0, , Zhang et al. 2021, [ ]
-https://doi.org/10.3390/colloids5040044, AFM Slip Length Measurements for Water at Selected Phyllosilicate Surfaces, Talc, Water, 75, 95, , Zhang et al. 2021, []
-https://doi.org/10.1021/la900612s, Boundary Slip Study on Hydrophilic Hydrophobic and Superhydrophobic Surfaces with Dynamic Atomic Force Microscopy, Hydrophobic, Water, 91, 43, 10, Bhushan et al. 2009, [x]
-https://doi.org/10.1021/la026419f, Dynamic Effects on Force Measurements. 2. Lubrication and the Atomic Force Microscope, Silica, Water, 0, 0, , Vinogradova & Yakubov 2003, [ ]
-https://doi.org/10.1021/la026419f, Dynamic Effects on Force Measurements. 2. Lubrication and the Atomic Force Microscope, Polystyrene, Water, 91, 4, , Vinogradova & Yakubov 2003, [ ]
-https://doi.org/10.1103/PhysRevLett.88.076103, Hydrodynamic Force Measurements: Boundary Slip of Water on Hydrophilic Surfaces and Electrokinetic Effects, Mica, Water, 0, 8.9, , Bonaccurso et al. 2002, [ ]
+doi, title, substrate, liquid, contact_angle [degree], slip_length [nm], slip_length_error [nm], author, label_offset_x, label_offset_y, checked
+https://doi.org/10.3390/colloids5040044, AFM Slip Length Measurements for Water at Selected Phyllosilicate Surfaces, Mica, Water, 10, 0, , Zhang et al. 2021, 3, , [ ]
+https://doi.org/10.3390/colloids5040044, AFM Slip Length Measurements for Water at Selected Phyllosilicate Surfaces, Talc, Water, 75, 95, , Zhang et al. 2021, , , []
+https://doi.org/10.1021/la900612s, Boundary Slip Study on Hydrophilic Hydrophobic and Superhydrophobic Surfaces with Dynamic Atomic Force Microscopy, n-hexatriacontane, Water, 91, 43, 10, Bhushan et al. 2009, , , [x]
+https://doi.org/10.1021/la026419f, Dynamic Effects on Force Measurements. 2. Lubrication and the Atomic Force Microscope, Silica, Water, 0, 0, , Vinogradova & Yakubov 2003, -2, , [ ]
+https://doi.org/10.1021/la026419f, Dynamic Effects on Force Measurements. 2. Lubrication and the Atomic Force Microscope, Polystyrene, Water, 91, 4, , Vinogradova & Yakubov 2003, , , [ ]
+https://doi.org/10.1103/PhysRevLett.88.076103, Hydrodynamic Force Measurements: Boundary Slip of Water on Hydrophilic Surfaces and Electrokinetic Effects, Mica, Water, 0, 8.9, , Bonaccurso et al. 2002, , , [ ]
+https://doi.org/10.1103/PhysRevLett.94.056102, Boundary Slip on Smooth Hydrophobic Surfaces: Intrinsic Effects and Possible Artifacts, OTS-Pyrex, Water, 105, 19, 2, Cottin-Bizonne et al. 2005, , , [ ] 

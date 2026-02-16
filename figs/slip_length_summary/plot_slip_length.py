@@ -13,7 +13,7 @@ plt.rcParams['mathtext.fontset'] = 'stix'  # 数式もTimes New Roman風に
 
 # ===== 設定パラメータ =====
 # フォントサイズ設定
-FONT_SIZE_LEGEND = 12
+FONT_SIZE_LEGEND = 14
 FONT_SIZE_AXES = 16
 
 # 点線の太さ設定
@@ -21,14 +21,14 @@ DASHED_LINEWIDTH = 2
 
 # 凡例設定
 LEGEND_LOCATION = 'upper left'  # 'upper left', 'upper right', 'lower left', 'lower right', 'center', etc.
-LEGEND_BBOX_TO_ANCHOR = (0.03, 0.85)  # (x, y)で凡例位置を座標指定（0-1の範囲でグラフ内、1.0以上でグラフ外）。例: (0.02, 0.98)は左上内側、Noneの場合はlocのみ使用
+LEGEND_BBOX_TO_ANCHOR = (0.0, 0.88)  # (x, y)で凡例位置を座標指定（0-1の範囲でグラフ内、1.0以上でグラフ外）。例: (0.02, 0.98)は左上内側、Noneの場合はlocのみ使用
 
 # マーカー設定
 MARKER_SIZE = 8  # マーカーのサイズ（全基板共通）
 
 # 基板名ラベル設定
 SHOW_SUBSTRATE_LABELS = True  # 基板名を点の横に表示するか
-LABEL_FONT_SIZE = 9  # 基板名のフォントサイズ
+LABEL_FONT_SIZE = 14  # 基板名のフォントサイズ
 LABEL_OFFSET_X = 3  # X方向のオフセット（度）
 LABEL_OFFSET_Y = 2  # Y方向のオフセット（nm）
 
@@ -45,7 +45,8 @@ MARKER_STYLES = {
     'Maali et al. 2008': {'marker': '^', 'color': '#2ca02c'},
     'Li et al. 2022': {'marker': 'D', 'color': '#d62728'},
     'Vinogradova & Yakubov 2003': {'marker': 'v', 'color': '#9467bd'},
-    'Bonaccurso et al. 2002': {'marker': 'p', 'color': '#8c564b'}
+    'Bonaccurso et al. 2002': {'marker': 'p', 'color': '#8c564b'},
+    'Cottin-Bizonne et al. 2005': {'marker': '*', 'color': '#e377c2'}
 }
 
 # 理論曲線パラメータ
@@ -62,6 +63,8 @@ df_clean = df.copy()
 df_clean['contact_angle [degree]'] = pd.to_numeric(df_clean['contact_angle [degree]'], errors='coerce')
 df_clean['slip_length [nm]'] = pd.to_numeric(df_clean['slip_length [nm]'], errors='coerce')
 df_clean['slip_length_error [nm]'] = pd.to_numeric(df_clean['slip_length_error [nm]'], errors='coerce')
+df_clean['label_offset_x'] = pd.to_numeric(df_clean['label_offset_x'], errors='coerce')
+df_clean['label_offset_y'] = pd.to_numeric(df_clean['label_offset_y'], errors='coerce')
 
 # NaNを除去
 df_plot = df_clean.dropna(subset=['contact_angle [degree]', 'slip_length [nm]']).copy()
@@ -81,6 +84,8 @@ def plot_data_points(ax):
         y = group["slip_length [nm]"].values
         yerr = group["slip_length_error [nm]"].values
         substrates = group["substrate"].values
+        offset_x_values = group["label_offset_x"].values
+        offset_y_values = group["label_offset_y"].values
 
         style = MARKER_STYLES.get(author, {'marker': 'o', 'color': 'black'})
         color = style['color']
@@ -103,8 +108,11 @@ def plot_data_points(ax):
         
         # 基板名をラベル表示
         if SHOW_SUBSTRATE_LABELS:
-            for xi, yi, substrate in zip(x, y, substrates):
-                ax.text(xi + LABEL_OFFSET_X, yi + LABEL_OFFSET_Y, substrate,
+            for xi, yi, substrate, offset_x, offset_y in zip(x, y, substrates, offset_x_values, offset_y_values):
+                # CSVにオフセットが指定されていればそれを使用、そうでなければデフォルト値を使用
+                actual_offset_x = offset_x if pd.notna(offset_x) else LABEL_OFFSET_X
+                actual_offset_y = offset_y if pd.notna(offset_y) else LABEL_OFFSET_Y
+                ax.text(xi + actual_offset_x, yi + actual_offset_y, substrate,
                        fontsize=LABEL_FONT_SIZE, color='black',
                        verticalalignment='bottom', horizontalalignment='left')
 
@@ -138,7 +146,7 @@ plot_data_points(ax)
 
 # 理論曲線
 ax.plot(theta_theory, slip_theory, '--', linewidth=DASHED_LINEWIDTH, 
-         color=THEORY_COLOR, label=f'C={C_VALUE}', zorder=1)
+         color=THEORY_COLOR, zorder=1)
 
 # 軸の範囲を設定
 ax.set_xlim(X_MIN, X_MAX)

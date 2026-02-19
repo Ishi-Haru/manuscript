@@ -1,8 +1,40 @@
-doi, title, substrate, liquid, contact_angle [degree], slip_length [nm], slip_length_error [nm], author, label_offset_x, label_offset_y, checked
-https://doi.org/10.3390/colloids5040044, AFM Slip Length Measurements for Water at Selected Phyllosilicate Surfaces, Mica, Water, 10, 0, , Zhang et al. 2021, 3, , [ ]
-https://doi.org/10.3390/colloids5040044, AFM Slip Length Measurements for Water at Selected Phyllosilicate Surfaces, Talc, Water, 75, 95, , Zhang et al. 2021, , , []
-https://doi.org/10.1021/la900612s, Boundary Slip Study on Hydrophilic Hydrophobic and Superhydrophobic Surfaces with Dynamic Atomic Force Microscopy, n-hexatriacontane, Water, 91, 43, 10, Bhushan et al. 2009, , , [x]
-https://doi.org/10.1021/la026419f, Dynamic Effects on Force Measurements. 2. Lubrication and the Atomic Force Microscope, Silica, Water, 0, 0, , Vinogradova & Yakubov 2003, -2, , [ ]
-https://doi.org/10.1021/la026419f, Dynamic Effects on Force Measurements. 2. Lubrication and the Atomic Force Microscope, Polystyrene, Water, 91, 4, , Vinogradova & Yakubov 2003, , , [ ]
-https://doi.org/10.1103/PhysRevLett.88.076103, Hydrodynamic Force Measurements: Boundary Slip of Water on Hydrophilic Surfaces and Electrokinetic Effects, Mica, Water, 0, 8.9, , Bonaccurso et al. 2002, , , [ ]
-https://doi.org/10.1103/PhysRevLett.94.056102, Boundary Slip on Smooth Hydrophobic Surfaces: Intrinsic Effects and Possible Artifacts, OTS-Pyrex, Water, 105, 19, 2, Cottin-Bizonne et al. 2005, , , [ ] 
+ checked,use,doi, title, substrate, liquid, contact_angle [degree],contact_angle_error [degree],adv._contact_angle [degree],rec._contact_angle [degree], slip_length [nm], slip_length_error [nm], author, label_offset_x, label_offset_y
+ [x],TRUE,https://doi.org/10.3390/colloids5040044, AFM Slip Length Measurements for Water at Selected Phyllosilicate Surfaces, Mica, Water,10,,,,0, , Zhang et al. 2021,3, 
+,TRUE,,, Talc, Water,75,,,,95, , Zhang et al. 2021, , 
+ [x],TRUE,https://doi.org/10.1021/la900612s, Boundary Slip Study on Hydrophilic Hydrophobic and Superhydrophobic Surfaces with Dynamic Atomic Force Microscopy,, DI Water,0,,,,0,, Bhushan et al. 2009, , 
+,TRUE,,, n-hexatriacontane, DI Water,91,2,,,43,10, Bhushan et al. 2009,,
+,FALSE,,,Lotus wax, DI Water,167,0.7,,,236,18, Bhushan et al. 2009,,
+ [x],TRUE,https://doi.org/10.1021/la026419f, Dynamic Effects on Force Measurements. 2. Lubrication and the Atomic Force Microscope, Silica, Water,,,,,0,1, Vinogradova & Yakubov 2003,-2, 
+,TRUE,,, Polystyrene, Water,,,92,86,4,1, Vinogradova & Yakubov 2003, , 
+ [x],TRUE,https://doi.org/10.1103/PhysRevLett.88.076103, Hydrodynamic Force Measurements: Boundary Slip of Water on Hydrophilic Surfaces and Electrokinetic Effects, Mica, Water,0,,,,8.5,0.5, Bonaccurso et al. 2002, , 
+ [x] ,TRUE,https://doi.org/10.1103/PhysRevLett.94.056102, Boundary Slip on Smooth Hydrophobic Surfaces: Intrinsic Effects and Possible Artifacts, OTS-Pyrex, Water,105,,,,19,2, Cottin-Bizonne et al. 2005, , 
+ [x] ,TRUE,https://doi.org/10.1021/jp073349i,Thin Film Lubrication for Large Colloidal Particles:? Experimental Test of the No-Slip Boundary Condition,hydroxyl-glass,sucrose_solution,5,,,,2,1.6,Honig & Ducker 2007,,
+,TRUE,,,methyl-glass,sucrose_solution,,,85,70,-0.2,2.3,Honig & Ducker 2007,,
+,TRUE,,,graphite?(between?steps),sucrose_solution,,,40,20,4.5,4.4,Honig & Ducker 2007,,
+ [x] ,TRUE,https://doi.org/10.3390/app9071453,Establishment of a Standard Method for Boundary Slip Measurement on Smooth Surfaces Based on AFM,OTS,DI water,,,,,28,,Chen et al. 2019,,
+,TRUE,,,mica,DI water,,,,,0,,Chen et al. 2019,,
+ [x] ,FALSE,https://doi.org/10.1021/la4030876,"Boundary Slip of Superoleophilic, Oleophobic, and Superoleophobic Surfaces Immersed in Deionized Water, Hexadecane, and Ethylene Glycol",polystyrene (PS),DI water,94,2,,,0,,Jing & Bhushan 2013,,
+,FALSE,,,OTS,DI water,106,2,,,30,5,Jing & Bhushan 2013,,
+,FALSE,,,SiO2?and methylphenyl silicone resin,DI water,162,5,,,65,20,Jing & Bhushan 2013,,
+,FALSE,,,SiO2?and fluorinated acrylic copolymer (0.3 by weight),DI water,163,3,,,150,30,Jing & Bhushan 2013,,
+,FALSE,,,SiO2?and fluorinated acrylic copolymer (0.6 by weight),DI water,165,3,,,300,50,Jing & Bhushan 2013,,
+[x],FALSE,https://doi.org/10.1021/la401168w,Quantification of Surface Charge Density and Its Effect on Boundary Slip,OTS,DI water,106,2,,,28,5,Jing & Bhushan 2013,,
+[x],TRUE,https://doi.org/10.1039/D2NR01481E,Translucency and negative temperature-dependence for the slip length of water on graphene,OTS,DI water,100,,,,13.4,3,Li et al. 2022,,
+,TRUE,,,SiO2,DI water,24.9,,,,0.9,1.2,Li et al. 2022,,
+,TRUE,,,HOPG,DI water,75,5,,,4.3,3.5,Li et al. 2022,,
+[x],TRUE,https://doi.org/10.1038/ncomms3482,The interplay between apparent viscosity and wettability in nanoconfined water,mica,DI water,4,3,,,0,,Young et al. 2013,,
+,TRUE,,,GO,DI water,48,3,,,0.24,0.38,Young et al. 2013,,
+,TRUE,,,DLC,DI water,66,6,,,0.55,1.37,Young et al. 2013,,
+,TRUE,,,Si,DI water,76,4,,,1,1.7,Young et al. 2013,,
+,TRUE,,,HOPG,DI water,85,4,,,12,3.3,Young et al. 2013,,
+[x],TRUE,https://doi.org/10.1063/1.2840717,Measurement of the slip length of water flow on graphite surface,HOPG,water,74,,,,8,2,Maali et al. 2008,,
+,TRUE,,,mica,water,0,,,,2,,Maali et al. 2008,,
+[x],TRUE,https://doi.org/10.1021/acsnano.5c15329,Electronic-Mediated Slip Regulation at MoS2?Water Interface via Self-Assembled Monolayers,SiO2,water,41.2,0.7,,,4.3,,Han et al. 2025,,
+,TRUE,,,APTES,water,68.2,1.9,,,9.4,,Han et al. 2025,,
+,TRUE,,,OTS,water,108.5,0.1,,,29.1,,Han et al. 2025,,
+,TRUE,,,FDTES,water,125.7,1.8,,,65.3,,Han et al. 2025,,
+[x],TRUE,https://doi.org/10.1021/la104597d,Reliable Measurements of Interfacial Slip by Colloid Probe Atomic Force Microscopy. II. Hydrodynamic Force Measurements,OTS,water,112,,,,26,3,Zhu et al. 2011,,
+[x],FALSE,https://doi.org/10.1021/acs.langmuir.8b03767,How Slippery are SLIPS? Measuring Effective Slip on Lubricated Surfaces with Colloidal Probe Atmoc Force Microscopy,OTS,sucrose_solution,109,,,,24,3,Scarratt et al. 2019,,
+,FALSE,,,Si,sucrose_solution,33,,,,7,2,Scarratt et al. 2019,,
+[x],TRUE,https://doi.org/10.1021/acs.jpcc.5b03426,Atomic Force Microscopy Measurement of Slip on Smooth Hydrophobic Surfaces and Possible Artifacts,Si,water,0,,,,0,,Ahmad et al. 2015,,
+,TRUE,,,OTS,water,108,3,,,0,,Ahmad et al. 2015,,

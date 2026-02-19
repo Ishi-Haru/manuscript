@@ -1,0 +1,31 @@
+contact_angle [degree],contact_angle_error [degree],slip_length [nm],slip_length_error [nm],author
+10.0,,0.0, , Zhang et al. 2021
+75.0,,95.0, , Zhang et al. 2021
+0.0,,0.0,, Bhushan et al. 2009
+91.0,2.0,43.0,10, Bhushan et al. 2009
+,,0.0,1, Vinogradova & Yakubov 2003
+89.0,3.0,4.0,1, Vinogradova & Yakubov 2003
+0.0,,8.5,0.5, Bonaccurso et al. 2002
+105.0,,19.0,2, Cottin-Bizonne et al. 2005
+5.0,,2.0,1.6,Honig & Ducker 2007
+77.5,7.5,-0.2,2.3,Honig & Ducker 2007
+30.0,10.0,4.5,4.4,Honig & Ducker 2007
+,,28.0,,Chen et al. 2019
+,,0.0,,Chen et al. 2019
+100.0,,13.4,3,Li et al. 2022
+24.9,,0.9,1.2,Li et al. 2022
+75.0,5.0,4.3,3.5,Li et al. 2022
+4.0,3.0,0.0,,Young et al. 2013
+48.0,3.0,0.24,0.38,Young et al. 2013
+66.0,6.0,0.55,1.37,Young et al. 2013
+76.0,4.0,1.0,1.7,Young et al. 2013
+85.0,4.0,12.0,3.3,Young et al. 2013
+74.0,,8.0,2,Maali et al. 2008
+0.0,,2.0,,Maali et al. 2008
+41.2,0.7,4.3,,Han et al. 2025
+68.2,1.9,9.4,,Han et al. 2025
+108.5,0.1,29.1,,Han et al. 2025
+125.7,1.8,65.3,,Han et al. 2025
+112.0,,26.0,3,Zhu et al. 2011
+0.0,,0.0,,Ahmad et al. 2015
+108.0,3.0,0.0,,Ahmad et al. 2015

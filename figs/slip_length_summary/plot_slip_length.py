@@ -34,7 +34,7 @@ LABEL_OFFSET_Y = 2  # Y方向のオフセット（nm）
 
 # グラフ範囲設定（データに基づいて自動調整するが、ここで上書き可能）
 X_MIN = -10  # Noneの場合は自動
-X_MAX = 160
+X_MAX = 180
 Y_MIN = -5
 Y_MAX = None
 

@@ -2,6 +2,27 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+from matplotlib.legend_handler import HandlerErrorbar
+from matplotlib.lines import Line2D
+
+
+# カスタムエラーバーハンドラー（エラーバーなし、マーカーのみ）
+class HandlerErrorbarNoLines(HandlerErrorbar):
+    def create_artists(self, legend, orig_handle,
+                       xdescent, ydescent, width, height, fontsize, trans):
+        # マーカーのみを作成
+        marker_line = Line2D(
+            [width / 2.],
+            [height / 2.],
+            marker=orig_handle[0].get_marker(),
+            markersize=orig_handle[0].get_markersize(),
+            markerfacecolor=orig_handle[0].get_markerfacecolor(),
+            markeredgecolor=orig_handle[0].get_markeredgecolor(),
+            markeredgewidth=orig_handle[0].get_markeredgewidth(),
+            linestyle='None'
+        )
+        marker_line.set_transform(trans)
+        return [marker_line]
 
 # matplotlib保存ダイアログのデフォルト保存先をカレントディレクトリに設定
 plt.rcParams['savefig.directory'] = os.getcwd()
@@ -13,7 +34,7 @@ plt.rcParams['mathtext.fontset'] = 'stix'  # 数式もTimes New Roman風に
 
 # ===== 設定パラメータ =====
 # フォントサイズ設定
-FONT_SIZE_LEGEND = 12
+FONT_SIZE_LEGEND = 10
 FONT_SIZE_AXES = 16
 
 # 点線の太さ設定
@@ -154,11 +175,12 @@ ax.set_ylabel('Slip length (nm)', fontsize=FONT_SIZE_AXES)
 # 軸の目盛りラベルのフォントサイズを設定
 ax.tick_params(axis='both', which='major', labelsize=FONT_SIZE_AXES)
 
-# 凡例のみ表示
+# 凡例のみ表示（エラーバーなし）
+handler_map = {plt.matplotlib.container.ErrorbarContainer: HandlerErrorbarNoLines()}
 if LEGEND_BBOX_TO_ANCHOR is not None:
-    legend = ax.legend(fontsize=FONT_SIZE_LEGEND, loc=LEGEND_LOCATION, bbox_to_anchor=LEGEND_BBOX_TO_ANCHOR)
+    legend = ax.legend(fontsize=FONT_SIZE_LEGEND, loc=LEGEND_LOCATION, bbox_to_anchor=LEGEND_BBOX_TO_ANCHOR, handler_map=handler_map)
 else:
-    legend = ax.legend(fontsize=FONT_SIZE_LEGEND, loc=LEGEND_LOCATION)
+    legend = ax.legend(fontsize=FONT_SIZE_LEGEND, loc=LEGEND_LOCATION, handler_map=handler_map)
 legend.get_frame().set_edgecolor('black')
 
 plt.tight_layout()

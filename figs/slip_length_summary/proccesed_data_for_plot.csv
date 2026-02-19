@@ -12,6 +12,7 @@ contact_angle [degree],contact_angle_error [degree],slip_length [nm],slip_length
 30.0,10.0,4.5,4.4,Honig & Ducker 2007
 ,,28.0,,Chen et al. 2019
 ,,0.0,,Chen et al. 2019
+106.0,2.0,28.0,5,Jing & Bhushan 2013
 100.0,,13.4,3,Li et al. 2022
 24.9,,0.9,1.2,Li et al. 2022
 75.0,5.0,4.3,3.5,Li et al. 2022
@@ -27,5 +28,7 @@ contact_angle [degree],contact_angle_error [degree],slip_length [nm],slip_length
 108.5,0.1,29.1,,Han et al. 2025
 125.7,1.8,65.3,,Han et al. 2025
 112.0,,26.0,3,Zhu et al. 2011
+109.0,,24.0,3,Scarratt et al. 2019
+33.0,,7.0,2,Scarratt et al. 2019
 0.0,,0.0,,Ahmad et al. 2015
 108.0,3.0,0.0,,Ahmad et al. 2015

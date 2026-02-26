@@ -7,9 +7,6 @@ contact_angle [degree],contact_angle_error [degree],slip_length [nm],slip_length
 89.0,3.0,4.0,1, Vinogradova & Yakubov 2003
 0.0,,8.5,0.5, Bonaccurso et al. 2002
 105.0,,19.0,2, Cottin-Bizonne et al. 2005
-5.0,,2.0,1.6,Honig & Ducker 2007
-77.5,7.5,-0.2,2.3,Honig & Ducker 2007
-30.0,10.0,4.5,4.4,Honig & Ducker 2007
 ,,28.0,,Chen et al. 2019
 ,,0.0,,Chen et al. 2019
 106.0,2.0,28.0,5,Jing & Bhushan 2013
@@ -28,7 +25,15 @@ contact_angle [degree],contact_angle_error [degree],slip_length [nm],slip_length
 108.5,0.1,29.1,,Han et al. 2025
 125.7,1.8,65.3,,Han et al. 2025
 112.0,,26.0,3,Zhu et al. 2011
-109.0,,24.0,3,Scarratt et al. 2019
-33.0,,7.0,2,Scarratt et al. 2019
 0.0,,0.0,,Ahmad et al. 2015
 108.0,3.0,0.0,,Ahmad et al. 2015
+62.0,,60.0,,Keerthi et al. 2021
+62.0,,1.0,,Keerthi et al. 2021
+83.7,,40.0,4,Chen et al. 2022
+83.7,,33.0,3,Chen et al. 2022
+20.0,,0.0,10,Bouzigues et al. 2008
+95.0,,38.0,6,Bouzigues et al. 2008
+105.0,,,,Cottin-Bizonne et al. 2008
+,,0.0,,Cottin-Bizonne et al. 2008
+95.0,,,,Cottin-Bizonne et al. 2008
+90.0,,45.0,15,Lasne et al. 2008

@@ -50,7 +50,7 @@ MARKER_SIZE = 8  # マーカーのサイズ（全基板共通）
 # グラフ範囲設定（データに基づいて自動調整するが、ここで上書き可能）
 X_MIN = None  # Noneの場合は自動
 X_MAX = None
-Y_MIN = None
+Y_MIN = -12
 Y_MAX = None
 
 # マーカー設定（著者ごと）
@@ -70,6 +70,13 @@ MARKER_STYLES = {
     'Zhu et al. 2011': {'marker': 'd', 'color': '#ba43b4'},
     'Scarratt et al. 2019': {'marker': '+', 'color': '#f07cab'},
     'Ahmad et al. 2015': {'marker': 'x', 'color': '#00b5d8'}
+    ,
+    # === 以下、不足分を追加 ===
+    'Chen et al. 2022': {'marker': 'H', 'color': '#bc5090'},
+    'Bouzigues et al. 2008': {'marker': '|', 'color': '#ffa600'},
+    'Cottin-Bizonne et al. 2008': {'marker': '_', 'color': '#003f5c'},
+    'Keerthi et al. 2021': {'marker': '8', 'color': '#58508d'},
+    'Lasne et al. 2008': {'marker': '1', 'color': '#ff6361'}
 }
 
 # 理論曲線パラメータ
@@ -153,43 +160,53 @@ theta_rad = np.deg2rad(theta_theory)  # ラジアンに変換
 # 理論曲線の値を計算
 slip_theory = C_VALUE / (1 + np.cos(theta_rad))**2
 
-# === プロット: データ点 + 理論曲線 ===
+
+
+# === 出力フォルダ設定 ===
+output_dir = os.path.join(os.getcwd(), 'output')
+os.makedirs(output_dir, exist_ok=True)
+
+# === プロット本体（凡例なし） ===
 fig, ax = plt.subplots()
 plot_data_points(ax)
-
-# 理論曲線
-ax.plot(theta_theory, slip_theory, '--', linewidth=DASHED_LINEWIDTH, 
-         color=THEORY_COLOR, zorder=1)
-
-# 軸の範囲を設定
+ax.plot(theta_theory, slip_theory, '--', linewidth=DASHED_LINEWIDTH, color=THEORY_COLOR, zorder=1)
 ax.set_xlim(X_MIN, X_MAX)
 ax.set_ylim(Y_MIN, Y_MAX)
-
-# y=0 の黒い破線（凡例に入れない）
 ax.axhline(0, linestyle='--', color='black', linewidth=1, zorder=0, label='_nolegend_')
-
-# 軸ラベル
 ax.set_xlabel('Contact angle (degree)', fontsize=FONT_SIZE_AXES)
 ax.set_ylabel('Slip length (nm)', fontsize=FONT_SIZE_AXES)
-
-# 軸の目盛りラベルのフォントサイズを設定
 ax.tick_params(axis='both', which='major', labelsize=FONT_SIZE_AXES)
 
-# 凡例のみ表示（エラーバーなし）
-handler_map = {plt.matplotlib.container.ErrorbarContainer: HandlerErrorbarNoLines()}
-if LEGEND_BBOX_TO_ANCHOR is not None:
-    legend = ax.legend(fontsize=FONT_SIZE_LEGEND, loc=LEGEND_LOCATION, bbox_to_anchor=LEGEND_BBOX_TO_ANCHOR, handler_map=handler_map)
-else:
-    legend = ax.legend(fontsize=FONT_SIZE_LEGEND, loc=LEGEND_LOCATION, handler_map=handler_map)
-legend.get_frame().set_edgecolor('black')
+# 凡例を一時的に非表示にして本体のみ保存
 
-plt.tight_layout()
+# 背景透過・余白最小化で保存
+output_path_main = os.path.join(output_dir, 'slip_length_plot_main.svg')
+ax.get_legend().remove() if ax.get_legend() else None
+plt.savefig(output_path_main, format='svg', dpi=300, bbox_inches='tight', transparent=True, pad_inches=0.01)
+print(f"プロット本体を保存しました: {output_path_main}")
 
-# SVG形式で保存
-output_path = 'slip_length_plot_processed.svg'
-plt.savefig(output_path, format='svg', dpi=300, bbox_inches='tight')
-print(f"プロットを保存しました: {output_path}")
+# === 凡例のみSVG ===
+# 新しいFigureでダミー軸を作り、全著者分のハンドルを生成
+from matplotlib.lines import Line2D
+handles = []
+labels = []
+for author, style in MARKER_STYLES.items():
+    handles.append(Line2D([0], [0], marker=style['marker'], color='w', markerfacecolor=style['color'], markeredgecolor='black', markeredgewidth=1, markersize=MARKER_SIZE, linestyle='None'))
+    labels.append(author)
 
+
+# 1列で凡例を出力し、枠線を黒にする
+
+# 凡例のみ: 余白最小化・背景透過
+fig_legend = plt.figure(figsize=(3.2, 0.5 + 0.32 * len(labels)))
+legend_obj = fig_legend.legend(handles, labels, loc='center', ncol=1, fontsize=FONT_SIZE_LEGEND, frameon=True)
+legend_obj.get_frame().set_edgecolor('black')
+plt.axis('off')
+output_path_legend = os.path.join(output_dir, 'slip_length_plot_legend.svg')
+fig_legend.savefig(output_path_legend, format='svg', dpi=300, bbox_inches='tight', transparent=True, pad_inches=0.01)
+print(f"凡例のみを保存しました: {output_path_legend}")
+
+# データ情報の出力
 print(f"\nプロット対象データ数: {len(df_plot)}")
 print("\nデータ一覧:")
 print(df_plot[['contact_angle [degree]', 'contact_angle_error [degree]', 'slip_length [nm]', 'slip_length_error [nm]', 'author']])

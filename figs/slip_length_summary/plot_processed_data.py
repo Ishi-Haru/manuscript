@@ -187,10 +187,18 @@ print(f"プロット本体を保存しました: {output_path_main}")
 
 # === 凡例のみSVG ===
 # 新しいFigureでダミー軸を作り、全著者分のハンドルを生成
-from matplotlib.lines import Line2D
+
+# --- 修正: データに含まれる著者のみ凡例に出力 ---
 handles = []
 labels = []
-for author, style in MARKER_STYLES.items():
+# データに含まれる著者順でリストアップ
+author_order = []
+for a in df_plot["author"]:
+    a_stripped = a.strip() if isinstance(a, str) else a
+    if a_stripped not in author_order:
+        author_order.append(a_stripped)
+for author in author_order:
+    style = MARKER_STYLES.get(author, {'marker': 'o', 'color': 'black'})
     handles.append(Line2D([0], [0], marker=style['marker'], color='w', markerfacecolor=style['color'], markeredgecolor='black', markeredgewidth=1, markersize=MARKER_SIZE, linestyle='None'))
     labels.append(author)
 
@@ -206,9 +214,21 @@ output_path_legend = os.path.join(output_dir, 'slip_length_plot_legend.svg')
 fig_legend.savefig(output_path_legend, format='svg', dpi=300, bbox_inches='tight', transparent=True, pad_inches=0.01)
 print(f"凡例のみを保存しました: {output_path_legend}")
 
+
 # データ情報の出力
 print(f"\nプロット対象データ数: {len(df_plot)}")
 print("\nデータ一覧:")
 print(df_plot[['contact_angle [degree]', 'contact_angle_error [degree]', 'slip_length [nm]', 'slip_length_error [nm]', 'author']])
+
+# --- プロットに使われた著者リストとスタイル情報をCSVで保存 ---
+import csv
+author_style_csv = os.path.join(output_dir, 'slip_length_plot_legend_data.csv')
+with open(author_style_csv, 'w', newline='', encoding='utf-8') as f:
+    writer = csv.writer(f)
+    writer.writerow(['author', 'marker', 'color'])
+    for author in author_order:
+        style = MARKER_STYLES.get(author, {'marker': 'o', 'color': 'black'})
+        writer.writerow([author, style['marker'], style['color']])
+print(f"凡例著者リストを保存しました: {author_style_csv}")
 
 plt.show()

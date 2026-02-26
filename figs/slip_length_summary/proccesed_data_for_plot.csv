@@ -33,7 +33,6 @@ contact_angle [degree],contact_angle_error [degree],slip_length [nm],slip_length
 83.7,,33.0,3,Chen et al. 2022
 20.0,,0.0,10,Bouzigues et al. 2008
 95.0,,38.0,6,Bouzigues et al. 2008
-105.0,,,,Cottin-Bizonne et al. 2008
-,,0.0,,Cottin-Bizonne et al. 2008
-95.0,,,,Cottin-Bizonne et al. 2008
-90.0,,45.0,15,Lasne et al. 2008
+105.0,,17.0,2,Cottin-Bizonne et al. 2008
+3.0,,0.0,,Cottin-Bizonne et al. 2008
+95.0,,10.0,2,Cottin-Bizonne et al. 2008

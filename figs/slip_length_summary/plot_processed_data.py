@@ -53,31 +53,41 @@ X_MAX = None
 Y_MIN = -12
 Y_MAX = None
 
-# マーカー設定（著者ごと）
-MARKER_STYLES = {
-    'Zhang et al. 2021': {'marker': 'o', 'color': '#1f77b4'},
-    'Bhushan et al. 2009': {'marker': 's', 'color': '#ff7f0e'},
-    'Maali et al. 2008': {'marker': '^', 'color': '#2ca02c'},
-    'Li et al. 2022': {'marker': 'D', 'color': '#d62728'},
-    'Vinogradova & Yakubov 2003': {'marker': 'v', 'color': '#9467bd'},
-    'Bonaccurso et al. 2002': {'marker': 'p', 'color': '#8c564b'},
-    'Cottin-Bizonne et al. 2005': {'marker': '*', 'color': '#e377c2'},
-    'Honig & Ducker 2007': {'marker': 'h', 'color': '#bcbd22'},
-    'Chen et al. 2019': {'marker': 'X', 'color': '#17becf'},
-    'Jing & Bhushan 2013': {'marker': 'P', 'color': '#e7298a'},
-    'Young et al. 2013': {'marker': '<', 'color': '#7f7f7f'},
-    'Han et al. 2025': {'marker': '>', 'color': '#c7519c'},
-    'Zhu et al. 2011': {'marker': 'd', 'color': '#ba43b4'},
-    'Scarratt et al. 2019': {'marker': '+', 'color': '#f07cab'},
-    'Ahmad et al. 2015': {'marker': 'x', 'color': '#00b5d8'}
-    ,
-    # === 以下、不足分を追加 ===
-    'Chen et al. 2022': {'marker': 'H', 'color': '#bc5090'},
-    'Bouzigues et al. 2008': {'marker': '|', 'color': '#ffa600'},
-    'Cottin-Bizonne et al. 2008': {'marker': '_', 'color': '#003f5c'},
-    'Keerthi et al. 2021': {'marker': '8', 'color': '#58508d'},
-    'Lasne et al. 2008': {'marker': '1', 'color': '#ff6361'}
-}
+
+# マーカー・色リスト（十分な数を用意、必要に応じて追加）
+MARKERS = ['o', 's', '^', 'D', 'v', 'p', '*', 'h', 'X', 'P', '<', '>', 'd', '+', 'x', 'H', '|', '_', '8', '1', '2', '3', '4', '.', ',', 'H', 'v', '^', '<', '>', '1', '2', '3', '4']
+COLORS = [
+    '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#bcbd22', '#17becf', '#e7298a',
+    '#7f7f7f', '#c7519c', '#ba43b4', '#f07cab', '#00b5d8', '#bc5090', '#ffa600', '#003f5c', '#58508d', '#ff6361',
+    '#a05195', '#665191', '#2f4b7c', '#f95d6a', '#ff7c43', '#ffa600', '#b56576', '#6d597a', '#355070', '#eaac8b', '#b56576', '#6d597a', '#355070', '#eaac8b'
+]
+
+
+# CSVファイルを読み込む
+csv_path = r"c:\Users\haruy\Desktop\paper\Nano letters\manuscript\figs\slip_length_summary\proccesed_data_for_plot.csv"
+df = pd.read_csv(csv_path)
+
+# 数値型に変換
+df['contact_angle [degree]'] = pd.to_numeric(df['contact_angle [degree]'], errors='coerce')
+df['slip_length [nm]'] = pd.to_numeric(df['slip_length [nm]'], errors='coerce')
+df['slip_length_error [nm]'] = pd.to_numeric(df['slip_length_error [nm]'], errors='coerce')
+df['contact_angle_error [degree]'] = pd.to_numeric(df['contact_angle_error [degree]'], errors='coerce')
+
+# contact_angleとslip_lengthの両方が存在するデータをフィルタリング
+df_plot = df.dropna(subset=['contact_angle [degree]', 'slip_length [nm]']).copy()
+
+# 著者リスト（csv出現順、重複除去）とマーカー・色割当
+author_order = []
+author_marker_style = {}
+marker_count = len(MARKERS)
+color_count = len(COLORS)
+for idx, a in enumerate(df_plot["author"]):
+    a_stripped = a.strip() if isinstance(a, str) else a
+    if a_stripped not in author_order:
+        author_order.append(a_stripped)
+        marker = MARKERS[(len(author_order)-1) % marker_count]
+        color = COLORS[(len(author_order)-1) % color_count]
+        author_marker_style[a_stripped] = {'marker': marker, 'color': color}
 
 # 理論曲線パラメータ
 C_VALUE = 0.41
@@ -99,29 +109,18 @@ df_plot = df.dropna(subset=['contact_angle [degree]', 'slip_length [nm]']).copy(
 
 
 def plot_data_points(ax):
-    """データ点をプロットする関数"""
-    # CSVの出現順でauthorリストを作成
-    author_order = []
-    for a in df_plot["author"]:
-        a_stripped = a.strip() if isinstance(a, str) else a
-        if a_stripped not in author_order:
-            author_order.append(a_stripped)
-
+    """データ点をプロットする関数(author列の出現順でマーカー・色を割当）"""
     for author in author_order:
         group = df_plot[df_plot["author"].str.strip() == author]
         x = group["contact_angle [degree]"].values
         y = group["slip_length [nm]"].values
-        
-        # エラーバーの設定（xerrとyerrを追加）
         yerr = group["slip_length_error [nm]"].values
         xerr = group["contact_angle_error [degree]"].values
-
-        style = MARKER_STYLES.get(author, {'marker': 'o', 'color': 'black'})
+        style = author_marker_style[author]
         color = style['color']
-
         ax.errorbar(
             x, y,
-            xerr=xerr,  # contact_angleのエラーバーを追加
+            xerr=xerr,
             yerr=yerr,
             fmt=style['marker'],
             markersize=MARKER_SIZE,
@@ -188,17 +187,12 @@ print(f"プロット本体を保存しました: {output_path_main}")
 # === 凡例のみSVG ===
 # 新しいFigureでダミー軸を作り、全著者分のハンドルを生成
 
-# --- 修正: データに含まれる著者のみ凡例に出力 ---
+
+# --- データに含まれる著者のみ凡例に出力（author_marker_styleを利用） ---
 handles = []
 labels = []
-# データに含まれる著者順でリストアップ
-author_order = []
-for a in df_plot["author"]:
-    a_stripped = a.strip() if isinstance(a, str) else a
-    if a_stripped not in author_order:
-        author_order.append(a_stripped)
 for author in author_order:
-    style = MARKER_STYLES.get(author, {'marker': 'o', 'color': 'black'})
+    style = author_marker_style[author]
     handles.append(Line2D([0], [0], marker=style['marker'], color='w', markerfacecolor=style['color'], markeredgecolor='black', markeredgewidth=1, markersize=MARKER_SIZE, linestyle='None'))
     labels.append(author)
 
@@ -227,7 +221,7 @@ with open(author_style_csv, 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f)
     writer.writerow(['author', 'marker', 'color'])
     for author in author_order:
-        style = MARKER_STYLES.get(author, {'marker': 'o', 'color': 'black'})
+        style = author_marker_style[author]
         writer.writerow([author, style['marker'], style['color']])
 print(f"凡例著者リストを保存しました: {author_style_csv}")
 

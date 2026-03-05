@@ -50,8 +50,10 @@ MARKER_STYLES = {
 }
 
 # 理論曲線パラメータ
-C_VALUE = 0.41
-THEORY_COLOR = 'red'
+C_VALUE_MD = 0.41
+C_VALUE_EXPERIMENT = 6.0
+THEORY_COLOR_MD = 'red'
+THEORY_COLOR_EXPERIMENT = 'blue'
 # =========================
 
 # CSVファイルを読み込む
@@ -63,8 +65,6 @@ df_clean = df.copy()
 df_clean['contact_angle [degree]'] = pd.to_numeric(df_clean['contact_angle [degree]'], errors='coerce')
 df_clean['slip_length [nm]'] = pd.to_numeric(df_clean['slip_length [nm]'], errors='coerce')
 df_clean['slip_length_error [nm]'] = pd.to_numeric(df_clean['slip_length_error [nm]'], errors='coerce')
-df_clean['label_offset_x'] = pd.to_numeric(df_clean['label_offset_x'], errors='coerce')
-df_clean['label_offset_y'] = pd.to_numeric(df_clean['label_offset_y'], errors='coerce')
 
 # NaNを除去
 df_plot = df_clean.dropna(subset=['contact_angle [degree]', 'slip_length [nm]']).copy()
@@ -84,8 +84,6 @@ def plot_data_points(ax):
         y = group["slip_length [nm]"].values
         yerr = group["slip_length_error [nm]"].values
         substrates = group["substrate"].values
-        offset_x_values = group["label_offset_x"].values
-        offset_y_values = group["label_offset_y"].values
 
         style = MARKER_STYLES.get(author, {'marker': 'o', 'color': 'black'})
         color = style['color']
@@ -105,16 +103,6 @@ def plot_data_points(ax):
             label=author,
             alpha=0.7
         )
-        
-        # 基板名をラベル表示
-        if SHOW_SUBSTRATE_LABELS:
-            for xi, yi, substrate, offset_x, offset_y in zip(x, y, substrates, offset_x_values, offset_y_values):
-                # CSVにオフセットが指定されていればそれを使用、そうでなければデフォルト値を使用
-                actual_offset_x = offset_x if pd.notna(offset_x) else LABEL_OFFSET_X
-                actual_offset_y = offset_y if pd.notna(offset_y) else LABEL_OFFSET_Y
-                ax.text(xi + actual_offset_x, yi + actual_offset_y, substrate,
-                       fontsize=LABEL_FONT_SIZE, color='black',
-                       verticalalignment='bottom', horizontalalignment='left')
 
 
 # 理論曲線の計算
@@ -138,15 +126,18 @@ theta_theory = np.linspace(max(1, X_MIN), min(178, X_MAX), 1000)
 theta_rad = np.deg2rad(theta_theory)  # ラジアンに変換
 
 # 理論曲線の値を計算
-slip_theory = C_VALUE / (1 + np.cos(theta_rad))**2
+slip_theory_md = C_VALUE_MD / (1 + np.cos(theta_rad))**2
+slip_theory_experiment = C_VALUE_EXPERIMENT / (1 + np.cos(theta_rad))**2
 
 # === プロット: データ点 + 理論曲線 ===
 fig, ax = plt.subplots()
 plot_data_points(ax)
 
 # 理論曲線
-ax.plot(theta_theory, slip_theory, '--', linewidth=DASHED_LINEWIDTH, 
-         color=THEORY_COLOR, zorder=1)
+ax.plot(theta_theory, slip_theory_md, '--', linewidth=DASHED_LINEWIDTH,
+    color=THEORY_COLOR_MD, zorder=1)
+ax.plot(theta_theory, slip_theory_experiment, '--', linewidth=DASHED_LINEWIDTH,
+    color=THEORY_COLOR_EXPERIMENT, zorder=1)
 
 # 軸の範囲を設定
 ax.set_xlim(X_MIN, X_MAX)

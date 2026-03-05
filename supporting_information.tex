@@ -95,7 +95,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title[Title_supporting_information]
   {Supporting Information\\
-  Direct Nanoscale Mapping of Slip Length Reveals Near-Zero Slip on Hydrophobic Surfaces}
+  Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some journals require a list of abbreviations or keywords to be
@@ -117,93 +117,72 @@
 \subsection{Relation between Amplitude Decay and Damping Coefficient}
 
 The total damping coefficient, \(\gamma_{\text{total}}\), acting on the probe can be expressed as the sum of the damping due to the probe sphere, \(\gamma_{\text{tip}}\), and the background damping, \(\gamma_{\text{bulk}}\):
-
 \begin{equation}
   \gamma_{\text{total}} = \gamma_{\text{tip}}(h, b_t, b_s) + \gamma_{\text{bulk}}.
   \tag{S1}
   \label{eqn:s1}
 \end{equation}
-
 where \(h\) is probe-substrate distance, and \(b_t\) and \(b_s\) are the slip lengths at the probe and substrate surfaces, respectively. The background damping \(\gamma_{\text{bulk}}\) originates from various sources, such as viscous drag on the cantilever beam and friction due to thermal fluctuations \cite{Gauthier1999-su}. However, it remains nearly constant and is therefore treated as a constant here. Using the definition of the quality factor \(Q(h) = k/(\omega\gamma_{\text{total}}(h))\), Eq.~\ref{eqn:s1} can be rewritten as:
-
 \begin{equation}
   \frac{k}{\omega Q(h)} = \gamma_{\text{tip}}(h, b_t, b_s) + \gamma_{\text{bulk}}.
   \tag{S2}
   \label{eqn:s2}
 \end{equation}
-
 At sufficiently large \(h \gg R\), the influence of the substrate becomes negligible and the hydrodynamic drag on the probe reduces to the Stokes resistance, \(\gamma_{\text{tip}} = 6\pi\eta R\). Because this drag on a \SI{300}{\nano\metre} spherical tip is orders of magnitude smaller than the viscous damping acting on the micrometer-scale cantilever, \(\gamma_{\text{tip}}\) becomes negligibly small compared to \(\gamma_{\text{bulk}}\), leading to:
-
 \begin{equation}
   \gamma_{\text{total}} = \gamma_{\text{bulk}} = \frac{k}{\omega Q_{\text{bulk}}}.
   \tag{S3}
   \label{eqn:s3}
 \end{equation}
-
 Combining Eqs.~\ref{eqn:s2} and \ref{eqn:s3} yields:
-
 \begin{equation}
   \frac{Q_{\text{bulk}}}{Q(h)} = \frac{\gamma_{\text{tip}}(h, b_t, b_s)}{\gamma_{\text{bulk}}} + 1.
   \tag{S4}
   \label{eqn:s4}
 \end{equation}
-
 In normal FM-AFM, the oscillation amplitude is stabilized by automatic gain control (AGC). In contrast, in this method, AGC was disabled and the cantilever was driven at a constant power. As a result, the amplitude decay directly reflects the damping, and the following relation between the quality factor and the amplitude holds:
-
 \begin{equation}
   \frac{Q_{\text{bulk}}}{Q(h)} = \frac{A_{\text{bulk}}}{A(h)}.
   \tag{S5}
   \label{eqn:s5}
 \end{equation}
-
 Therefore, from Eqs.~\ref{eqn:s4} and \ref{eqn:s5}, the following relation connecting the ratio of amplitude attenuation to the damping coefficient is obtained:
-
 \begin{equation}
   \gamma_{\text{tip}}(h, b_t, b_s) = \gamma_{\text{bulk}}\left(\frac{A_{\text{bulk}}}{A(h)} - 1\right).
   \tag{S6}
   \label{eqn:s6}
 \end{equation}
-
 \subsection{Comparison of Sensitivity between Conventional and Proposed Methods}
 
 We compared the sensitivity of slip length measurements between conventional contact-mode AFM and our newly proposed FM-AFM. With contact-mode AFM, the cantilever deflection \(x\) is measured as a sensor voltage, and the relationship between the deflection sensor voltage \(V_x\) and \(x\) is expressed using the sensitivity \(s\) as \(x = sV_x\). Furthermore, to determine the viscous drag in Eq.~\ref{eqn:hydrodynamic force} from the restoring force of the cantilever, \(kx\) (\(k\) is the spring constant), the following relation holds:
-
 \begin{equation}
   F = -ksV_x = -\frac{6\pi\eta R^2 \dot{h}}{h} f^{*}(b_t, b_s).
   \tag{S7}
   \label{eqn:s7}
 \end{equation}
-
 In contrast, in the FM-AFM method, the oscillation amplitude \(A\) is recorded as a sensor voltage \(V_A\), with the relationship \(A = sV_A/\sqrt{2}\). From Eqs.~\ref{eqn:damping coefficient amplitude} and \ref{eqn:damping coefficient slip} of the manuscript, the following relation is obtained:
-
 \begin{equation}
   \frac{6\pi\eta R^2}{h} f^{*}(b_t, b_s) = \gamma_{\text{bulk}}\left(\frac{V_{A,\text{bulk}}}{V_A(h)} - 1\right).
   \tag{S8}
   \label{eqn:s8}
 \end{equation}
-
 Here, the measurement sensitivity is defined as the change in signal voltage with respect to the slip length, \(\partial V/\partial b_s\). Differentiating Eqs.~\ref{eqn:s7} and \ref{eqn:s8} yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
-
 \begin{equation}
   S_{\text{contact}} = \frac{\partial V_x}{\partial b_s} = -\frac{6\pi\eta R^2 \dot{h}}{k s h}\frac{\partial f^{*}}{\partial b_s}.
   \tag{S9}
   \label{eqn:s9}
 \end{equation}
-
 \begin{equation}
   S_{\text{FM}} = \frac{\partial V_A}{\partial b_s} = -\frac{6\pi\eta R^2 V_{A,\text{bulk}}}{h\gamma_{\text{bulk}}}\left(1 + \frac{6\pi\eta R^2 f^{*}}{h\gamma_{\text{bulk}}}\right)^{-2}\frac{\partial f^{*}}{\partial b_s}.
   \tag{S10}
   \label{eqn:s10}
 \end{equation}
-
 From Eqs.~\ref{eqn:s9} and \ref{eqn:s10}, the ratio of sensitivities is given by:
-
 \begin{equation}
   \frac{S_{\text{FM}}}{S_{\text{contact}}} = \frac{V_{A,\text{bulk}} k s}{\gamma_{\text{bulk}} \dot{h}}\left(1 + \frac{6\pi\eta R^2 f^{*}}{h\gamma_{\text{bulk}}}\right)^{-2}.
   \tag{S11}
   \label{eqn:s11}
 \end{equation}
-
 The sensitivity ratio was calculated to be \(S_{\text{FM}}/S_{\text{contact}} = 159\) using typical physical parameters in the measurements: \(V_{A,\text{bulk}} =\) \SI{0.2}{\volt}, \(k =\) \SI{20}{\newton\per\metre}, \(s =\) \SI{10}{\nano\metre\per\volt}, \(\gamma_{\text{bulk}} =\) \SI{2.3}{\micro\newton\second\per\metre}, \(\dot{h} =\) \SI{100}{\micro\metre\per\second}, \(R =\) \SI{300}{\nano\metre}, \(\eta =\) \SI{1}{\milli\pascal\second}, \(f^{*} = 0.63\), and \(h =\) \SI{10}{\nano\metre}. The \(f^{*}\) value corresponds to the slip length of \(b_t =\) \SI{0}{\nano\metre} and \(b_s =\) \SI{10}{\nano\metre}, and the tip substrate distance \(h =\) \SI{10}{\nano\metre} is chosen as a representative value among the range of distances used in the calculation. This indicates that the present method is 159 times more sensitive to slip length than the conventional approach. Consequently, slip length can be measured using much smaller colloidal probes than before.
 
 \subsection{Materials}

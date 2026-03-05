@@ -88,7 +88,7 @@
 %% a running title from the author: this should be supplied as an
 %% optional argument to \title.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[title]{Direct Nanoscale Mapping of Slip Length Reveals Near-Zero Slip on Hydrophobic Surfaces}
+\title[title]{Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some journals require a list of abbreviations or keywords to be
@@ -131,26 +131,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The no-slip boundary condition, which assumes that the fluid velocity at a solid wall is zero, has long been regarded as an implicit premise in fluid mechanics. However, recent experiments have reported the occurrence of boundary slip, where fluids slip along solid surfaces with a finite velocity \cite{Huang2007-kv, Chen2022-hs, Cross2018-bc, Zhu2012-wb, Vinogradova1995-ct, Vinogradova2003-gh, Li2022-qs}. Slip is quantified by the slip length \(b\), defined in terms of the slip flow velocity \(v_{s}\) and the shear rate \(\partial v / \partial z \), as follows \cite{Navier1827-nw}: 
-
 \begin{equation}
   v_s = b \left( \frac{\partial v}{\partial z} \right)_{z=0}. \label{eqn:definition of slip length}
 \end{equation}
-
 Solid-liquid friction is drastically reduced when slip occurs. For instance, the flow rate of water through carbon nanotubes \cite{Holt2006-yw} and hydrophobic fluorous nanochannels \cite{Itoh2022-hd} has been reported to exceed continuum predictions by orders of magnitude. Such enhancements are decisive factors for the performance of nanofluidic devices, in which interfacial effects are dominant. Thus, efficient molecular transport realized by the control of slip is highly desired for breakthroughs in desalination \cite{Itoh2022-hd}, lab-on-a-chip technologies \cite{Shuvo2025-xv}, osmotic power generators \cite{Laucirica2021-fw, Ma2021-sr}, and on-chip cooling \cite{Sarvar2025-xk, Van_Erp2020-rm}.
 
 Previous studies have suggested that solid-liquid interfacial properties such as wettability \cite{Huang2008-xu}, surface roughness \cite{Vinogradova2006-cw}, surface charge \cite{Xie2020-as}, surface free energy distribution \cite{Tocci2014-es}, and surface nanobubbles \cite{Li2016-ly} strongly influence the slip length. However, despite extensive efforts, their quantitative relationships remain unclear. In particular, compared with hydrophilic surfaces (i.e., contact angles \(< \SI{90}{degree}\)), there is no clear consensus on slip lengths for hydrophobic surfaces (i.e., contact angles \(> \SI{90}{degree}\)). A scaling law relating the slip length \(b\) to the intrinsic contact angle \(\theta\) is derived as follows \cite{Huang2008-xu}:
-
 \begin{equation}
   b = \frac{C}{(1 + \cos \theta)^{2}}. \label{eqn:slip length scaling}
 \end{equation}
-
 where \(C\) is a proportionality constant. Slip lengths obtained from molecular dynamics (MD) simulations are well fit by Eq.~\ref{eqn:slip length scaling} with \(C = 0.41\), indicating almost no slip even at intrinsic contact angles of \SI{120}{\degree}, which is the near maximum achievable on a topographically smooth flat surface \cite{Nishino1999-dk}. In contrast, when experimental slip-length data from various studies are compiled (Figure.~\ref{fgr:previous_slip_length}), they show significant deviation from the MD-predicted scaling law with \(C = 0.41\), with large enhancements of slip lengths on hydrophobic surfaces. 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\linewidth]{figs/slip_length_summary/previous_slip_length.png}
+  \includegraphics[width=0.8\linewidth]{figs/slip_length_summary/previous_slip_length.png}
   \caption{
-    Experimental slip-length data from previous studies plotted as a function of contact angle.The red dashed line represents the theoretical curve given by Eq.~\ref{eqn:slip length scaling} with $C=0.41$. \cite{Zhang2021-tn, Bhushan2009-yz, Vinogradova2003-gh, Bonaccurso2002-nf, Cottin-Bizonne2005-kj, Jing2013-kn, Li2022-qs, Ortiz-Young2013-wc, Maali2008-rd, Han2025-qq, Zhu2011-je, Ahmad2015-eb, Keerthi2021-mz, Chen2022-hs, Bouzigues2008-xn, Cottin-Bizonne2008-nc, Lasne2008-qt, Joseph2005-qe, Radha2016-bk}. The slip length values are summarized in Table~\ref{tbl:Previous_contact_angle_slip} of the Supporting Information.
+    Experimental slip-length data from previous studies plotted as a function of contact angle.The red dashed line represents the theoretical curve given by Eq.~\ref{eqn:slip length scaling} with $C=0.41$. \cite{Bonaccurso2002-nf, Vinogradova2003-gh, Cho2004-it, Cottin-Bizonne2005-kj, Maali2008-rd, Bouzigues2008-xn, Cottin-Bizonne2008-nc, Lasne2008-qt, Bhushan2009-yz, Zhu2011-je, Jing2013-kn, Ortiz-Young2013-wc, Xue2015-tu, Ahmad2015-eb, Radha2016-bk, Zhang2021-tn, Keerthi2021-mz, Li2022-qs, Chen2022-hs, Han2025-qq}. The slip length values are summarized in Table~\ref{tbl:Previous_contact_angle_slip} of the Supporting Information.
   }
   \label{fgr:previous_slip_length}
 \end{figure}
@@ -160,25 +156,19 @@ This discrepancy between experiments and MD analyses is likely due to a complex 
 To date, atomic force microscopy (AFM) provides the highest lateral spatial resolution for slip length measurements \cite{Zhu2012-wb, Vinogradova1995-ct, Vinogradova2003-gh, Li2022-qs}. However, in practice, the lateral resolution is typically limited to approximately \SI{10}{\micro\metre} because of limited detection sensitivity, which is still insufficient for accurate slip length measurements.
 
 In this study, we dramatically improve the spatial resolution of slip length measurements by employing highly sensitive frequency-modulation (FM) AFM. In AFM-based slip measurements, the viscous drag force \(F_h\) acting on the sphere of an AFM probe tip near a planar substrate is given by:
-
 \begin{equation}
 F_h=-\gamma_{\text{tip}} \dot{h}=-\frac{6\pi\eta R^2 \dot{h}}{h} f^* (b_t,b_s). \label{eqn:hydrodynamic force}
 \end{equation}
-
 where \(\gamma_{\text{tip}}\) is the viscous damping coefficient acting on the probe tip,  \(\eta\) is the viscosity of the surrounding medium, \(R\) is the radius of curvature of the probe tip, \(h\) is the probe-substrate distance, \(b_t\) and \(b_s\) are the slip lengths at the probe tip and substrate surfaces, respectively, and \(f^*\) is a correction factor representing the reduction of viscous drag due to slip \cite{Vinogradova1995-ct}. In conventional contact-mode AFM, \(F_h\) is determined from the static deflection of the cantilever and the viscous drag scales with \(R^2\) as shown in Eq.~\ref{eqn:hydrodynamic force}.  Consequently, when the probe radius is reduced, the detection sensitivity rapidly decreases. Although the smallest probe radius reported to date is \(R = \SI{1.9}{\micro\metre}\) \cite{Vinogradova2003-gh}, probe tips with radii of approximately \(\SI{10}{\micro\metre}\) \cite{Li2022-qs} are typically used, and further miniaturization remains challenging.
 
 To overcome this limitation, we employ FM-AFM \cite{Albrecht1991-wp}, in which the cantilever is continuously oscillated at its resonance frequency. In this mode, the energy dissipated by viscous drag is quantified as the damping coefficient \(\gamma\). Because the resonance amplifies the viscous drag, the sensitivity to it is significantly enhanced, thereby compensating for the signal-to-noise degradation proportional to \(R^2\). Then, \(\gamma_{\text{tip}}\) can be obtained from the oscillation amplitudes \(A_{\text{bulk}}\) and \(A(h)\) (see Supporting Information for details):
-
 \begin{equation}
 \gamma_{\text{tip}} (h,b_t,b_s)=\gamma_{\text{bulk}} \left(\frac{A_{\text{bulk}}}{A(h)} -1\right). \label{eqn:damping coefficient amplitude}
 \end{equation}
-
 where the subscript "bulk" denotes the value at sufficiently large \(h\). In conventional FM-AFM, the oscillation amplitude is kept constant (\(A(h) = A_{\text{bulk}}\) = const.) by an automatic gain control (AGC) circuit. However, in our method, the AGC is turned off and instead the drive power is kept constant, allowing the amplitude reduction \(A(h)\) to directly reflect the magnitude of the damping coefficient \(\gamma_{\text{tip}}\). This offers the advantage that the reliability of slip length measurements is not limited by AGC performance. Extracting the coefficient of \(\dot{h}\) from Eq.~\ref{eqn:hydrodynamic force}, the damping coefficient can be expressed as
-
 \begin{equation}
 \gamma_{\text{tip}} (h,b_t,b_s)=\frac{6\pi\eta R^2}{h} f^* (b_t,b_s). \label{eqn:damping coefficient slip}
 \end{equation}
-
 Slip length \(b_s\) is then obtained by fitting Eq.~\ref{eqn:damping coefficient slip} to a damping-coefficient-tip-sample distance curve with \(b_s\) as the fitting parameter. We note that the slip length of the probe material, \(b_t\), needs to be pre-calibrated using a substrate made of the same material (\(b_t=b_s\)). This method enhances slip length sensitivity by 159-fold relative to normal contact-mode AFM (see Supporting Information for details). Consequently, this allows us to measure the slip length using a probe with a much smaller sphere. 
 
 \begin{figure}[h]

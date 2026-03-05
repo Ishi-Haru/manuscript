@@ -49,9 +49,9 @@ MARKER_SIZE = 8  # マーカーのサイズ（全基板共通）
 
 # グラフ範囲設定（データに基づいて自動調整するが、ここで上書き可能）
 X_MIN = None  # Noneの場合は自動
-X_MAX = None
+X_MAX = 130
 Y_MIN = -12
-Y_MAX = None
+Y_MAX = 105
 
 
 # マーカー・色リスト（十分な数を用意、必要に応じて追加）
@@ -90,8 +90,10 @@ for idx, a in enumerate(df_plot["author"]):
         author_marker_style[a_stripped] = {'marker': marker, 'color': color}
 
 # 理論曲線パラメータ
-C_VALUE = 0.41
-THEORY_COLOR = 'red'
+C_VALUE_MD = 0.41
+C_VALUE_EXPERIMENT = 6.0
+THEORY_COLOR_MD = 'red'
+THEORY_COLOR_EXPERIMENT = 'blue'
 # =========================
 
 # CSVファイルを読み込む
@@ -157,7 +159,8 @@ theta_theory = np.linspace(max(1, X_MIN), min(178, X_MAX), 1000)
 theta_rad = np.deg2rad(theta_theory)  # ラジアンに変換
 
 # 理論曲線の値を計算
-slip_theory = C_VALUE / (1 + np.cos(theta_rad))**2
+slip_theory_md = C_VALUE_MD / (1 + np.cos(theta_rad))**2
+slip_theory_experiment = C_VALUE_EXPERIMENT / (1 + np.cos(theta_rad))**2
 
 
 
@@ -168,7 +171,8 @@ os.makedirs(output_dir, exist_ok=True)
 # === プロット本体（凡例なし） ===
 fig, ax = plt.subplots()
 plot_data_points(ax)
-ax.plot(theta_theory, slip_theory, '--', linewidth=DASHED_LINEWIDTH, color=THEORY_COLOR, zorder=1)
+ax.plot(theta_theory, slip_theory_md, '--', linewidth=DASHED_LINEWIDTH, color=THEORY_COLOR_MD, zorder=1, label='C=0.41')
+ax.plot(theta_theory, slip_theory_experiment, '--', linewidth=DASHED_LINEWIDTH, color=THEORY_COLOR_EXPERIMENT, zorder=1, label='C=6.0')
 ax.set_xlim(X_MIN, X_MAX)
 ax.set_ylim(Y_MIN, Y_MAX)
 ax.axhline(0, linestyle='--', color='black', linewidth=1, zorder=0, label='_nolegend_')
@@ -191,10 +195,17 @@ print(f"プロット本体を保存しました: {output_path_main}")
 # --- データに含まれる著者のみ凡例に出力（author_marker_styleを利用） ---
 handles = []
 labels = []
+
 for author in author_order:
     style = author_marker_style[author]
     handles.append(Line2D([0], [0], marker=style['marker'], color='w', markerfacecolor=style['color'], markeredgecolor='black', markeredgewidth=1, markersize=MARKER_SIZE, linestyle='None'))
     labels.append(author)
+
+# 理論曲線の凡例ラベル（最後に追加）
+handles.append(Line2D([0], [0], linestyle='--', color=THEORY_COLOR_EXPERIMENT, linewidth=DASHED_LINEWIDTH))
+labels.append('Eq.2 with C=6.0')
+handles.append(Line2D([0], [0], linestyle='--', color=THEORY_COLOR_MD, linewidth=DASHED_LINEWIDTH))
+labels.append('Eq.2 with C=0.41')
 
 
 # 1列で凡例を出力し、枠線を黒にする

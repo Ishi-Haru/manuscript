@@ -110,10 +110,10 @@ df['contact_angle_error [degree]'] = pd.to_numeric(df['contact_angle_error [degr
 df_plot = df.dropna(subset=['contact_angle [degree]', 'slip_length [nm]']).copy()
 
 
-def plot_data_points(ax):
+def plot_data_points(ax, plot_df, plot_author_order):
     """データ点をプロットする関数(author列の出現順でマーカー・色を割当）"""
-    for author in author_order:
-        group = df_plot[df_plot["author"].str.strip() == author]
+    for author in plot_author_order:
+        group = plot_df[plot_df["author"].str.strip() == author]
         x = group["contact_angle [degree]"].values
         y = group["slip_length [nm]"].values
         yerr = group["slip_length_error [nm]"].values
@@ -134,7 +134,8 @@ def plot_data_points(ax):
             capsize=4,
             capthick=1.5,
             label=author,
-            alpha=1.0
+            alpha=1.0,
+            clip_on=True
         )
 
 
@@ -154,6 +155,20 @@ if Y_MAX is None:
     y_margin = (y_max_data - y_min_data) * 0.1
     Y_MAX = y_max_data + y_margin
 
+# 軸範囲内のデータのみを描画対象にする（表示とSVG内部を一致させる）
+df_plot_visible = df_plot[
+    (df_plot['contact_angle [degree]'] >= X_MIN) &
+    (df_plot['contact_angle [degree]'] <= X_MAX) &
+    (df_plot['slip_length [nm]'] >= Y_MIN) &
+    (df_plot['slip_length [nm]'] <= Y_MAX)
+].copy()
+
+author_order_visible = []
+for a in df_plot_visible["author"]:
+    a_stripped = a.strip() if isinstance(a, str) else a
+    if a_stripped not in author_order_visible:
+        author_order_visible.append(a_stripped)
+
 # 理論曲線の計算
 theta_theory = np.linspace(max(1, X_MIN), min(178, X_MAX), 1000)
 theta_rad = np.deg2rad(theta_theory)  # ラジアンに変換
@@ -170,7 +185,7 @@ os.makedirs(output_dir, exist_ok=True)
 
 # === プロット本体（凡例なし） ===
 fig, ax = plt.subplots()
-plot_data_points(ax)
+plot_data_points(ax, df_plot_visible, author_order_visible)
 ax.plot(theta_theory, slip_theory_md, '--', linewidth=DASHED_LINEWIDTH, color=THEORY_COLOR_MD, zorder=1, label='C=0.41')
 ax.plot(theta_theory, slip_theory_experiment, '--', linewidth=DASHED_LINEWIDTH, color=THEORY_COLOR_EXPERIMENT, zorder=1, label='C=6.0')
 ax.set_xlim(X_MIN, X_MAX)
@@ -196,7 +211,7 @@ print(f"プロット本体を保存しました: {output_path_main}")
 handles = []
 labels = []
 
-for author in author_order:
+for author in author_order_visible:
     style = author_marker_style[author]
     handles.append(Line2D([0], [0], marker=style['marker'], color='w', markerfacecolor=style['color'], markeredgecolor='black', markeredgewidth=1, markersize=MARKER_SIZE, linestyle='None'))
     labels.append(author)
@@ -221,9 +236,9 @@ print(f"凡例のみを保存しました: {output_path_legend}")
 
 
 # データ情報の出力
-print(f"\nプロット対象データ数: {len(df_plot)}")
+print(f"\nプロット対象データ数（軸内）: {len(df_plot_visible)} / 全有効データ: {len(df_plot)}")
 print("\nデータ一覧:")
-print(df_plot[['contact_angle [degree]', 'contact_angle_error [degree]', 'slip_length [nm]', 'slip_length_error [nm]', 'author']])
+print(df_plot_visible[['contact_angle [degree]', 'contact_angle_error [degree]', 'slip_length [nm]', 'slip_length_error [nm]', 'author']])
 
 # --- プロットに使われた著者リストとスタイル情報をCSVで保存 ---
 import csv
@@ -231,7 +246,7 @@ author_style_csv = os.path.join(output_dir, 'slip_length_plot_legend_data.csv')
 with open(author_style_csv, 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f)
     writer.writerow(['author', 'marker', 'color'])
-    for author in author_order:
+    for author in author_order_visible:
         style = author_marker_style[author]
         writer.writerow([author, style['marker'], style['color']])
 print(f"凡例著者リストを保存しました: {author_style_csv}")

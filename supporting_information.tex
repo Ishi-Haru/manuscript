@@ -207,82 +207,112 @@ A thermally grown silica surface on a Si wafer was spin-coated with an electron-
 Silica substrates cut to \SI{1}{\centi\metre}\(\times\)\SI{1}{\centi\metre} were ultrasonically cleaned in acetone (US-1KS, SND Co., Ltd., Japan) and treated with \(\mathrm{O}_2\) plasma. After baking at \SI{120}{\degreeCelsius} for \SI{5}{\minute} to remove surface moisture, the substrates were immersed for \SI{1}{\hour} in a \SI{0.05}{\percent} (w/w) toluene solution of FDTS to form an FDTS monolayer. On top of the FDTS-treated substrate, a \SI{0.6}{\percent} (w/w) solution of Teflon AF1600X (DuPont Inc., Wilmington, DE, USA) in FC-770 (3M, St. Paul, MN, USA) was dropped, spin-coated at \SI{4000}{\per\minute} for \SI{1}{\minute}, and baked at \SI{175}{\degreeCelsius} for \SI{10}{\minute}. The FDTS underlayer was used to improve the adhesion of the Teflon coating \cite{Makohliso1998-av}.
 
 \begin{table}
-    \caption{Contact angle and slip length for various substrates from previous studies.}
-    \label{tbl:Previous_contact_angle_slip}
-    \begin{tabular}{llccc}
-        \hline
-        Author & Method & Substrate & Contact Angle $\theta$ (\si{\degree}) & Slip length (\si{\nano\metre}) \\
-        \hline
-    \multirow{2}{*}{Zhang et al. 2021\cite{Zhang2021-tn}} & \multirow{2}{*}{AFM} & Mica & $10$ & $0$ \\
-     &  & Talc & $75$ & $95$ \\
-    \cline{1-5}
-    \multirow{3}{*}{Bhushan et al. 2009\cite{Bhushan2009-yz}} & \multirow{3}{*}{AFM} & mica & $0$ & $0$ \\
-     &  & n-hexatriacontane & $91 \pm 2$ & $43 \pm 10$ \\
-     &  & Lotus wax & $167 \pm 0.7$ & $236 \pm 18$ \\
-    \cline{1-5}
-    \multirow{2}{*}{Vinogradova \& Yakubov 2003\cite{Vinogradova2003-gh}} & \multirow{2}{*}{AFM} & Silica & $0$ & $0 \pm 1$ \\
-     &  & Polystyrene & $86$--$92$ & $4 \pm 1$ \\
-    \cline{1-5}
-    \multirow{1}{*}{Bonaccurso et al. 2002\cite{Bonaccurso2002-nf}} & \multirow{1}{*}{AFM} & Mica & $0$ & $8.5 \pm 0.5$ \\
-    \cline{1-5}
-    \multirow{1}{*}{Cottin-Bizonne et al. 2005\cite{Cottin-Bizonne2005-kj}} & \multirow{1}{*}{AFM} & OTS-Pyrex & $105$ & $19 \pm 2$ \\
-    \cline{1-5}
-    \multirow{1}{*}{Jing \& Bhushan 2013\cite{Jing2013-kn}} & \multirow{1}{*}{AFM} & OTS & $106 \pm 2$ & $28 \pm 5$ \\
-    \cline{1-5}
-    \multirow{3}{*}{Li et al. 2022\cite{Li2022-qs}} & \multirow{3}{*}{AFM} & OTS & $100$ & $13.4 \pm 3$ \\
-     &  & SiO2 & $24.9$ & $0.9 \pm 1.2$ \\
-     &  & HOPG & $75 \pm 5$ & $4.3 \pm 3.5$ \\
-    \cline{1-5}
-    \multirow{5}{*}{Ortiz-Young et al. 2013\cite{Ortiz-Young2013-wc}} & \multirow{5}{*}{AFM} & mica & $4 \pm 3$ & $0$ \\
-     &  & GO & $48 \pm 3$ & $0.24 \pm 0.38$ \\
-     &  & DLC & $66 \pm 6$ & $0.55 \pm 1.37$ \\
-     &  & Si & $76 \pm 4$ & $1 \pm 1.7$ \\
-     &  & HOPG & $85 \pm 4$ & $12 \pm 3.3$ \\
-    \cline{1-5}
-    \multirow{2}{*}{Maali et al. 2008\cite{Maali2008-rd}} & \multirow{2}{*}{AFM} & HOPG & $74$ & $8 \pm 2$ \\
-     &  & mica & $0$ & $2$ \\
-    \cline{1-5}
-    \multirow{4}{*}{Han et al. 2025\cite{Han2025-qq}} & \multirow{4}{*}{AFM} & SiO2 & $41.2 \pm 0.7$ & $4.3$ \\
-     &  & APTES & $68.2 \pm 1.9$ & $9.4$ \\
-     &  & OTS & $108.5 \pm 0.1$ & $29.1$ \\
-     &  & FDTES & $125.7 \pm 1.8$ & $65.3$ \\
-    \cline{1-5}
-    \multirow{1}{*}{Zhu et al. 2011\cite{Zhu2011-je}} & \multirow{1}{*}{AFM} & OTS & $112$ & $26 \pm 3$ \\
-    \cline{1-5}
-    \multirow{2}{*}{Ahmad et al. 2015\cite{Ahmad2015-eb}} & \multirow{2}{*}{AFM} & Si & $0$ & $0$ \\
-     &  & OTS & $108 \pm 3$ & $0$ \\
-    \cline{1-5}
-    \multirow{2}{*}{Keerthi et al. 2021\cite{Keerthi2021-mz}} & \multirow{2}{*}{Channel} & graphene & $62$ & $60$ \\
-     &  & hBN & $62$ & $1$ \\
-    \cline{1-5}
-    \multirow{2}{*}{Chen et al. 2022\cite{Chen2022-hs}} & \multirow{2}{*}{Channel} & graphene & $83.7$ & $40 \pm 4$ \\
-     &  & graphene & $83.7$ & $33 \pm 3$ \\
-    \cline{1-5}
-    \multirow{2}{*}{Bouzigues et al. 2008\cite{Bouzigues2008-xn}} & \multirow{2}{*}{TIRF-PIV} & silica & $20$ & $0 \pm 10$ \\
-     &  & OTS & $95$ & $38 \pm 6$ \\
-    \cline{1-5}
-    \multirow{3}{*}{Cottin-Bizonne et al. 2008\cite{Cottin-Bizonne2008-nc}} & \multirow{3}{*}{SFA} & OTS-Pyrex & $105$ & $17 \pm 2$ \\
-     &  & Pyrex & $3$ & $0$ \\
-     &  & DPPC monolayer & $95$ & $10 \pm 2$ \\
-    \cline{1-5}
-    \multirow{2}{*}{Lasne et al. 2008\cite{Lasne2008-qt}} & \multirow{2}{*}{TIRF-PIV} & OTS & $90$ & $45 \pm 15$ \\
-     &  & silica & $0$ & $0$ \\
-    \cline{1-5}
-    \multirow{3}{*}{Joseph et al. 2005\cite{Joseph2005-qe}} & \multirow{3}{*}{micro-PIV} & silica & $0$ & $50 \pm 50$ \\
-     &  & OTS & $95$ & $-35 \pm 100$ \\
-     &  & CDOS & $95$ & $57 \pm 100$ \\
-    \cline{1-5}
-    \multirow{1}{*}{Radha et al. 2016\cite{Radha2016-bk}} & \multirow{1}{*}{channel} & graphene & $55$--$85$ & $60$ \\
-    \cline{1-5}
-        \hline
-    \end{tabular}
+\caption{Contact angle and slip length for various substrates}
+\label{tbl:Previous_contact_angle_slip}
+\hspace*{-3cm}
+\scalebox{0.9}{%}
+\makebox[\textwidth][l]{%
+\begin{tabular}{llccc}
+\hline
+Author & Method & Substrate & Contact Angle $\theta$ (\si{\degree}) & Slip length (\si{\nano\metre}) \\
+\hline
 
+Bonaccurso et al. 2002\cite{Bonaccurso2002-nf} & AFM & Mica & $0$ & $8.5 \pm 0.5$ \\
+\cline{1-5}
+
+\multirow{2}{*}{Vinogradova \& Yakubov 2003\cite{Vinogradova2003-gh}} & \multirow{2}{*}{AFM} & Silica & $0$ & $0 \pm 1$ \\
+ &  & Polystyrene & $86$--$92$ & $4 \pm 1$ \\
+\cline{1-5}
+
+Cho et al. 2004\cite{Cho2004-it} & AFM & OTS & $97.5$ & $30$ \\
+\cline{1-5}
+
+Cottin-Bizonne et al. 2005\cite{Cottin-Bizonne2005-kj} & AFM & OTS-Pyrex & $105$ & $19 \pm 2$ \\
+\cline{1-5}
+
+\multirow{2}{*}{Maali et al. 2008\cite{Maali2008-rd}} & \multirow{2}{*}{AFM} & HOPG & $74$ & $8 \pm 2$ \\
+ &  & Mica & $0$ & $2$ \\
+\cline{1-5}
+
+\multirow{4}{*}{Bouzigues et al. 2008\cite{Bouzigues2008-xn}} & \multirow{4}{*}{TIRF-PIV} & Silica & $20$ & $0 \pm 10$ \\
+ &  & OTS & $95$ & $38 \pm 6$ \\
+ &  & Silica & $20$ & $3 \pm 7$ \\
+ &  & OTS & $95$ & $29 \pm 11$ \\
+\cline{1-5}
+
+\multirow{3}{*}{Cottin-Bizonne et al. 2008\cite{Cottin-Bizonne2008-nc}} & \multirow{3}{*}{SFA} & OTS-Pyrex & $105$ & $17 \pm 2$ \\
+ &  & Pyrex & $3$ & $0$ \\
+ &  & DPPC monolayer & $95$ & $10 \pm 2$ \\
+\cline{1-5}
+
+\multirow{2}{*}{Lasne et al. 2008\cite{Lasne2008-qt}} & \multirow{2}{*}{TIRF-PIV} & OTS & $90$ & $45 \pm 15$ \\
+ &  & Silica & $0$ & $0$ \\
+\cline{1-5}
+
+\multirow{3}{*}{Bhushan et al. 2009\cite{Bhushan2009-yz}} & \multirow{3}{*}{AFM} & Mica & $0$ & $0$ \\
+ &  & n-hexatriacontane & $91 \pm 2$ & $43 \pm 10$ \\
+ &  & Lotus wax & $167 \pm 0.7$ & $236 \pm 18$ \\
+\cline{1-5}
+
+Zhu et al. 2011\cite{Zhu2011-je} & AFM & OTS & $112$ & $26 \pm 3$ \\
+\cline{1-5}
+
+Jing \& Bhushan 2013\cite{Jing2013-kn} & AFM & OTS & $106 \pm 2$ & $28 \pm 5$ \\
+\cline{1-5}
+
+\multirow{5}{*}{Ortiz-Young et al. 2013\cite{Ortiz-Young2013-wc}} & \multirow{5}{*}{AFM} & Mica & $4 \pm 3$ & $0$ \\
+ &  & GO & $48 \pm 3$ & $0.24 \pm 0.38$ \\
+ &  & DLC & $66 \pm 6$ & $0.55 \pm 1.37$ \\
+ &  & Si & $76 \pm 4$ & $1 \pm 1.7$ \\
+ &  & HOPG & $85 \pm 4$ & $12 \pm 3.3$ \\
+\cline{1-5}
+
+\multirow{4}{*}{Xue et al. 2015\cite{Xue2015-tu}} & \multirow{4}{*}{QCM} & DLC & $75$--$100$ & $2.4$ \\
+ &  & MUOH & $40$--$80$ & $1.9$ \\
+ &  & MUOH & $0$--$60$ & $1.2$ \\
+ &  & MUOH & $0$--$50$ & $0.7$ \\
+\cline{1-5}
+
+\multirow{2}{*}{Ahmad et al. 2015\cite{Ahmad2015-eb}} & \multirow{2}{*}{AFM} & Si & $0$ & $0$ \\
+ &  & OTS & $108 \pm 3$ & $0$ \\
+\cline{1-5}
+
+Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
+\cline{1-5}
+
+\multirow{2}{*}{Zhang et al. 2021\cite{Zhang2021-tn}} & \multirow{2}{*}{AFM} & Mica & $10$ & $0$ \\
+ &  & Talc & $75$ & $95$ \\
+\cline{1-5}
+
+\multirow{2}{*}{Keerthi et al. 2021\cite{Keerthi2021-mz}} & \multirow{2}{*}{Channel} & Graphene & $62$ & $60$ \\
+ &  & hBN & $62$ & $1$ \\
+\cline{1-5}
+
+\multirow{3}{*}{Li et al. 2022\cite{Li2022-qs}} & \multirow{3}{*}{AFM} & OTS & $100$ & $13.4 \pm 3$ \\
+ &  & SiO$_2$ & $24.9$ & $0.9 \pm 1.2$ \\
+ &  & HOPG & $75 \pm 5$ & $4.3 \pm 3.5$ \\
+\cline{1-5}
+
+\multirow{2}{*}{Chen et al. 2022\cite{Chen2022-hs}} & \multirow{2}{*}{Channel} & Graphene & $83.7$ & $40 \pm 4$ \\
+ &  & N/A & $83.7$ & $33 \pm 3$ \\
+\cline{1-5}
+
+\multirow{4}{*}{Han et al. 2025\cite{Han2025-qq}} & \multirow{4}{*}{AFM} & SiO$_2$ & $41.2 \pm 0.7$ & $4.3$ \\
+ &  & APTES & $68.2 \pm 1.9$ & $9.4$ \\
+ &  & OTS & $108.5 \pm 0.1$ & $29.1$ \\
+ &  & FDTES & $125.7 \pm 1.8$ & $65.3$ \\
+\cline{1-5}
+
+\hline
+\end{tabular}
+}%
+}%
 \end{table}
 
 \begin{figure}[p]
   \centering
   \includegraphics[width=1.0\linewidth]{figs/mapping_colormaps.png}
-  \caption{ (a-d) Topography and (e-h) corresponding slip-length maps of (a, e) mica, (b, f) FDTS, (c, g) Teflon, and (d, h) HOPG. The \(R_a\) values were \SI{0.27}{\nano\metre}, \SI{0.29}{\nano\metre}, \SI{0.64}{\nano\metre}, and \SI{0.35}{\nano\metre} for each surface, respectively. Only the result for HOPG (d, h) was obtained in a \SI{10}{\milli\mole\per\litre} KCl solution and the others were in DI water.}
+  \caption{ (a-e) Topography and (f-i) corresponding slip-length maps of (a)HOPG, (b, f) mica, (c, g) FDTS, (d, h) Teflon, and (e, i) HOPG. The \(R_a\) values were \SI{0.27}{\nano\metre}, \SI{0.29}{\nano\metre}, \SI{0.64}{\nano\metre}, and \SI{0.35}{\nano\metre} for each surface, respectively. (a) shows a height image reconstructed from the same dataset as Fig.~\ref{fgr:mapping_results} (a, b). In this case, the surface profile was reconstructed using the data obtained when the tip was pushed until the cantilever deflection corresponded to a force of approximately 100 nN, where the tip is in firm contact with the substrate. Only the result for HOPG (e, i) was obtained in a \SI{10}{\milli\mole\per\litre} KCl solution and the others were in DI water.}
   \label{figS:mapping_colormaps}
 \end{figure}
 

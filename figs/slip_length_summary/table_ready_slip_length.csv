@@ -1,35 +1,11 @@
 ﻿Autor,Method,Substrate,Contact Angle,Slip Length
-Zhang et al. 2021,AFM,Mica,10,0
-Zhang et al. 2021,AFM,Talc,75,95
-Bhushan et al. 2009,AFM,mica,0,0
-Bhushan et al. 2009,AFM,n-hexatriacontane,91 \pm 2,43 \pm 10
-Bhushan et al. 2009,AFM,Lotus wax,167 \pm 0.7,236 \pm 18
+Bonaccurso et al. 2002,AFM,Mica,0,8.5 \pm 0.5
 Vinogradova & Yakubov 2003,AFM,Silica,0,0 \pm 1
 Vinogradova & Yakubov 2003,AFM,Polystyrene,86 - 92,4 \pm 1
-Bonaccurso et al. 2002,AFM,Mica,0,8.5 \pm 0.5
+Cho et al. 2004,AFM,OTS,97.5,30
 Cottin-Bizonne et al. 2005,AFM,OTS-Pyrex,105,19 \pm 2
-Jing & Bhushan 2013,AFM,OTS,106 \pm 2,28 \pm 5
-Li et al. 2022,AFM,OTS,100,13.4 \pm 3
-Li et al. 2022,AFM,SiO2,24.9,0.9 \pm 1.2
-Li et al. 2022,AFM,HOPG,75 \pm 5,4.3 \pm 3.5
-Young et al. 2013,AFM,mica,4 \pm 3,0
-Young et al. 2013,AFM,GO,48 \pm 3,0.24 \pm 0.38
-Young et al. 2013,AFM,DLC,66 \pm 6,0.55 \pm 1.37
-Young et al. 2013,AFM,Si,76 \pm 4,1 \pm 1.7
-Young et al. 2013,AFM,HOPG,85 \pm 4,12 \pm 3.3
 Maali et al. 2008,AFM,HOPG,74,8 \pm 2
 Maali et al. 2008,AFM,mica,0,2
-Han et al. 2025,AFM,SiO2,41.2 \pm 0.7,4.3
-Han et al. 2025,AFM,APTES,68.2 \pm 1.9,9.4
-Han et al. 2025,AFM,OTS,108.5 \pm 0.1,29.1
-Han et al. 2025,AFM,FDTES,125.7 \pm 1.8,65.3
-Zhu et al. 2011,AFM,OTS,112,26 \pm 3
-Ahmad et al. 2015,AFM,Si,0,0
-Ahmad et al. 2015,AFM,OTS,108 \pm 3,0
-Keerthi et al. 2021,Channel,graphene,62,60
-Keerthi et al. 2021,Channel,hBN,62,1
-Chen et al. 2022,Channel,graphene,83.7,40 \pm 4
-Chen et al. 2022,Channel,,83.7,33 \pm 3
 Bouzigues et al. 2008,TIRF-PIV,silica,20,0 \pm 10
 Bouzigues et al. 2008,TIRF-PIV,OTS,95,38 \pm 6
 Cottin-Bizonne et al. 2008,SFA,OTS-Pyrex,105,17 \pm 2
@@ -37,7 +13,35 @@ Cottin-Bizonne et al. 2008,SFA,Pyrex,3,0
 Cottin-Bizonne et al. 2008,SFA,DPPC monolayer,95,10 \pm 2
 Lasne et al. 2008,TIRF-PIV,OTS,90,45 \pm 15
 Lasne et al. 2008,TIRF-PIV,silica,0,0
-Joseph et al. 2005,micro-PIV,silica,0,50 \pm 50
-Joseph et al. 2005,micro-PIV,OTS,95,-35 \pm 100
-Joseph et al. 2005,micro-PIV,CDOS,95,57 \pm 100
+Bouzigues et al. 2008,TIRF,silica,20,3 \pm 7
+Bouzigues et al. 2008,TIRF,OTS,95,29 \pm 11
+Bhushan et al. 2009,AFM,mica,0,0
+Bhushan et al. 2009,AFM,n-hexatriacontane,91 \pm 2,43 \pm 10
+Bhushan et al. 2009,AFM,Lotus wax,167 \pm 0.7,236 \pm 18
+Zhu et al. 2011,AFM,OTS,112,26 \pm 3
+Jing & Bhushan 2013,AFM,OTS,106 \pm 2,28 \pm 5
+Ortiz-Young et al. 2013,AFM,mica,4 \pm 3,0
+Ortiz-Young et al. 2013,AFM,GO,48 \pm 3,0.24 \pm 0.38
+Ortiz-Young et al. 2013,AFM,DLC,66 \pm 6,0.55 \pm 1.37
+Ortiz-Young et al. 2013,AFM,Si,76 \pm 4,1 \pm 1.7
+Ortiz-Young et al. 2013,AFM,HOPG,85 \pm 4,12 \pm 3.3
+Xue et al. 2015,QCM,DLC,75 - 100,2.4
+Xue et al. 2015,QCM,MUOH,40 - 80,1.9
+Xue et al. 2015,QCM,MUOH,0 - 60,1.2
+Xue et al. 2015,QCM,MUOH,0 - 50,0.7
+Ahmad et al. 2015,AFM,Si,0,0
+Ahmad et al. 2015,AFM,OTS,108 \pm 3,0
 Radha et al. 2016,channel,graphene,55 - 85,60
+Zhang et al. 2021,AFM,Mica,10,0
+Zhang et al. 2021,AFM,Talc,75,95
+Keerthi et al. 2021,Channel,graphene,62,60
+Keerthi et al. 2021,Channel,hBN,62,1
+Li et al. 2022,AFM,OTS,100,13.4 \pm 3
+Li et al. 2022,AFM,SiO2,24.9,0.9 \pm 1.2
+Li et al. 2022,AFM,HOPG,75 \pm 5,4.3 \pm 3.5
+Chen et al. 2022,Channel,graphene,83.7,40 \pm 4
+Chen et al. 2022,Channel,,83.7,33 \pm 3
+Han et al. 2025,AFM,SiO2,41.2 \pm 0.7,4.3
+Han et al. 2025,AFM,APTES,68.2 \pm 1.9,9.4
+Han et al. 2025,AFM,OTS,108.5 \pm 0.1,29.1
+Han et al. 2025,AFM,FDTES,125.7 \pm 1.8,65.3

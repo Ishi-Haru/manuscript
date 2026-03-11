@@ -39,7 +39,7 @@ for file_name in npy_files:
     # プロットして保存（ラベル・タイトル非表示）
     plt.figure(figsize=(6, 5))
     
-    c_map = "magma"  # デフォルトのカラーマップ
+    c_map = "gist_earth"  # デフォルトのカラーマップ magma
 
     if colorbar_range:
         vmin, vmax = colorbar_range

@@ -71,12 +71,6 @@
 \author{Haruya Ishida}
 \affiliation[Kyushu University]
 {Department of Aeronautics and Astronautics, Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
-\author{Hideaki Teshima}
-\affiliation[Kyushu University]
-{Department of Aeronautics and Astronautics, Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
-\email{hteshima05@aero.kyushu-u.ac.jp}
-\alsoaffiliation[I2CNER]
-{International Institute for Carbon-Neutral Energy Research (WPI-I2CNER), Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
 \author{Koji Takahashi}
 \affiliation[Kyushu University]
 {Department of Aeronautics and Astronautics, Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
@@ -98,6 +92,12 @@
 {Institute for Sustainability, Energy and Environment (iSEE), University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 \alsoaffiliation[ARC]
 {Air Conditioning and Refrigeration Center, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+\author{Hideaki Teshima}
+\affiliation[Kyushu University]
+{Department of Aeronautics and Astronautics, Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
+\email{hteshima05@aero.kyushu-u.ac.jp}
+\alsoaffiliation[I2CNER]
+{International Institute for Carbon-Neutral Energy Research (WPI-I2CNER), Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The document title should be given as usual. Some journals require
@@ -157,7 +157,7 @@ In normal FM-AFM, the oscillation amplitude is stabilized by automatic gain cont
   \tag{S5}
   \label{eqn:s5}
 \end{equation}
-Therefore, from Eqs.~\ref{eqn:s4} and \ref{eqn:s5}, Thus, the damping coefficient is related to the amplitude attenuation ratio as follows:
+Therefore, from Eqs.~\ref{eqn:s4} and \ref{eqn:s5}, the damping coefficient is related to the amplitude attenuation ratio as follows:
 \begin{equation}
   \gamma_{\text{tip}}(h, b_t, b_s) = \gamma_{\text{bulk}}\left(\frac{A_{\text{bulk}}}{A(h)} - 1\right).
   \tag{S6}
@@ -177,7 +177,7 @@ In contrast, in the FM-AFM method, the oscillation amplitude \(A\) is recorded a
   \tag{S8}
   \label{eqn:s8}
 \end{equation}
-Here, the measurement sensitivity is defined as the change in signal voltage with respect to thesubstrate slip length, \(\partial V/\partial b_s\). Differentiating Eqs.~\ref{eqn:s7} and \ref{eqn:s8} yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
+Here, the measurement sensitivity is defined as the change in signal voltage with respect to the substrate slip length, \(\partial V/\partial b_s\). Differentiating Eqs.~\ref{eqn:s7} and \ref{eqn:s8} yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
 \begin{equation}
   S_{\text{contact}} = \frac{\partial V_x}{\partial b_s} = -\frac{6\pi\eta R^2 \dot{h}}{k s h}\frac{\partial f^{*}}{\partial b_s}.
   \tag{S9}
@@ -206,7 +206,7 @@ A thermally grown silica surface on a Si wafer was spin-coated with an electron-
 
 Silica substrates cut into \SI{1}{\centi\metre}\(\times\)\SI{1}{\centi\metre} were ultrasonically cleaned in acetone (US-1KS, SND Co., Ltd., Japan) and treated with \(\mathrm{O}_2\) plasma. After baking at \SI{120}{\degreeCelsius} for \SI{5}{\minute} to remove surface moisture, the substrates were immersed for \SI{1}{\hour} in a \SI{0.05}{\percent} (w/w) toluene solution of FDTS to form an FDTS monolayer. On top of the FDTS-treated substrate, a \SI{0.6}{\percent} (w/w) solution of Teflon AF1600X (DuPont Inc., Wilmington, DE, USA) in FC-770 (3M, St. Paul, MN, USA) was dropped, spin-coated at \SI{4000}{\per\minute} for \SI{1}{\minute}, and baked at \SI{175}{\degreeCelsius} for \SI{10}{\minute}. The FDTS underlayer was used to improve the adhesion of the Teflon coating \cite{Makohliso1998-av}.
 
-\begin{table}
+\begin{table}[p]
 \caption{Literature values of contact angle and slip length for various solid-liquid interfaces}
 \label{tbl:Previous_contact_angle_slip}
 \hspace*{-3cm}
@@ -311,8 +311,17 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
 
 \begin{figure}[p]
   \centering
+  \includegraphics[width=0.6\linewidth]{figs/HOPG_strong_force.png}
+  \caption{
+    Height image acquired while the tip was strongly pressed against the surface, showing disappearance of the bubble-like feature and exposure of the underlying HOPG substrate.
+  }
+  \label{figS:HOPG_strong_force}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
   \includegraphics[width=1.0\linewidth]{figs/mapping_colormaps.png}
-  \caption{ (a-e) Topography and (f-i) corresponding slip-length maps of (a)HOPG, (b, f) mica, (c, g) FDTS, (d, h) Teflon, and (e, i) HOPG. The \(R_a\) values were \SI{0.27}{\nano\metre}, \SI{0.29}{\nano\metre}, \SI{0.64}{\nano\metre}, and \SI{0.35}{\nano\metre} for each surface, respectively. (a) shows a height image reconstructed from the same dataset as Fig.~\ref{fgr:mapping_results} (a, b). In this case, the surface profile was reconstructed using the data obtained when the tip was pushed until the cantilever deflection corresponded to a force of approximately 100 nN, where the tip is in firm contact with the substrate. Only the result for HOPG (e, i) was obtained in a \SI{10}{\milli\mole\per\litre} KCl solution and the others were in DI water.}
+  \caption{ (a-d) Topography and (e-h) corresponding slip-length maps of (a) mica, (b, e) FDTS, (c, f) Teflon, and (d, h) HOPG. The \(R_a\) values were \SI{0.27}{\nano\metre}, \SI{0.29}{\nano\metre}, \SI{0.64}{\nano\metre}, and \SI{0.35}{\nano\metre} for each surface, respectively. Only the result for HOPG (d, h) was obtained in a \SI{10}{\milli\mole\per\litre} KCl solution and the others were in DI water.}
   \label{figS:mapping_colormaps}
 \end{figure}
 

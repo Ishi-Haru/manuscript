@@ -1,7 +1,7 @@
 ﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL supporting_old_temp.tex   Fri Mar  6 18:18:37 2026
-%DIF ADD supporting_new_temp.tex   Fri Mar  6 18:18:44 2026
+%DIF DEL tex_diff_tmp\supporting_old_temp.tex   Tue Mar 17 13:38:09 2026
+%DIF ADD tex_diff_tmp\supporting_new_temp.tex   Tue Mar 17 13:38:09 2026
 %% This is a (brief) model paper using the achemso class
 %% The document class accepts keyval options, which should include
 %% the target journal and optionally the manuscript type. 
@@ -200,7 +200,7 @@
 } %DIF PREAMBLE
 \lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
 \lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
-\lstset{extendedchars=\true,inputencoding=utf8}
+\lstset{extendedchars=\true,inputencoding=utf-8}
 
 %DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
@@ -235,13 +235,13 @@ Combining Eqs.~\ref{eqn:s2} and \ref{eqn:s3} yields:
   \tag{S4}
   \label{eqn:s4}
 \end{equation}
-In normal FM-AFM, the oscillation amplitude is stabilized by automatic gain control (AGC). In \DIFdelbegin \DIFdel{contrast, in this }\DIFdelend \DIFaddbegin \DIFadd{the present }\DIFaddend method, AGC was disabled and the cantilever was driven at a constant power. As a result, the amplitude decay directly reflects the damping, and the following relation between the quality factor and the amplitude holds:
+In normal FM-AFM, the oscillation amplitude is stabilized by automatic gain control (AGC). In the present method, AGC was disabled and the cantilever was driven at a constant power. As a result, the amplitude decay directly reflects the damping, and the following relation between the quality factor and the amplitude holds:
 \begin{equation}
   \frac{Q_{\text{bulk}}}{Q(h)} = \frac{A_{\text{bulk}}}{A(h)}.
   \tag{S5}
   \label{eqn:s5}
 \end{equation}
-Therefore, from Eqs.~\ref{eqn:s4} and \ref{eqn:s5}, \DIFdelbegin \DIFdel{the following relation connecting the ratio of amplitude attenuation to the }\DIFdelend \DIFaddbegin \DIFadd{Thus, the }\DIFaddend damping coefficient is \DIFdelbegin \DIFdel{obtained}\DIFdelend \DIFaddbegin \DIFadd{related to the amplitude attenuation ratio as follows}\DIFaddend :
+Therefore, from Eqs.~\ref{eqn:s4} and \ref{eqn:s5}, \DIFdelbegin \DIFdel{Thus, }\DIFdelend the damping coefficient is related to the amplitude attenuation ratio as follows:
 \begin{equation}
   \gamma_{\text{tip}}(h, b_t, b_s) = \gamma_{\text{bulk}}\left(\frac{A_{\text{bulk}}}{A(h)} - 1\right).
   \tag{S6}
@@ -249,7 +249,7 @@ Therefore, from Eqs.~\ref{eqn:s4} and \ref{eqn:s5}, \DIFdelbegin \DIFdel{the fol
 \end{equation}
 \subsectionpart{sensitivity-comparison}{Comparison of Sensitivity between Conventional and Proposed Methods}
 
-We compared the sensitivity of slip length measurements between conventional contact-mode AFM and \DIFdelbegin \DIFdel{our newly }\DIFdelend \DIFaddbegin \DIFadd{the }\DIFaddend proposed FM-AFM \DIFdelbegin \DIFdel{. With }\DIFdelend \DIFaddbegin \DIFadd{method. In }\DIFaddend contact-mode AFM, the cantilever deflection \(x\) is measured as a sensor voltage, and the relationship between the deflection sensor voltage \(V_x\) and \(x\) is expressed using the sensitivity \(s\) as \(x = sV_x\). Furthermore, to determine the viscous drag in Eq.~\ref{eqn:hydrodynamic force} from the restoring force of the cantilever, \(kx\) (\(k\) is the spring constant), the following relation holds:
+We compared the sensitivity of slip length measurements between conventional contact-mode AFM and the proposed FM-AFM method. In contact-mode AFM, the cantilever deflection \(x\) is measured as a sensor voltage, and the relationship between the deflection sensor voltage \(V_x\) and \(x\) is expressed using the sensitivity \(s\) as \(x = sV_x\). Furthermore, to determine the viscous drag in Eq.~\ref{eqn:hydrodynamic force} from the restoring force of the cantilever, \(kx\) (\(k\) is the spring constant), the following relation holds:
 \begin{equation}
   F = -ksV_x = -\frac{6\pi\eta R^2 \dot{h}}{h} f^{*}(b_t, b_s).
   \tag{S7}
@@ -261,7 +261,7 @@ In contrast, in the FM-AFM method, the oscillation amplitude \(A\) is recorded a
   \tag{S8}
   \label{eqn:s8}
 \end{equation}
-Here, the measurement sensitivity is defined as the change in signal voltage with respect to \DIFdelbegin \DIFdel{the }\DIFdelend \DIFaddbegin \DIFadd{thesubstrate }\DIFaddend slip length, \(\partial V/\partial b_s\). Differentiating Eqs.~\ref{eqn:s7} and \ref{eqn:s8} yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
+Here, the measurement sensitivity is defined as the change in signal voltage with respect to \DIFdelbegin \DIFdel{thesubstrate }\DIFdelend \DIFaddbegin \DIFadd{the substrate }\DIFaddend slip length, \(\partial V/\partial b_s\). Differentiating Eqs.~\ref{eqn:s7} and \ref{eqn:s8} yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
 \begin{equation}
   S_{\text{contact}} = \frac{\partial V_x}{\partial b_s} = -\frac{6\pi\eta R^2 \dot{h}}{k s h}\frac{\partial f^{*}}{\partial b_s}.
   \tag{S9}
@@ -282,224 +282,21 @@ The sensitivity ratio was calculated to be \(S_{\text{FM}}/S_{\text{contact}} = 
 
 \subsectionpart{materials}{Materials}
 
-\subsubsection{\DIFdelbegin \DIFdel{I}\DIFdelend \DIFaddbegin \DIFadd{A}\DIFaddend . Fabrication of \DIFdelbegin \DIFdel{Hydrophilic-Hydrophobic }\DIFdelend \DIFaddbegin \DIFadd{Hydrophilic/Hydrophobic }\DIFaddend Composite Substrates}
+\subsubsection{A. Fabrication of Hydrophilic/Hydrophobic Composite Substrates}
 
-A thermally grown silica surface on a Si wafer was spin-coated with an electron-beam resist (ZEP520A, ZEON Corporation, Japan) at \SI{5000}{\per\minute} to form a \SI{300}{\nano\metre}-thick film. Using an electron-beam lithography system (JSM-6360, JEOL Ltd., Japan / BEAM DRAW, Tokyo Technology Inc., Japan), square patterns of \SI{1}{\micro\metre}\(\times\)\SI{1}{\micro\metre} were \DIFdelbegin \DIFdel{drawn at a \mbox{%DIFAUXCMD
-\SI{2}{\micro\metre} }\hskip0pt%DIFAUXCMD
-pitch }\DIFdelend \DIFaddbegin \DIFadd{patterned with a pitch of \mbox{%DIFAUXCMD
-\SI{2}{\micro\metre}}\hskip0pt%DIFAUXCMD
-}\DIFaddend , and the resist in the exposed areas was removed \DIFdelbegin \DIFdel{by }\DIFdelend \DIFaddbegin \DIFadd{during }\DIFaddend development. Subsequently, a \SI{5}{\nano\metre}-thick indium tin oxide (ITO) film was deposited by magnetron sputtering (MS-4B-3T, Cosmo System Co., Ltd., Japan). The electron-beam resist was then lifted off by rinsing in dimethylacetamide for \SI{5}{\minute}, leaving ITO patches on the silica substrate. The patterned ITO substrate was treated with \(\mathrm{O}_2\) plasma (PR500, Yamato Scientific Co., Japan) and then immersed in a \SI{1}{\milli\mole\per\litre} ethanol solution of 1H,1H,2H,2H-perfluorooctanephosphonic acid (FOPA) for \SI{1}{\hour} to form a self-assembled monolayer (SAM). Since FOPA SAMs are easily hydrolyzed on silica but remain stable on ITO surfaces \DIFdelbegin \DIFdel{, maintaining hydrophobicity for hours in water }\DIFdelend \DIFaddbegin \DIFadd{and maintain hydrophobicity in water for several hours }\DIFaddend \cite{Thissen2012-xt, Jo2011-nw}, the fabricated composite substrate was immersed in water for \SI{3}{\hour} to selectively remove FOPA from the silica surface.
+A thermally grown silica surface on a Si wafer was spin-coated with an electron-beam resist (ZEP520A, ZEON Corporation, Japan) at \SI{5000}{\per\minute} to form a \SI{300}{\nano\metre}-thick film. Using an electron-beam lithography system (JSM-6360, JEOL Ltd., Japan / BEAM DRAW, Tokyo Technology Inc., Japan), square patterns of \SI{1}{\micro\metre}\(\times\)\SI{1}{\micro\metre} were patterned with a pitch of \SI{2}{\micro\metre}, and the resist in the exposed areas was removed during development. Subsequently, a \SI{5}{\nano\metre}-thick indium tin oxide (ITO) film was deposited by magnetron sputtering (MS-4B-3T, Cosmo System Co., Ltd., Japan). The electron-beam resist was then lifted off by rinsing in dimethylacetamide for \SI{5}{\minute}, leaving ITO patches on the silica substrate. The patterned ITO substrate was treated with \(\mathrm{O}_2\) plasma (PR500, Yamato Scientific Co., Japan) and then immersed in a \SI{1}{\milli\mole\per\litre} ethanol solution of 1H,1H,2H,2H-perfluorooctanephosphonic acid (FOPA) for \SI{1}{\hour} to form a self-assembled monolayer (SAM). Since FOPA SAMs are easily hydrolyzed on silica but remain stable on ITO surfaces and maintain hydrophobicity in water for several hours \cite{Thissen2012-xt, Jo2011-nw}, the fabricated composite substrate was immersed in water for \SI{3}{\hour} to selectively remove FOPA from the silica surface.
 
-\subsubsection{\DIFdelbegin \DIFdel{II}\DIFdelend \DIFaddbegin \DIFadd{B}\DIFaddend . Fabrication of Teflon Substrates}
+\subsubsection{B. Fabrication of Teflon Substrates}
 
-Silica substrates cut \DIFdelbegin \DIFdel{to }\DIFdelend \DIFaddbegin \DIFadd{into }\DIFaddend \SI{1}{\centi\metre}\(\times\)\SI{1}{\centi\metre} were ultrasonically cleaned in acetone (US-1KS, SND Co., Ltd., Japan) and treated with \(\mathrm{O}_2\) plasma. After baking at \SI{120}{\degreeCelsius} for \SI{5}{\minute} to remove surface moisture, the substrates were immersed for \SI{1}{\hour} in a \SI{0.05}{\percent} (w/w) toluene solution of FDTS to form an FDTS monolayer. On top of the FDTS-treated substrate, a \SI{0.6}{\percent} (w/w) solution of Teflon AF1600X (DuPont Inc., Wilmington, DE, USA) in FC-770 (3M, St. Paul, MN, USA) was dropped, spin-coated at \SI{4000}{\per\minute} for \SI{1}{\minute}, and baked at \SI{175}{\degreeCelsius} for \SI{10}{\minute}. The FDTS underlayer was used to improve the adhesion of the Teflon coating \cite{Makohliso1998-av}.
+Silica substrates cut into \SI{1}{\centi\metre}\(\times\)\SI{1}{\centi\metre} were ultrasonically cleaned in acetone (US-1KS, SND Co., Ltd., Japan) and treated with \(\mathrm{O}_2\) plasma. After baking at \SI{120}{\degreeCelsius} for \SI{5}{\minute} to remove surface moisture, the substrates were immersed for \SI{1}{\hour} in a \SI{0.05}{\percent} (w/w) toluene solution of FDTS to form an FDTS monolayer. On top of the FDTS-treated substrate, a \SI{0.6}{\percent} (w/w) solution of Teflon AF1600X (DuPont Inc., Wilmington, DE, USA) in FC-770 (3M, St. Paul, MN, USA) was dropped, spin-coated at \SI{4000}{\per\minute} for \SI{1}{\minute}, and baked at \SI{175}{\degreeCelsius} for \SI{10}{\minute}. The FDTS underlayer was used to improve the adhesion of the Teflon coating \cite{Makohliso1998-av}.
 
-\begin{table}
-\caption{\DIFdelbeginFL \DIFdelFL{Contact }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Literature values of contact }\DIFaddendFL angle and slip length for various \DIFdelbeginFL \DIFdelFL{substrates from previous studies.}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{solid-liquid interfaces}\DIFaddendFL }
-\label{tbl:Previous_contact_angle_slip}
-\DIFdelbeginFL %DIFDELCMD < \begin{tabular}{llccc}
-%DIFDELCMD <         \hline
-%DIFDELCMD <         %%%
-\DIFdelFL{Author }%DIFDELCMD < & %%%
-\DIFdelFL{Method }%DIFDELCMD < & %%%
-\DIFdelFL{Substrate }%DIFDELCMD < & %%%
-\DIFdelFL{Contact Angle $\theta$ (\si{\degree}) }%DIFDELCMD < & %%%
-\DIFdelFL{Slip length (\si{\nano\metre}) }%DIFDELCMD < \\
-%DIFDELCMD <         \hline
-%DIFDELCMD <     \multirow{2}{*}{Zhang et al. 2021\cite{Zhang2021-tn}} & \multirow{2}{*}{AFM} & %%%
-\DIFdelFL{Mica }%DIFDELCMD < & %%%
-\DIFdelFL{$10$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{Talc }%DIFDELCMD < & %%%
-\DIFdelFL{$75$ }%DIFDELCMD < & %%%
-\DIFdelFL{$95$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{3}{*}{Bhushan et al. 2009\cite{Bhushan2009-yz}} & \multirow{3}{*}{AFM} & %%%
-\DIFdelFL{mica }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{n-hexatriacontane }%DIFDELCMD < & %%%
-\DIFdelFL{$91 \pm 2$ }%DIFDELCMD < & %%%
-\DIFdelFL{$43 \pm 10$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{Lotus wax }%DIFDELCMD < & %%%
-\DIFdelFL{$167 \pm 0.7$ }%DIFDELCMD < & %%%
-\DIFdelFL{$236 \pm 18$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{2}{*}{Vinogradova \& Yakubov 2003\cite{Vinogradova2003-gh}} & \multirow{2}{*}{AFM} & %%%
-\DIFdelFL{Silica }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0 \pm 1$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{Polystyrene }%DIFDELCMD < & %%%
-\DIFdelFL{$86$--$92$ }%DIFDELCMD < & %%%
-\DIFdelFL{$4 \pm 1$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{1}{*}{Bonaccurso et al. 2002\cite{Bonaccurso2002-nf}} & \multirow{1}{*}{AFM} & %%%
-\DIFdelFL{Mica }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < & %%%
-\DIFdelFL{$8.5 \pm 0.5$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{1}{*}{Cottin-Bizonne et al. 2005\cite{Cottin-Bizonne2005-kj}} & \multirow{1}{*}{AFM} & %%%
-\DIFdelFL{OTS-Pyrex }%DIFDELCMD < & %%%
-\DIFdelFL{$105$ }%DIFDELCMD < & %%%
-\DIFdelFL{$19 \pm 2$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{1}{*}{Jing \& Bhushan 2013\cite{Jing2013-kn}} & \multirow{1}{*}{AFM} & %%%
-\DIFdelFL{OTS }%DIFDELCMD < & %%%
-\DIFdelFL{$106 \pm 2$ }%DIFDELCMD < & %%%
-\DIFdelFL{$28 \pm 5$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{3}{*}{Li et al. 2022\cite{Li2022-qs}} & \multirow{3}{*}{AFM} & %%%
-\DIFdelFL{OTS }%DIFDELCMD < & %%%
-\DIFdelFL{$100$ }%DIFDELCMD < & %%%
-\DIFdelFL{$13.4 \pm 3$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{SiO2 }%DIFDELCMD < & %%%
-\DIFdelFL{$24.9$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0.9 \pm 1.2$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{HOPG }%DIFDELCMD < & %%%
-\DIFdelFL{$75 \pm 5$ }%DIFDELCMD < & %%%
-\DIFdelFL{$4.3 \pm 3.5$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{5}{*}{Ortiz-Young et al. 2013\cite{Ortiz-Young2013-wc}} & \multirow{5}{*}{AFM} & %%%
-\DIFdelFL{mica }%DIFDELCMD < & %%%
-\DIFdelFL{$4 \pm 3$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{GO }%DIFDELCMD < & %%%
-\DIFdelFL{$48 \pm 3$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0.24 \pm 0.38$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{DLC }%DIFDELCMD < & %%%
-\DIFdelFL{$66 \pm 6$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0.55 \pm 1.37$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{Si }%DIFDELCMD < & %%%
-\DIFdelFL{$76 \pm 4$ }%DIFDELCMD < & %%%
-\DIFdelFL{$1 \pm 1.7$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{HOPG }%DIFDELCMD < & %%%
-\DIFdelFL{$85 \pm 4$ }%DIFDELCMD < & %%%
-\DIFdelFL{$12 \pm 3.3$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{2}{*}{Maali et al. 2008\cite{Maali2008-rd}} & \multirow{2}{*}{AFM} & %%%
-\DIFdelFL{HOPG }%DIFDELCMD < & %%%
-\DIFdelFL{$74$ }%DIFDELCMD < & %%%
-\DIFdelFL{$8 \pm 2$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{mica }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < & %%%
-\DIFdelFL{$2$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{4}{*}{Han et al. 2025\cite{Han2025-qq}} & \multirow{4}{*}{AFM} & %%%
-\DIFdelFL{SiO2 }%DIFDELCMD < & %%%
-\DIFdelFL{$41.2 \pm 0.7$ }%DIFDELCMD < & %%%
-\DIFdelFL{$4.3$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{APTES }%DIFDELCMD < & %%%
-\DIFdelFL{$68.2 \pm 1.9$ }%DIFDELCMD < & %%%
-\DIFdelFL{$9.4$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{OTS }%DIFDELCMD < & %%%
-\DIFdelFL{$108.5 \pm 0.1$ }%DIFDELCMD < & %%%
-\DIFdelFL{$29.1$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{FDTES }%DIFDELCMD < & %%%
-\DIFdelFL{$125.7 \pm 1.8$ }%DIFDELCMD < & %%%
-\DIFdelFL{$65.3$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{1}{*}{Zhu et al. 2011\cite{Zhu2011-je}} & \multirow{1}{*}{AFM} & %%%
-\DIFdelFL{OTS }%DIFDELCMD < & %%%
-\DIFdelFL{$112$ }%DIFDELCMD < & %%%
-\DIFdelFL{$26 \pm 3$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{2}{*}{Ahmad et al. 2015\cite{Ahmad2015-eb}} & \multirow{2}{*}{AFM} & %%%
-\DIFdelFL{Si }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{OTS }%DIFDELCMD < & %%%
-\DIFdelFL{$108 \pm 3$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{2}{*}{Keerthi et al. 2021\cite{Keerthi2021-mz}} & \multirow{2}{*}{Channel} & %%%
-\DIFdelFL{graphene }%DIFDELCMD < & %%%
-\DIFdelFL{$62$ }%DIFDELCMD < & %%%
-\DIFdelFL{$60$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{hBN }%DIFDELCMD < & %%%
-\DIFdelFL{$62$ }%DIFDELCMD < & %%%
-\DIFdelFL{$1$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{2}{*}{Chen et al. 2022\cite{Chen2022-hs}} & \multirow{2}{*}{Channel} & %%%
-\DIFdelFL{graphene }%DIFDELCMD < & %%%
-\DIFdelFL{$83.7$ }%DIFDELCMD < & %%%
-\DIFdelFL{$40 \pm 4$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{graphene }%DIFDELCMD < & %%%
-\DIFdelFL{$83.7$ }%DIFDELCMD < & %%%
-\DIFdelFL{$33 \pm 3$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{2}{*}{Bouzigues et al. 2008\cite{Bouzigues2008-xn}} & \multirow{2}{*}{TIRF-PIV} & %%%
-\DIFdelFL{silica }%DIFDELCMD < & %%%
-\DIFdelFL{$20$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0 \pm 10$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{OTS }%DIFDELCMD < & %%%
-\DIFdelFL{$95$ }%DIFDELCMD < & %%%
-\DIFdelFL{$38 \pm 6$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{3}{*}{Cottin-Bizonne et al. 2008\cite{Cottin-Bizonne2008-nc}} & \multirow{3}{*}{SFA} & %%%
-\DIFdelFL{OTS-Pyrex }%DIFDELCMD < & %%%
-\DIFdelFL{$105$ }%DIFDELCMD < & %%%
-\DIFdelFL{$17 \pm 2$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{Pyrex }%DIFDELCMD < & %%%
-\DIFdelFL{$3$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{DPPC monolayer }%DIFDELCMD < & %%%
-\DIFdelFL{$95$ }%DIFDELCMD < & %%%
-\DIFdelFL{$10 \pm 2$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{2}{*}{Lasne et al. 2008\cite{Lasne2008-qt}} & \multirow{2}{*}{TIRF-PIV} & %%%
-\DIFdelFL{OTS }%DIFDELCMD < & %%%
-\DIFdelFL{$90$ }%DIFDELCMD < & %%%
-\DIFdelFL{$45 \pm 15$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{silica }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{3}{*}{Joseph et al. 2005\cite{Joseph2005-qe}} & \multirow{3}{*}{micro-PIV} & %%%
-\DIFdelFL{silica }%DIFDELCMD < & %%%
-\DIFdelFL{$0$ }%DIFDELCMD < & %%%
-\DIFdelFL{$50 \pm 50$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{OTS }%DIFDELCMD < & %%%
-\DIFdelFL{$95$ }%DIFDELCMD < & %%%
-\DIFdelFL{$-35 \pm 100$ }%DIFDELCMD < \\
-%DIFDELCMD <      &  & %%%
-\DIFdelFL{CDOS }%DIFDELCMD < & %%%
-\DIFdelFL{$95$ }%DIFDELCMD < & %%%
-\DIFdelFL{$57 \pm 100$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <     \multirow{1}{*}{Radha et al. 2016\cite{Radha2016-bk}} & \multirow{1}{*}{channel} & %%%
-\DIFdelFL{graphene }%DIFDELCMD < & %%%
-\DIFdelFL{$55$--$85$ }%DIFDELCMD < & %%%
-\DIFdelFL{$60$ }%DIFDELCMD < \\
-%DIFDELCMD <     \cline{1-5}
-%DIFDELCMD <         \hline
-%DIFDELCMD <     \end{tabular}
-%DIFDELCMD < 
-
+\DIFdelbegin %DIFDELCMD < \begin{table}
 %DIFDELCMD < %%%
-\DIFdelendFL \DIFaddbeginFL \DIFaddFL{\hspace*{-3cm}
-}\scalebox{0.9}{%}
+\DIFdelendFL \DIFaddbeginFL \begin{table}[p]
+\DIFaddendFL \caption{Literature values of contact angle and slip length for various solid-liquid interfaces}
+\label{tbl:Previous_contact_angle_slip}
+\hspace*{-3cm}
+\scalebox{0.9}{%}
 \makebox[\textwidth][l]{%
 \begin{tabular}{llccc}
 \hline
@@ -595,18 +392,27 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
 \hline
 \end{tabular}
 }%
-}%DIF > 
-\DIFaddendFL \end{table}
+}%
+\end{table}
 
 \begin{figure}[p]
   \centering
-  \includegraphics[width=1.0\linewidth]{figs/mapping_colormaps.png}
-  \caption{ (\DIFdelbeginFL \DIFdelFL{a-d}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{a-e}\DIFaddendFL ) Topography and (\DIFdelbeginFL \DIFdelFL{e-h}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{f-i}\DIFaddendFL ) corresponding slip-length maps of (a\DIFdelbeginFL \DIFdelFL{, e}\DIFdelendFL )\DIFdelbeginFL \DIFdelFL{mica}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{HOPG}\DIFaddendFL , (b, f) \DIFdelbeginFL \DIFdelFL{FDTS}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{mica}\DIFaddendFL , (c, g) \DIFdelbeginFL \DIFdelFL{Teflon}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{FDTS}\DIFaddendFL , \DIFdelbeginFL \DIFdelFL{and }\DIFdelendFL (d, h) \DIFaddbeginFL \DIFaddFL{Teflon, and (e, i) }\DIFaddendFL HOPG. The \(R_a\) values were \SI{0.27}{\nano\metre}, \SI{0.29}{\nano\metre}, \SI{0.64}{\nano\metre}, and \SI{0.35}{\nano\metre} for each surface, respectively. \DIFaddbeginFL \DIFaddFL{(a) shows a height image reconstructed from the same dataset as Fig.~\ref{fgr:mapping_results} (a, b). In this case, the surface profile was reconstructed using the data obtained when the tip was pushed until the cantilever deflection corresponded to a force of approximately 100 nN, where the tip is in firm contact with the substrate. }\DIFaddendFL Only the result for HOPG (\DIFdelbeginFL \DIFdelFL{d}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{e}\DIFaddendFL , \DIFdelbeginFL \DIFdelFL{h}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{i}\DIFaddendFL ) was obtained in a \SI{10}{\milli\mole\per\litre} KCl solution and the others were in DI water.}
+  \DIFaddbeginFL \includegraphics[width=0.6\linewidth]{figs/HOPG_strong_force.png}
+  \caption{
+    \DIFaddFL{Height image acquired while the tip was strongly pressed against the surface, showing disappearance of the bubble-like feature and exposure of the underlying HOPG substrate.
+  }}
+  \label{figS:HOPG_strong_force}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \DIFaddendFL \includegraphics[width=1.0\linewidth]{figs/mapping_colormaps.png}
+  \caption{ (\DIFdelbeginFL \DIFdelFL{a-e}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{a-d}\DIFaddendFL ) Topography and (\DIFdelbeginFL \DIFdelFL{f-i}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{e-h}\DIFaddendFL ) corresponding slip-length maps of (a) \DIFdelbeginFL \DIFdelFL{HOPG}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{mica}\DIFaddendFL , (b, \DIFdelbeginFL \DIFdelFL{f}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{e}\DIFaddendFL ) \DIFdelbeginFL \DIFdelFL{mica}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{FDTS}\DIFaddendFL , (c, \DIFdelbeginFL \DIFdelFL{g}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{f}\DIFaddendFL ) \DIFdelbeginFL \DIFdelFL{FDTS}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Teflon}\DIFaddendFL , \DIFaddbeginFL \DIFaddFL{and }\DIFaddendFL (d, h) \DIFdelbeginFL \DIFdelFL{Teflon, and (e, i) }\DIFdelendFL HOPG. The \(R_a\) values were \SI{0.27}{\nano\metre}, \SI{0.29}{\nano\metre}, \SI{0.64}{\nano\metre}, and \SI{0.35}{\nano\metre} for each surface, respectively. \DIFdelbeginFL \DIFdelFL{(a) shows a height image reconstructed from the same dataset as Fig.~\ref{fgr:mapping_results} (a, b). In this case, the surface profile was reconstructed using the data obtained when the tip was pushed until the cantilever deflection corresponded to a force of approximately 100 nN, where the tip is in firm contact with the substrate. }\DIFdelendFL Only the result for HOPG (\DIFdelbeginFL \DIFdelFL{e}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{d}\DIFaddendFL , \DIFdelbeginFL \DIFdelFL{i}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{h}\DIFaddendFL ) was obtained in a \SI{10}{\milli\mole\per\litre} KCl solution and the others were in DI water.}
   \label{figS:mapping_colormaps}
 \end{figure}
 
 \begin{table}[p]
-  \caption{Measured contact \DIFdelbeginFL \DIFdelFL{angle }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{angles }\DIFaddendFL and slip \DIFdelbeginFL \DIFdelFL{length for various }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{lengths of the }\DIFaddendFL substrates \DIFaddbeginFL \DIFaddFL{investigated in this study}\DIFaddendFL }
+  \caption{Measured contact angles and slip lengths of the substrates investigated in this study}
   \label{tbl:contact_angle_slip}
   \begin{tabular}{lcc}
     \hline

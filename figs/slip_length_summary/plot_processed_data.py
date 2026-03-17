@@ -55,10 +55,10 @@ Y_MAX = 105
 
 
 # マーカー・色リスト（十分な数を用意、必要に応じて追加）
-MARKERS = ['o', 's', '^', 'D', 'v', 'p', '*', 'h', 'X', 'P', '<', '>', 'd', '+', 'x', 'H', '|', '8', '1', '2', '3', '4', '.', ',', 'H', 'v', '^', '<', '>', '1', '2', '3', '4']
+MARKERS = ['o', 's', '^', 'D', 'v', 'p', '*', 'h', 'X', 'P', '<', '>', 'd', 'H', '8', '+', 'x', '|', '1', '2', '3', '4', '.', ',', 'H', 'v', '^', '<', '>', '1', '2', '3', '4']
 COLORS = [
     '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#bcbd22', '#17becf', '#e7298a',
-    '#7f7f7f', '#c7519c', '#ba43b4', '#f07cab', '#00b5d8', '#bc5090', '#ffa600', '#003f5c', '#58508d', '#ff6361',
+    '#7f7f7f', '#c7519c', '#00b5d8', '#bc5090', '#ffa600', '#003f5c', '#58508d', '#ff6361',
     '#a05195', '#665191', '#2f4b7c', '#f95d6a', '#ff7c43', '#ffa600', '#b56576', '#6d597a', '#355070', '#eaac8b', '#b56576', '#6d597a', '#355070', '#eaac8b'
 ]
 
@@ -186,7 +186,7 @@ os.makedirs(output_dir, exist_ok=True)
 # === プロット本体（凡例なし） ===
 fig, ax = plt.subplots()
 plot_data_points(ax, df_plot_visible, author_order_visible)
-ax.plot(theta_theory, slip_theory_md, '--', linewidth=DASHED_LINEWIDTH, color=THEORY_COLOR_MD, zorder=1, label='C=0.41')
+ax.plot(theta_theory, slip_theory_md, '-', linewidth=DASHED_LINEWIDTH, color=THEORY_COLOR_MD, zorder=1, label='C=0.41')
 ax.plot(theta_theory, slip_theory_experiment, '--', linewidth=DASHED_LINEWIDTH, color=THEORY_COLOR_EXPERIMENT, zorder=1, label='C=6.0')
 ax.set_xlim(X_MIN, X_MAX)
 ax.set_ylim(Y_MIN, Y_MAX)
@@ -218,9 +218,9 @@ for author in author_order_visible:
 
 # 理論曲線の凡例ラベル（最後に追加）
 handles.append(Line2D([0], [0], linestyle='--', color=THEORY_COLOR_EXPERIMENT, linewidth=DASHED_LINEWIDTH))
-labels.append('Eq.2 with C=6.0')
-handles.append(Line2D([0], [0], linestyle='--', color=THEORY_COLOR_MD, linewidth=DASHED_LINEWIDTH))
-labels.append('Eq.2 with C=0.41')
+labels.append('Eq. 2 with $C=6.0$ (Exp.)')
+handles.append(Line2D([0], [0], linestyle='-', color=THEORY_COLOR_MD, linewidth=DASHED_LINEWIDTH))
+labels.append('Eq. 2 with $C=0.41$ (MD)')
 
 
 # 1列で凡例を出力し、枠線を黒にする

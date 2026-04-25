@@ -1,0 +1,136 @@
+To improve and transform your experience of publishing with ACS journals, we are currently developing the ACS Publishing Center. As a result, you may experience interactions and communications from different systems for some elements of the process during this transition. We aim to continue providing you with the best service and appreciate your patience as we work through these changes.
+
+22-Apr-2026
+
+
+RE: Nano Letters Manuscript Revision Request
+Manuscript ID: nl-2026-01403y
+Title: "Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping"
+Author(s): Ishida, Haruya; Takahashi, Koji; Ganesan, Vishwanath; Miljkovic, Nenad; Teshima, Hideaki
+
+Dear Dr. Teshima:
+
+Thank you for submitting your manuscript for publication in Nano Letters. Your work has now been examined by expert reviewers. As indicated in the enclosed documents, the reviewers have raised questions regarding several critical issues. I am not able to consider further this manuscript for publication unless you can successfully address the concerns of the reviewers in:
+
+(1) a revised manuscript
+
+(2) a response to the Editor that includes a point-by-point response to the reviewers’ comments and a list of changes made to the revised manuscript.
+
+If you decide to revise your manuscript, we ask that you submit your revision by 13-May-2026.
+
+Please note: if your manuscript includes animal and/or human studies, an appropriate ethics statement must be included in accordance with the ACS Ethical Guidelines to Publication of Chemical Research, http://pubs.acs.org/page/policy/ethics/index.html.
+
+Please note that you may receive a follow-up message within 24 hours describing the non-scientific changes you should also make to your manuscript, in accordance with our author guidelines, before you submit the revision. It is important to address these changes in your revision so that processing your manuscript can proceed without further delay.
+
+Go to the ACS Publishing Center at https://publish.acs.org to submit your revised manuscript.
+
+On resubmission, please provide 2 copies of the final manuscript file:
+
+(1) A revised manuscript file that does not contain any highlighting or editing marks. This file should be uploaded in “Manuscript”.
+
+(2) A marked copy of the revised manuscript that shows changes clearly highlighted. This file should be uploaded in “Supporting Information for Review”.
+
+Do not add any highlighting or other editing marks to the Supporting Information file to be published with the manuscript. This file should be uploaded in “Supporting Information for Publication”.
+
+Funding Sources: Authors are required to report ALL funding sources and grant/award numbers relevant to this manuscript. Confirm all sources of funding for ALL authors relevant to this manuscript are included in BOTH the submission form and in the manuscript file to meet this requirement. See http://pubs.acs.org/page/4authors/funder_options.html for complete instructions.
+
+ORCID: Authors submitting manuscript revisions are required to provide their own validated ORCID iDs before completing the submission, if an ORCID iD is not already associated with their user profiles. This iD may be provided during original manuscript submission or when submitting the manuscript revision. You can provide only your own ORCID iD, a unique researcher identifier. If your ORCID iD is not already validated and associated with your  user profile, you may do so by following the ORCID-related links in the Email/Name section of your user account. All authors are encouraged to register for and associate their own ORCID iDs with their user profiles. The ORCID iD will be displayed in the published article for any author on a manuscript who has a validated ORCID iD associated with their user account when the manuscript is accepted. Learn more at http://www.orcid.org.
+
+ACS Publications uses Crossref Similarity Check Powered by iThenticate to detect instances of similarity in submitted manuscripts. In publishing only original research, ACS is committed to deterring plagiarism, including self-plagiarism. Your manuscript may be screened for similarity to published material.
+
+We look forward to receiving your revised manuscript. Thank you for considering Nano Letters as the forum to publish your work.
+
+Best,
+
+
+
+
+Reviewer(s)' Comments to Author:
+
+Reviewer: 1
+
+Recommendation: Publish as is; no revisions needed.
+
+Comments:
+Using a frequency-modulation atomic-force-microscopy setup, the authors simultaneous measure slip length and surface topography with nanoscale lateral resolution on different substrate types. The extracted slip lengths on flat substrates are
+found to be almost zero, in agreement with scaling analysis combined with molecular dynamics simulation predictions. Large apparent slip lengths are explained in terms of surface bubbles. The paper is well written and settles some long-standing controversies in the field. I therefore recommend publication as is and only have two minor comments.
+
+1)      The prefactor C of equation 2 has units of length and is given by C=0.41 nm
+2)      The scaling law in equation 2 was derived for non-polar surfaces that interact with water only via dispersion or Lennard-Jones interactions, that means that hydrophilic surfaces were created by large dispersion attraction. In the recent publication “Subnanometer Interfacial Hydrodynamics: Spatially Resolved Viscosity and Surface Friction”, Carlson et al., Nano Lett. 2025, 25, 15605−15612 MD simulations were used to model polar surfaces where small contact angles are created by polar surface groups, which is more realistic. The fit of the friction coefficient is for these systems better represented by a exponential, not by a power law. For the non-polar surfaces the authors are mostly interested this does not make a difference, but for future studies this could be relevant.
+
+
+Additional Questions:
+Are there elements of novelty in the research reported?:
+
+Is the manuscript likely to be of interest to a reasonable number of scientists working in the field of nanoscience and nanotechnology?: Yes
+
+Are the conclusions technically sound and adequately supported by the data presented?: Yes
+
+Is sufficient information included to allow other workers in the field to test and reproduce the results?: Yes
+
+Rate the overall importance of this paper to the field of nanoscience and nanotechnology (5 - Highly Important / 1 - Unimportant): 5
+
+Significance: Top 5% (suitable for Nano Letters)
+
+Novelty: High (suitable for Nano Letters)
+
+Broad interest: High (suitable for Nano Letters)
+
+Scholarly presentation: High (suitable for Nano Letters)
+
+
+Reviewer: 2
+
+Recommendation: Publish after major revisions noted.
+
+Comments:
+This is an interesting article that deals with experimental measurements of the water slip length on various surfaces, coming to the conclusion that water need not slip on hydrophobic surfaces. The measurements are made using frequency-modulation atomic force microscopy (AFM), with claims of a 159-fold improvement in the sensitivity of measurement. The authors found a large slip length of 43.2 nm on graphite in deionized water. Overall, the manuscript can be of interest to a broad cross-section of researchers in the field of nanoscience and nanotechnology. Thus, the manuscript may eventually be suitable for publication in Nano Letters. However, at this juncture, several critical points require careful consideration and revision in the manuscript, before the manuscript can be considered for publication. I outline these points below:
+
+1. Firstly, the title of the paper is currently not wholly accurate. The word "Does" should be replaced with "Need", i.e., the title should be "Water Need Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping". This is because water does slip on graphite, so the authors cannot generally state that water does not slip on hydrophobic surfaces. Instead, the claim should be that water need not slip on hydrophobic surfaces.
+
+2. The authors need to contextualize their results vis-a-vis those of Secchi et al. (https://www.nature.com/articles/nature19315), who found massive radius-dependent water slippage in carbon nanotubes (CNTs), with slip lengths on the order of hundreds of nanometers. The authors should explain why there is massive slippage on CNTs but not on the surfaces they examined.
+
+3. The derivation of eq. 3 and 4 must be provided along with the paper and the symbol hdot must be explained in the main text, including how it is measured experimentally.
+
+4. The authors mention that the "Slip length bs is then obtained by fitting Eq. 5 to a damping-coefficient-tip-sample distance curve with bs as the fitting parameter." However, the functional form of f* in Eq. 5 is not provided, making it unclear as to how bs can be extracted. This omission must be clarified and the form of f* must be derived and mentioned in the paper.
+
+5. For the fit in Figure 2a, please provide the goodness of fit (R^2) or any other metric, such as the mean absolute error, to quantify how good the fit is. Also, the authors must explain as to how error bars were obtained on the reported slip lengths. Are these confidence intervals from the fit, or standard deviations/errors from repeated measurements?
+
+6. The authors state that "We calibrated the slip length of the probe tip by measuring a symmetric system (bt = bs) using an atmospheric-plasma-treated diamond-like carbon (DLC) substrate, yielding a slip length of bt = bs = 0.0 ±1.2 nm." The authors should show the fit plot for this case, similar to what they did in Figure 2a.
+
+7. Plots should also be shown for the fit used to extract the slip length of 345.3 nm above the nanobubble, as mentioned towards the end of page 8.
+
+8. Why are negative slip lengths obtained on the flat silica and FOPA regions? What is the physical meaning of a negative slip length? Isn't the lowest value of the slip length 0?
+
+9. Why is the water slip length 0.8 nm on Teflon but 43.2 on HOPG, despite Teflon expected to have a higher contact angle of water than HOPG?
+
+10. Figure 4 presents a systematic comparison of slip lengths on nanoscopically flat substrates. How is it proved that these surfaces are nanoscopically flat? The authors need to provide some proof using AFM measurements.
+
+11. For eq. 2, the units of b must be specified for completeness. The authors also must provide a table of the calculated b (from eq. 2) and the measured b from their experiments for all the surfaces examined in this work.
+
+12. How can the authors claim that a water contact angle of 120 degrees is the near-maximum achievable on a topographically smooth flat surface? Ref. 21 mentions that "This value is considered to be the lowest surface free energy of any solid, *based on the hexagonal closed alignment of −CF3 groups on the surface.*" Thus, for surfaces with other than CF3 groups, the contact angle could be higher. Also, the presence of CF3 groups would make the surface topographically rough, as compared to say, graphite.
+
+13. The authors mention that "The contact angles of deionized-water droplets, measured separately on the hydrophilic and hydrophobic surfaces, were 28◦ and 105◦, respectively." How quickly were these measurements done since exposure to the atmosphere can change the contact angle, particularly for hydrophilic surfaces?
+
+14. The authors need to substantiate the claim that "compared with hydrophilic surfaces (i.e., contact angles <90 degree), there is no clear consensus on slip lengths for hydrophobic surfaces (i.e., contact angles > 90 degree)." They should also state what consensus there is in the field for hydrophilic surfaces, along with providing suitable references.
+
+15. Pristine graphite is actually hydrophilic as revealed in the last decade (https://pubs.acs.org/doi/full/10.1021/acs.accounts.6b00447). How do the authors then explain the relatively large water slip length seen on HOPG in their measurements? Is it due to hydrophobic molecules adsorbed on the surface, or due to nanobubbles, as they have speculated in some other cases in the paper? 
+
+Additional Questions:
+Are there elements of novelty in the research reported?: Yes
+
+Is the manuscript likely to be of interest to a reasonable number of scientists working in the field of nanoscience and nanotechnology?: Yes
+
+Are the conclusions technically sound and adequately supported by the data presented?: No
+
+Is sufficient information included to allow other workers in the field to test and reproduce the results?: Yes
+
+Rate the overall importance of this paper to the field of nanoscience and nanotechnology (5 - Highly Important / 1 - Unimportant): 4
+
+Significance: High (suitable for Nano Letters)
+
+Novelty: High (suitable for Nano Letters)
+
+Broad interest: High (suitable for Nano Letters)
+
+Scholarly presentation: Moderate (not suitable for Nano Letters)

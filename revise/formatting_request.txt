@@ -1,0 +1,41 @@
+To improve and transform your experience of publishing with ACS journals, we are currently developing the ACS Publishing Center. As a result, you may experience interactions and communications from different systems for some elements of the process during this transition. We aim to continue providing you with the best service and appreciate your patience as we work through these changes.
+
+23-Apr-2026
+
+Manuscript ID: nl-2026-01403y
+Manuscript Type: Communication
+Title: "Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping"
+Author(s): Ishida, Haruya; Takahashi, Koji; Ganesan, Vishwanath; Miljkovic, Nenad; Teshima, Hideaki
+
+Dear Dr. Teshima:
+
+You recently received a Revision Request from Prof. Wooyoung  Shim.  In addition to addressing the Editor's concerns and the requests of the reviewers, please complete the following before submitting your revision:
+
+1. Please provide full contact information for all authors in manuscript file: institution, city, state, postal code, country for each affiliation (states are required for United States addresses only). Postal codes are also required for addresses outside the U.S., for countries that have them. Each separate affiliation requires its own address information; they cannot be combined.
+
+2. An Abstract, which should summarize the reason for the work, the most significant results, and the conclusions, must be present and labeled.
+
+3. Keywords are missing. Four to six keywords should be placed after the abstract.
+
+4. "Copyright permissions are required for any graphic that is reproduced or adapted from a source that is not published by the American Chemical Society. See, for example, Figure 1. Please make sure that all graphics reproduced or adapted from another journal have the proper permission forms and credit lines in your revision.
+
+        1. If your graphic is reproduced or adapted from a source that is not published by the ACS, please submit the copyright permission form obtained from the other publisher as “Other Files for Editors Only”.  Most copyright permissions can be obtained from the publishers’ websites. Please also make sure a permission statement is included in the caption, if you have not already done so, e.g., Reproduced or adapted with permission from [provide reference #].  Copyright [YEAR] [PUBLISHER].
+
+        2. If you are using material that appeared in any ACS journal, and ACS owns copyright to the material, permission is NOT necessary.  A simple acknowledgment is required, in this format, after inserting the appropriate information where the capitalized words appear:  Reproduced from [PROVIDE REFERENCE #].  Copyright [YEAR] American Chemical Society.
+
+        3. If you are using material that is covered under an Open Access license, please provide proper attribution, e.g., Reproduced from ref XX. Available under a CC-BY XX license. Copyright XXXX Author Name(s). For information about proper attribution, please see https://wiki.creativecommons.org/wiki/Best_practices_for_attribution."
+
+For more details, please see the Author Guidelines, which can be found here: http://pubs.acs.org/page/nalefd/submission/authors.html
+
+We look forward to receiving your revised manuscript, so that processing of your manuscript may proceed without further delay.
+
+Be sure that the final versions of your manuscript file and any Supporting Information files intended for publication (including the pdf versions, if provided) are free of all markup elements, such as track changes, comments, colored text, highlights, and sticky notes.
+
+Please include an annotated copy of the manuscript to show revisions and track changes for the benefit of the reviewers.   This marked manuscript should be uploaded electronically in the File Upload section as "Supporting Information for Review Only" during submission of your revision.
+
+Thank you for considering Nano Letters as a forum for the publication of your work.
+
+Sincerely,
+
+Bojan Miletic
+Nano Letters

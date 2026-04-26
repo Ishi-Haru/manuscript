@@ -38,6 +38,42 @@ On resubmission, provide two copies of the final manuscript file:
 
 Do not add highlighting or editing marks to the Supporting Information file intended for publication. Upload that file as **Supporting Information for Publication**.
 
+## Additional Formatting Request (23-Apr-2026)
+
+During the transition to the ACS Publishing Center, some interactions and communications may come from different systems. In addition to addressing the editor's concerns and the reviewers' requests, Nano Letters asked that the following items be completed before submitting the revision.
+
+Manuscript ID: nl-2026-01403y  
+Manuscript Type: Communication  
+Title: "Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping"  
+Authors: Ishida, Haruya; Takahashi, Koji; Ganesan, Vishwanath; Miljkovic, Nenad; Teshima, Hideaki
+
+1. Provide full contact information for all authors in the manuscript file.
+   - Include institution, city, state, postal code, and country for each affiliation.
+   - States are required for United States addresses only.
+   - Postal codes are also required for addresses outside the U.S. for countries that have them.
+   - Each separate affiliation requires its own address information and cannot be combined.
+
+2. Include an Abstract and label it clearly.
+   - The Abstract should summarize the reason for the work, the most significant results, and the conclusions.
+
+3. Add Keywords.
+   - Four to six keywords should be placed after the Abstract.
+
+4. Provide copyright permissions for graphics reproduced or adapted from sources not published by the American Chemical Society.
+   - Figure 1 was specifically noted as an example to check.
+   - If a graphic is reproduced or adapted from a non-ACS source, submit the copyright permission form from the other publisher as **Other Files for Editors Only**.
+   - Include a permission statement in the caption if not already present, e.g., `Reproduced or adapted with permission from [provide reference #]. Copyright [YEAR] [PUBLISHER].`
+   - If using material that appeared in an ACS journal and ACS owns the copyright, permission is not necessary, but acknowledgment is required in this format: `Reproduced from [PROVIDE REFERENCE #]. Copyright [YEAR] American Chemical Society.`
+   - If using material covered under an Open Access license, provide proper attribution, e.g., `Reproduced from ref XX. Available under a CC-BY XX license. Copyright XXXX Author Name(s).`
+
+For more details, see the Author Guidelines:
+
+http://pubs.acs.org/page/nalefd/submission/authors.html
+
+The final versions of the manuscript file and any Supporting Information files intended for publication, including PDF versions if provided, must be free of all markup elements such as track changes, comments, colored text, highlights, and sticky notes.
+
+Include an annotated copy of the manuscript to show revisions and track changes for the reviewers. This marked manuscript should be uploaded in the File Upload section as **Supporting Information for Review Only**.
+
 ## Administrative Notes
 
 ### Ethics Statement
@@ -238,6 +274,13 @@ This is an interesting article dealing with experimental measurements of water s
 - [ ] Prepare a marked revised manuscript with changes clearly highlighted.
 - [ ] Prepare a point-by-point response to reviewers.
 - [ ] Include a list of changes made to the revised manuscript.
+- [ ] Add full author affiliation/contact address information to the manuscript file: institution, city, state, postal code, and country.
+- [ ] Include and clearly label the Abstract.
+- [ ] Add four to six keywords after the Abstract.
+- [ ] Check whether reproduced or adapted non-ACS graphics require permission forms and caption credit lines.
+- [ ] Determine whether Figure 1 or any other reproduced/adapted graphics require copyright permission forms to be uploaded as **Other Files for Editors Only**.
+- [ ] Remove all markup elements from publication versions of the manuscript and Supporting Information files, including track changes, comments, colored text, highlights, and sticky notes.
+- [ ] Upload the annotated/marked manuscript as **Supporting Information for Review Only**.
 - [ ] Confirm all funding sources and grant/award numbers in both the submission form and manuscript file.
 - [ ] Confirm validated ORCID iDs for submitting authors.
 

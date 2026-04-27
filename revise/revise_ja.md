@@ -458,12 +458,17 @@ Added a sentence noting that large apparent slip on hydrophobic surfaces has bee
 
     著者らは、HOPG 上で観察された比較的大きな water slip length を説明する必要がある。査読者は、それが表面に吸着した hydrophobic molecules によるものなのか、あるいは論文中の他の箇所で推測されているように nanobubbles によるものなのかを問うている。
 
-Thank you for raising this important point. We revised the discussion to clarify the origin of the large slip length observed on HOPG while focusing on the contact angle measured in this study. The HOPG surface was freshly cleaved immediately before measurement and showed only moderate wettability (\(\SI{59.0}{\degree}\)), so the large slip length is unlikely to originate primarily from hydrophobic adsorbates, whose accumulation on graphitic surfaces has been reported to occur over longer time scales. We also clarified that the nanobubble observed in the HOPG map was a localized feature and was analyzed separately. Thus, we interpret the slip length on the flat HOPG terrace as arising from the low-friction graphite-water interface, consistent with previous MD simulations.
+[x] checked
+
+Thank you for raising this important point. We revised the discussion to clarify the origin of the large slip length observed on HOPG while focusing on the contact angle measured in this study. The HOPG surface was freshly cleaved immediately before measurement and showed only moderate wettability (\(\SI{59.0}{\degree}\)), so the large slip length is unlikely to originate primarily from hydrophobic adsorbates, whose accumulation on graphitic surfaces has been reported to occur over longer time scales. We also clarified that the nanobubble observed in the HOPG map was a localized feature and was analyzed separately. Therefore, we attribute the slip length on the flat HOPG terrace to the low-friction graphite-water interface. Previous MD studies have reported the uniqueness of graphite: its atomic-scale smoothness drastically reduces friction, leading to the slip length on the order of \(\SI{50}{\nano\metre}\).
+
+[ ] checked
 
 Changes:
 Revised the HOPG discussion to focus on the contact angle measured in this study rather than on the general wettability of pristine graphite.
 Clarified that hydrophobic adsorbates are unlikely to be the primary origin of the large HOPG slip length because the HOPG surface was freshly cleaved immediately before measurement and showed only moderate wettability.
 Clarified that the localized nanobubble was analyzed separately and is not the origin of the slip length on the flat HOPG terrace.
+Added that the large slip length on the flat HOPG terrace is attributed to the low-friction graphite-water interface, consistent with MD studies reporting graphite slip lengths on the order of \(\SI{50}{\nano\metre}\).
 
 ### 追加質問
 

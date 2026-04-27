@@ -44,16 +44,16 @@ https://publish.acs.org
 
 ACS Publishing Center への移行期間中であるため、一部のやり取りや連絡が異なるシステムから届く可能性がある。Nano Letters から、編集者および査読者への対応に加えて、改訂版提出前に以下を完了するよう依頼があった。
 
-1. 原稿ファイル内に、すべての著者について完全な連絡先情報を記載する。
+1. [x] 原稿ファイル内に、すべての著者について完全な連絡先情報を記載する。
    - 各 affiliation について、institution、city、state、postal code、country を記載する。
    - state は米国住所のみ必須。
    - postal code は、郵便番号制度のある米国外の国についても必須。
    - 複数の affiliation は統合せず、それぞれ個別に住所情報を記載する。
 
-2. Abstract を必ず記載し、明確にラベル付けする。
+2. [x] Abstract を必ず記載し、明確にラベル付けする。
    - Abstract には、研究の理由、最も重要な結果、結論を要約する。
 
-3. Keywords が不足しているため、Abstract の後に 4--6 個の keywords を記載する。
+3. [x] Keywords が不足しているため、Abstract の後に 4--6 個の keywords を記載する。
 
 4. ACS 以外の出版元から転載または改変した図については、著作権許諾が必要である。
    - 例として Figure 1 が挙げられている。
@@ -495,8 +495,8 @@ Added that the large slip length on the flat HOPG terrace is attributed to the l
 - [ ] 変更箇所を明確にハイライトした改訂原稿を準備する。
 - [ ] 査読者への point-by-point response を準備する。
 - [ ] 改訂原稿で行った変更点のリストを含める。
-- [ ] 原稿ファイルに、すべての著者について完全な affiliation/contact address（institution, city, state, postal code, country）を記載する。
-- [ ] Abstract を記載し、明確にラベル付けする。
+- [x] 原稿ファイルに、すべての著者について完全な affiliation/contact address（institution, city, state, postal code, country）を記載する。
+- [x] Abstract を記載し、明確にラベル付けする。
 - [ ] Abstract の後に 4--6 個の keywords を記載する。
 - [ ] ACS 以外の出版元から転載または改変した図について、permission form と caption の credit line が必要か確認する。
 - [ ] Figure 1 など、転載・改変図の copyright permission form を **Other Files for Editors Only** として提出する必要があるか確認する。

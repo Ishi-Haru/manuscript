@@ -1,7 +1,11 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+﻿%DIF 1c1
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL C:\Users\haruy\AppData\Local\Temp\diff-tex-f23c4m1b\old\supporting_information.tex   Sat Apr 25 13:46:54 2026
-%DIF ADD C:\Users\haruy\AppData\Local\Temp\diff-tex-f23c4m1b\new\supporting_information.tex   Sun Apr 26 17:13:14 2026
+%DIF DEL tex_diff_tmp/supporting_information_old.tex   Mon Apr 27 23:44:58 2026
+%DIF ADD supporting_information.tex                    Mon Apr 27 21:41:13 2026
+%DIF < ﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DIF -------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %DIF > 
+%DIF -------
 %% This is a (brief) model paper using the achemso class
 %% The document class accepts keyval options, which should include
 %% the target journal and optionally the manuscript type. 
@@ -20,6 +24,9 @@
 \usepackage{graphicx}
 \usepackage{xr} % For cross-referencing equations from main.tex
 \usepackage{multirow}
+%DIF 20a20
+\usepackage{lineno} %DIF > 
+%DIF -------
 \externaldocument{main}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,6 +42,10 @@
 %% when typesetting).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand*\mycommand[1]{\texttt{\emph{#1}}}
+%DIF 35a36-37
+\newcommand{\ChangeTagStart}[1]{\linelabel{changetag:start:#1}} %DIF > 
+\newcommand{\ChangeTagEnd}[1]{\linelabel{changetag:end:#1}} %DIF > 
+%DIF -------
 \setcounter{figure}{0}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \setcounter{table}{0}
@@ -83,20 +94,44 @@
 {International Institute for Carbon-Neutral Energy Research (WPI-I2CNER), Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
 \author{Vishwanath Ganesan}
 \affiliation[UIUC MechSE]
-{Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF 83c86
+%DIF < {Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF -------
+{Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
+%DIF -------
 \author{Nenad Miljkovic}
 \affiliation[I2CNER]
 {International Institute for Carbon-Neutral Energy Research (WPI-I2CNER), Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
 \alsoaffiliation[UIUC MechSE]
-{Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF 88c91
+%DIF < {Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF -------
+{Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
+%DIF -------
 \alsoaffiliation[UIUC MRL]
-{Materials Research Laboratory, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF 90c93
+%DIF < {Materials Research Laboratory, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF -------
+{Materials Research Laboratory, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
+%DIF -------
 \alsoaffiliation[UIUC ECE]
-{Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF 92c95
+%DIF < {Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF -------
+{Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
+%DIF -------
 \alsoaffiliation[iSEE]
-{Institute for Sustainability, Energy and Environment (iSEE), University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF 94c97
+%DIF < {Institute for Sustainability, Energy and Environment (iSEE), University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF -------
+{Institute for Sustainability, Energy and Environment (iSEE), University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
+%DIF -------
 \alsoaffiliation[ARC]
-{Air Conditioning and Refrigeration Center, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF 96c99
+%DIF < {Air Conditioning and Refrigeration Center, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+%DIF -------
+{Air Conditioning and Refrigeration Center, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
+%DIF -------
 \author{Hideaki Teshima}
 \affiliation[Kyushu University]
 {Department of Aeronautics and Astronautics, Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
@@ -111,11 +146,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title[Title_supporting_information]
   {Supporting Information\\
-%DIF 111c111
-%DIF <   Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
-%DIF -------
-  Water Need Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping} %DIF > 
-%DIF -------
+  Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some journals require a list of abbreviations or keywords to be
@@ -130,11 +161,11 @@
 %% executed automatically.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
-%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
-\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+%DIF CFONT PREAMBLE %DIF PREAMBLE
 \RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
-\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
-\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}} %DIF PREAMBLE
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue} #1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{} %DIF PREAMBLE
 %DIF SAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddbegin}{} %DIF PREAMBLE
 \providecommand{\DIFaddend}{} %DIF PREAMBLE
@@ -144,7 +175,7 @@
 \providecommand{\DIFmodend}{} %DIF PREAMBLE
 %DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
-\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{} %DIF PREAMBLE
 \providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
 \providecommand{\DIFaddendFL}{} %DIF PREAMBLE
 \providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
@@ -180,23 +211,23 @@
 \LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{} %DIF PREAMBLE
 \LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{} %DIF PREAMBLE
 %DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
 \RequirePackage{listings} %DIF PREAMBLE
 \RequirePackage{color} %DIF PREAMBLE
 \lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
-%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
-  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
-  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+%DIF DIFCODE_CFONT %DIF PREAMBLE
+  moredelim=[il][\color{red}\scriptsize]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\sffamily]{\%DIF\ >\ } %DIF PREAMBLE
 } %DIF PREAMBLE
 \lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
 	language=DIFcode, %DIF PREAMBLE
@@ -211,6 +242,8 @@
 %DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
+\DIFaddbegin \linenumbers
+\DIFaddend 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Start the main part of the manuscript here.
@@ -255,7 +288,7 @@ Therefore, from Eqs.~\ref{eqn:s4} and \ref{eqn:s5}, the damping coefficient is r
 \end{equation}
 \subsectionpart{sensitivity-comparison}{Comparison of Sensitivity between Conventional and Proposed Methods}
 
-We compared the sensitivity of slip length measurements between conventional contact-mode AFM and the proposed FM-AFM method. In contact-mode AFM, the cantilever deflection \(x\) is measured as a sensor voltage, and the relationship between the deflection sensor voltage \(V_x\) and \(x\) is expressed using the sensitivity \(s\) as \(x = sV_x\). Furthermore, to determine the viscous drag in Eq.~\ref{eqn:hydrodynamic force} from the restoring force of the cantilever, \(kx\) (\(k\) is the spring constant), the following relation holds:
+\DIFaddbegin \ChangeTagStart{r2_4_fstar_function_si}\DIFaddend We compared the sensitivity of slip length measurements between conventional contact-mode AFM and the proposed FM-AFM method. In contact-mode AFM, the cantilever deflection \(x\) is measured as a sensor voltage, and the relationship between the deflection sensor voltage \(V_x\) and \(x\) is expressed using the sensitivity \(s\) as \(x = sV_x\). Furthermore, to determine the viscous drag in Eq.~\ref{eqn:hydrodynamic force} from the restoring force of the cantilever, \(kx\) (\(k\) is the spring constant), the following relation holds:
 \begin{equation}
   F = -ksV_x = -\frac{6\pi\eta R^2 \dot{h}}{h} f^{*}(\DIFaddbegin \DIFadd{h, }\DIFaddend b_t, b_s).
   \tag{S7}
@@ -267,7 +300,7 @@ In contrast, in the FM-AFM method, the oscillation amplitude \(A\) is recorded a
   \tag{S8}
   \label{eqn:s8}
 \end{equation}
-Here, the measurement sensitivity is defined as the change in signal voltage with respect to the substrate slip length, \(\partial V/\partial b_s\). Differentiating Eqs.~\ref{eqn:s7} and \ref{eqn:s8} yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
+\DIFaddbegin \ChangeTagEnd{r2_4_fstar_function_si}\DIFaddend Here, the measurement sensitivity is defined as the change in signal voltage with respect to the substrate slip length, \(\partial V/\partial b_s\). Differentiating Eqs.~\ref{eqn:s7} and \ref{eqn:s8} yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
 \begin{equation}
   S_{\text{contact}} = \frac{\partial V_x}{\partial b_s} = -\frac{6\pi\eta R^2 \dot{h}}{k s h}\frac{\partial f^{*}}{\partial b_s}.
   \tag{S9}
@@ -290,8 +323,8 @@ The sensitivity ratio was calculated to be \(S_{\text{FM}}/S_{\text{contact}} = 
 
 \subsubsection{A. Fabrication of Hydrophilic/Hydrophobic Composite Substrates}
 
-A thermally grown silica surface on a Si wafer was spin-coated with an electron-beam resist (ZEP520A, ZEON Corporation, Japan) at \SI{5000}{\per\minute} to form a \SI{300}{\nano\metre}-thick film. Using an electron-beam lithography system (JSM-6360, JEOL Ltd., Japan / BEAM DRAW, Tokyo Technology Inc., Japan), square patterns of \SI{1}{\micro\metre}\(\times\)\SI{1}{\micro\metre} were patterned with a pitch of \SI{2}{\micro\metre}, and the resist in the exposed areas was removed during development. Subsequently, a \SI{5}{\nano\metre}-thick indium tin oxide (ITO) film was deposited by magnetron sputtering (MS-4B-3T, Cosmo System Co., Ltd., Japan). The electron-beam resist was then lifted off by rinsing in dimethylacetamide for \SI{5}{\minute}, leaving ITO patches on the silica substrate. The patterned ITO substrate was treated with \(\mathrm{O}_2\) plasma (PR500, Yamato Scientific Co., Japan) and then immersed in a \SI{1}{\milli\mole\per\litre} ethanol solution of 1H,1H,2H,2H-perfluorooctanephosphonic acid (FOPA) for \SI{1}{\hour} to form a self-assembled monolayer (SAM). Since FOPA SAMs are easily hydrolyzed on silica but remain stable on ITO surfaces and maintain hydrophobicity in water for several hours \cite{Thissen2012-xt, Jo2011-nw}, the fabricated composite substrate was immersed in water for \SI{3}{\hour} to selectively remove FOPA from the silica surface. \DIFaddbegin \DIFadd{Contact angles of the hydrophilic and hydrophobic regions were evaluated immediately before the FM-AFM measurements using reference substrates prepared by the same process as the corresponding regions of the composite substrate.
-}\DIFaddend 
+A thermally grown silica surface on a Si wafer was spin-coated with an electron-beam resist (ZEP520A, ZEON Corporation, Japan) at \SI{5000}{\per\minute} to form a \SI{300}{\nano\metre}-thick film. Using an electron-beam lithography system (JSM-6360, JEOL Ltd., Japan / BEAM DRAW, Tokyo Technology Inc., Japan), square patterns of \SI{1}{\micro\metre}\(\times\)\SI{1}{\micro\metre} were patterned with a pitch of \SI{2}{\micro\metre}, and the resist in the exposed areas was removed during development. Subsequently, a \SI{5}{\nano\metre}-thick indium tin oxide (ITO) film was deposited by magnetron sputtering (MS-4B-3T, Cosmo System Co., Ltd., Japan). The electron-beam resist was then lifted off by rinsing in dimethylacetamide for \SI{5}{\minute}, leaving ITO patches on the silica substrate. The patterned ITO substrate was treated with \(\mathrm{O}_2\) plasma (PR500, Yamato Scientific Co., Japan) and then immersed in a \SI{1}{\milli\mole\per\litre} ethanol solution of 1H,1H,2H,2H-perfluorooctanephosphonic acid (FOPA) for \SI{1}{\hour} to form a self-assembled monolayer (SAM). Since FOPA SAMs are easily hydrolyzed on silica but remain stable on ITO surfaces and maintain hydrophobicity in water for several hours \cite{Thissen2012-xt, Jo2011-nw}, the fabricated composite substrate was immersed in water for \SI{3}{\hour} to selectively remove FOPA from the silica surface. \DIFaddbegin \ChangeTagStart{r2_13_contact_angle_timing_si}\DIFadd{Contact angles of the hydrophilic and hydrophobic regions were evaluated immediately before the FM-AFM measurements using reference substrates that underwent the corresponding \(\mathrm{O}_2\)-plasma treatment, FOPA/ethanol-solution immersion, and subsequent water-immersion steps used to prepare the composite substrate.}\ChangeTagEnd{r2_13_contact_angle_timing_si}
+\DIFaddend 
 
 \subsubsection{B. Fabrication of Teflon Substrates}
 
@@ -400,7 +433,8 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
 }%
 \end{table}
 
-\begin{figure}[p]
+\DIFaddbegin \ChangeTagStart{r2_6_tip_calibration_fit_si}\ChangeTagStart{r2_7_nanobubble_fit_si}
+\DIFaddend \begin{figure}[p]
   \centering
   \includegraphics[width=0.6\linewidth]{figs/HOPG_strong_force.png}
   \caption{
@@ -408,16 +442,16 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
   }
   \label{figS:HOPG_strong_force}
 \end{figure}
+\DIFaddbegin \ChangeTagEnd{r2_7_nanobubble_fit_si}\ChangeTagEnd{r2_6_tip_calibration_fit_si}
+\DIFaddend 
 
 \begin{figure}[p]
   \centering
   \DIFaddbeginFL \includegraphics[width=1.0\linewidth]{figs/DLC_bubble.png}
   \caption{
-    \DIFaddFL{Representative damping-coefficient fitting curves for (a) tip slip-length calibration on an atmospheric-plasma-treated DLC substrate and (b) slip-length extraction directly above a nanobubble. The mean absolute errors were \mbox{%DIFAUXCMD
-\SI{0.016}{\micro\newton\second\per\metre} }\hskip0pt%DIFAUXCMD
-and \mbox{%DIFAUXCMD
-\SI{0.014}{\micro\newton\second\per\metre} }\hskip0pt%DIFAUXCMD
-for (a) and (b), respectively.
+    \DIFaddFL{Representative damping-coefficient fitting curves for (a) a atmospheric-plasma-treated DLC substrate and (b) a location above a nanobubble.
+    The slip lengths shown in the panels were obtained from these representative single-point fits and therefore do not necessarily coincide with the mean values reported in the main text: \(0.0\pm1.2~\mathrm{nm}\) for DLC and \(345.3\pm23.7~\mathrm{nm}\) for nanobubbles.
+    The mean absolute errors were \SI{0.016}{\micro\newton\second\per\metre} and \SI{0.014}{\micro\newton\second\per\metre} for (a) and (b), respectively.
   }}
   \label{figS:DLC_bubble_fit}
 \end{figure}
@@ -429,12 +463,9 @@ for (a) and (b), respectively.
   \label{figS:mapping_colormaps}
 \end{figure}
 
-\begin{table}[p]
-  \caption{\DIFdelbeginFL \DIFdelFL{Measured contact angles and }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Comparison of measured }\DIFaddendFL slip lengths \DIFdelbeginFL \DIFdelFL{of }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{with values calculated from Eq.~\ref{eqn:slip length scaling} for }\DIFaddendFL the substrates investigated in this study\DIFaddbeginFL \DIFaddFL{. The mean absolute errors between the measured values and the calculated values over all entries are \mbox{%DIFAUXCMD
-\SI{6.56}{\nano\metre} }\hskip0pt%DIFAUXCMD
-for \(C = \SI{0.41}{\nano\metre}\) and \mbox{%DIFAUXCMD
-\SI{11.17}{\nano\metre} }\hskip0pt%DIFAUXCMD
-for \(C = \SI{6.0}{\nano\metre}\).}\DIFaddendFL }
+\DIFaddbegin \ChangeTagStart{r2_11_units_comparison_table_si}
+\DIFaddend \begin{table}[p]
+  \caption{Measured \DIFdelbeginFL \DIFdelFL{contact angles and }\DIFdelendFL slip lengths \DIFdelbeginFL \DIFdelFL{of }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{and values calculated from Eq.~\ref{eqn:slip length scaling} for }\DIFaddendFL the substrates investigated in this study\DIFaddbeginFL \DIFaddFL{.}\DIFaddendFL }
   \label{tbl:contact_angle_slip}
   \DIFdelbeginFL %DIFDELCMD < \begin{tabular}{lcc}
 %DIFDELCMD <     \hline
@@ -449,49 +480,31 @@ for \(C = \SI{6.0}{\nano\metre}\).}\DIFaddendFL }
 \DIFdelFL{\(-1.7 \pm \SI{0.3}{\nano\metre}\) }%DIFDELCMD < \\
 %DIFDELCMD <     %%%
 \DIFdelFL{Oxygen plasma-treated silica }%DIFDELCMD < & %%%
-\DIFdelFL{\mbox{%DIFAUXCMD
-\SI{28.1}{\degree} }\hskip0pt%DIFAUXCMD
-}%DIFDELCMD < & %%%
+\DIFdelFL{\SI{28.1}{\degree} }%DIFDELCMD < & %%%
 \DIFdelFL{\(-0.7 \pm \SI{0.6}{\nano\metre}\) }%DIFDELCMD < \\
 %DIFDELCMD <     %%%
 \DIFdelFL{FDTS }%DIFDELCMD < & %%%
-\DIFdelFL{\mbox{%DIFAUXCMD
-\SI{97.9}{\degree} }\hskip0pt%DIFAUXCMD
-}%DIFDELCMD < & %%%
+\DIFdelFL{\SI{97.9}{\degree} }%DIFDELCMD < & %%%
 \DIFdelFL{\(-1.7 \pm \SI{0.2}{\nano\metre}\) }%DIFDELCMD < \\
 %DIFDELCMD <     %%%
 \DIFdelFL{FOPA }%DIFDELCMD < & %%%
-\DIFdelFL{\mbox{%DIFAUXCMD
-\SI{105.0}{\degree} }\hskip0pt%DIFAUXCMD
-}%DIFDELCMD < & %%%
+\DIFdelFL{\SI{105.0}{\degree} }%DIFDELCMD < & %%%
 \DIFdelFL{\(-0.9 \pm \SI{0.6}{\nano\metre}\) }%DIFDELCMD < \\
 %DIFDELCMD <     %%%
 \DIFdelFL{Teflon }%DIFDELCMD < & %%%
-\DIFdelFL{\mbox{%DIFAUXCMD
-\SI{111.1}{\degree} }\hskip0pt%DIFAUXCMD
-}%DIFDELCMD < & %%%
+\DIFdelFL{\SI{111.1}{\degree} }%DIFDELCMD < & %%%
 \DIFdelFL{\(0.8 \pm \SI{0.8}{\nano\metre}\) }%DIFDELCMD < \\
 %DIFDELCMD <     %%%
 \DIFdelFL{HOPG (DI water) }%DIFDELCMD < & %%%
-\DIFdelFL{\mbox{%DIFAUXCMD
-\SI{59.0}{\degree} }\hskip0pt%DIFAUXCMD
-}%DIFDELCMD < & %%%
+\DIFdelFL{\SI{59.0}{\degree} }%DIFDELCMD < & %%%
 \DIFdelFL{\(43.2 \pm \SI{5.8}{\nano\metre}\) }%DIFDELCMD < \\
 %DIFDELCMD <     %%%
-\DIFdelFL{HOPG (\mbox{%DIFAUXCMD
-\SI{10}{\milli\mole\per\litre} }\hskip0pt%DIFAUXCMD
-KCl aq.) }%DIFDELCMD < & %%%
-\DIFdelFL{\mbox{%DIFAUXCMD
-\SI{62.8}{\degree} }\hskip0pt%DIFAUXCMD
-}%DIFDELCMD < & %%%
+\DIFdelFL{HOPG (\SI{10}{\milli\mole\per\litre} KCl aq.) }%DIFDELCMD < & %%%
+\DIFdelFL{\SI{62.8}{\degree} }%DIFDELCMD < & %%%
 \DIFdelFL{\(-0.1 \pm \SI{0.7}{\nano\metre}\) }%DIFDELCMD < \\
 %DIFDELCMD <     %%%
-\DIFdelFL{HOPG (\mbox{%DIFAUXCMD
-\SI{10}{\milli\mole\per\litre} }\hskip0pt%DIFAUXCMD
-NaCl aq.) }%DIFDELCMD < & %%%
-\DIFdelFL{\mbox{%DIFAUXCMD
-\SI{57.0}{\degree} }\hskip0pt%DIFAUXCMD
-}%DIFDELCMD < & %%%
+\DIFdelFL{HOPG (\SI{10}{\milli\mole\per\litre} NaCl aq.) }%DIFDELCMD < & %%%
+\DIFdelFL{\SI{57.0}{\degree} }%DIFDELCMD < & %%%
 \DIFdelFL{\(-2.3 \pm \SI{0.6}{\nano\metre}\) }%DIFDELCMD < \\
 %DIFDELCMD <     \hline
 %DIFDELCMD <   \end{tabular}
@@ -514,6 +527,8 @@ NaCl aq.) }%DIFDELCMD < & %%%
   \end{tabular}
   }
 \DIFaddendFL \end{table}
+\DIFaddbegin \ChangeTagEnd{r2_11_units_comparison_table_si}
+\DIFaddend 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The appropriate \bibliography command should be placed here.
@@ -524,3 +539,4 @@ NaCl aq.) }%DIFDELCMD < & %%%
 \bibliography{main}
 
 \end{document}
+

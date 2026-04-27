@@ -4,6 +4,7 @@
 %% the target journal and optionally the manuscript type. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[journal=jacsat,manuscript=article]{achemso}
+\setkeys{acs}{keywords=true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Place any additional packages needed here.  Only include packages
@@ -37,6 +38,15 @@
 \newcommand{\ChangeTagEnd}[1]{\linelabel{changetag:end:#1}}
 \newcommand{\ChangeLineRange}[1]{lines~\ref{changetag:start:#1}--\ref{changetag:end:#1}}
 \newcommand{\ChangeListItem}[2]{\item #2 (\ChangeLineRange{#1})}
+\makeatletter
+\renewcommand*\acs@keywords@print{%
+  \ifx\@keywords\@empty\else
+    \section*{Keywords}
+    \@keywords
+    \par\vspace{1em}
+  \fi
+}
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Meta-data block
@@ -68,20 +78,20 @@
 {International Institute for Carbon-Neutral Energy Research (WPI-I2CNER), Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
 \author{Vishwanath Ganesan}
 \affiliation[UIUC MechSE]
-{Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+{Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA}
 \author{Nenad Miljkovic}
 \affiliation[I2CNER]
 {International Institute for Carbon-Neutral Energy Research (WPI-I2CNER), Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
 \alsoaffiliation[UIUC MechSE]
-{Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+{Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA}
 \alsoaffiliation[UIUC MRL]
-{Materials Research Laboratory, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+{Materials Research Laboratory, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA}
 \alsoaffiliation[UIUC ECE]
-{Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+{Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA}
 \alsoaffiliation[iSEE]
-{Institute for Sustainability, Energy and Environment (iSEE), University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+{Institute for Sustainability, Energy and Environment (iSEE), University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA}
 \alsoaffiliation[ARC]
-{Air Conditioning and Refrigeration Center, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
+{Air Conditioning and Refrigeration Center, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA}
 \author{Hideaki Teshima}
 \affiliation[Kyushu University]
 {Department of Aeronautics and Astronautics, Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
@@ -101,8 +111,8 @@
 %% supplied. These should be set up here, and will be printed after
 %% the title and author information, if needed.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\abbreviations{IR,NMR,UV}
-\keywords{American Chemical Society, \LaTeX}
+\abbreviations{}
+\keywords{slip length, boundary slip, AFM, graphite, hydrophobic surface, nanobubble}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The manuscript does not need to include \maketitle, which is
@@ -204,7 +214,7 @@ Slip length \(b_s\) is then obtained by fitting Eq.~\ref{eqn:damping coefficient
 \begin{figure}[h]
   \centering
   \includegraphics[width=1.0\linewidth]{figs/schematics_of_measurement.png}
-  \caption{(a) Total damping coefficient \(\gamma_{\text{total}}\) as a function of probe tip-sample distance \(h\) measured at an HOPG-deionized water interface. Blue dots indicate the experimental data. The black dashed and red solid lines represent theoretical curves for a no-slip boundary condition (\(b_s = 0\)) and a fitted slip length (\(b_s = \SI{43.2}{\nano\metre}\)), respectively. The mean absolute error was \(\SI{0.0141}{\micro\newton\second\per\metre}\). (b, c) SEM images of the probe with a diamond-like carbon spherical tip. (d) Schematic illustration of the simultaneous mapping of slip length and topography using FM-AFM. The color bar indicates the total damping coefficient.}
+  \caption{(a) Total damping coefficient \(\gamma_{\text{total}}\) as a function of probe tip-sample distance \(h\) measured at an HOPG-deionized water interface. Blue dots indicate the experimental data. The black dashed and red solid lines represent theoretical curves for a no-slip boundary condition (\(b_s = 0\)) and a fitted slip length (\(b_s = \SI{43.2}{\nano\metre}\)), respectively. The mean absolute error was \(\SI{0.014}{\micro\newton\second\per\metre}\). (b, c) SEM images of the probe with a diamond-like carbon spherical tip. (d) Schematic illustration of the simultaneous mapping of slip length and topography using FM-AFM. The color bar indicates the total damping coefficient.}
   \label{fgr:schematics_of_measurement}
 \end{figure}
 \ChangeTagEnd{r2_5_goodness_fit_errorbars_fig2}
@@ -213,7 +223,7 @@ In Fig.~\ref{fgr:schematics_of_measurement}(a), we show a representative damping
 
 Next, we extended this method to perform simultaneous nanoscale mapping of slip length and surface topography. A schematic of the measurement principle and representative three-dimensional maps of the damping coefficient are shown in Fig.~\ref{fgr:schematics_of_measurement}(d). Measurements were performed using the ZXY scan mode of an SPM-8100FM (Shimadzu Corp., Japan) equipped with a custom-built photothermal excitation system and closed-loop feedback scanner. At each \((x, y)\) pixel on the sample plane, the probe was scanned in the \(z\)-direction while recording the cantilever deflection, amplitude, and frequency-shift. The topography was reconstructed from the deflection, whereas the slip length was determined from the damping coefficient using Eq.~\ref{eqn:damping coefficient slip}. 
 
-Slip length mapping was first carried out on HOPG and on a hydrophilic-hydrophobic composite substrate (oxygen-plasma-treated-silica-1H,1H,2H,2H-perfluorooctanephosphonic acid, FOPA; the fabrication procedures are in Supporting Information \ref{supppart:materials}-A). \ChangeTagStart{r2_13_contact_angle_timing}The contact angles of deionized-water droplets were measured immediately before the FM-AFM measurements on reference hydrophilic and hydrophobic substrates prepared using the same process as the corresponding regions of the composite substrate, yielding \(\SI{28}{\degree}\) and \(\SI{105}{\degree}\), respectively.\ChangeTagEnd{r2_13_contact_angle_timing} The composite substrate enabled us to test artificially fabricated patterns, whereas HOPG, with its atomically flat terraces and step structures \cite{Chang1991-fz}, served as a natural reference surface for verifying nanoscale spatial resolution. Immediately before measurement, the HOPG surface was freshly cleaved with Scotch tape to expose a clean surface. Before each measurement, the cantilever was hydrophilized by atmospheric plasma treatment. In all measurements, the cantilever was controlled to oscillate with an amplitude of \(\SI{2}{\nano\metre}\). We calibrated the slip length of the probe tip by measuring a symmetric system (\(b_t = b_s\)) using an atmospheric-plasma-treated diamond-like carbon (DLC) substrate, yielding a slip length of \(b_t = b_s = 0.0 \pm \SI{1.2}{\nano\metre}\); \ChangeTagStart{r2_6_tip_calibration_fit}a representative fitting curve is shown in Fig.~\ref{figS:DLC_bubble_fit}(a)\ChangeTagEnd{r2_6_tip_calibration_fit}.
+Slip length mapping was first carried out on HOPG and on a hydrophilic-hydrophobic composite substrate (oxygen-plasma-treated-silica-1H,1H,2H,2H-perfluorooctanephosphonic acid, FOPA; the fabrication procedures are in Supporting Information \ref{supppart:materials}-A). The contact angles of deionized-water droplets \ChangeTagStart{r2_13_contact_angle_timing}were measured immediately before the FM-AFM measurements on reference hydrophilic and hydrophobic substrates prepared using the same process as the corresponding regions of the composite substrate, yielding \(\SI{28}{\degree}\) and \(\SI{105}{\degree}\), respectively.\ChangeTagEnd{r2_13_contact_angle_timing} The composite substrate enabled us to test artificially fabricated patterns, whereas HOPG, with its atomically flat terraces and step structures \cite{Chang1991-fz}, served as a natural reference surface for verifying nanoscale spatial resolution. Immediately before measurement, the HOPG surface was freshly cleaved with Scotch tape to expose a clean surface. Before each measurement, the cantilever was hydrophilized by atmospheric plasma treatment. In all measurements, the cantilever was controlled to oscillate with an amplitude of \(\SI{2}{\nano\metre}\). We calibrated the slip length of the probe tip by measuring a symmetric system (\(b_t = b_s\)) using an atmospheric-plasma-treated diamond-like carbon (DLC) substrate, yielding a slip length of \(b_t = b_s = 0.0 \pm \SI{1.2}{\nano\metre}\); \ChangeTagStart{r2_6_tip_calibration_fit}a representative fitting curve is shown in Fig.~\ref{figS:DLC_bubble_fit}(a)\ChangeTagEnd{r2_6_tip_calibration_fit}.
 
 \ChangeTagStart{r2_5_goodness_fit_errorbars_fig4}\ChangeTagEnd{r2_5_goodness_fit_errorbars_fig4}
 \ChangeTagStart{r2_12_contact_angle_upper_range_fig4}\ChangeTagEnd{r2_12_contact_angle_upper_range_fig4}
@@ -234,7 +244,7 @@ Next, we systematically measured slip lengths on a variety of solid surfaces wit
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.6\linewidth]{figs/scaling_result.png}
-  \caption{Systematic comparison of slip lengths on nanoscopically flat substrates with contact angles ranging from \SI{3}{\degree} to \SI{111}{\degree}. The error bars represent the standard deviations of the slip lengths obtained from the \(128 \times 128\) pixels in each slip-length map. The blue and red dashed lines correspond to the theoretical scaling law of Eq.~\ref{eqn:slip length scaling} with \(C = \SI{6.0}{\nano\metre}\) and \(C = \SI{0.41}{\nano\metre}\), respectively. The gray region represents contact angles above the approximate upper range expected for chemically homogeneous smooth flat surfaces without roughness-induced Cassie states. The corresponding topography and slip-length maps, together with the measured nanoscale roughness values, are shown in Fig.~\ref{figS:mapping_colormaps}.}
+  \caption{Systematic comparison of slip lengths on nanoscopically flat substrates with contact angles ranging from \SI{3}{\degree} to \SI{111}{\degree}. The error bars represent the standard deviations of the slip lengths obtained from the \(128 \times 128\) pixels in each slip-length map. The blue and red dashed lines correspond to the theoretical scaling law of Eq.~\ref{eqn:slip length scaling} with \(C = \SI{6.0}{\nano\metre}\) and \(C = \SI{0.41}{\nano\metre}\), respectively. The gray region represents contact angles above the approximate upper range expected for chemically homogeneous smooth flat surfaces. The corresponding topography and slip-length maps, together with the measured nanoscale roughness values, are shown in Fig.~\ref{figS:mapping_colormaps}.}
   \label{fgr:scaling_result}
 \end{figure}
 

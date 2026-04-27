@@ -17,6 +17,7 @@
 \usepackage{graphicx}
 \usepackage{xr} % For cross-referencing equations from main.tex
 \usepackage{multirow}
+\usepackage{lineno}
 \externaldocument{main}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -32,6 +33,8 @@
 %% when typesetting).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand*\mycommand[1]{\texttt{\emph{#1}}}
+\newcommand{\ChangeTagStart}[1]{\linelabel{changetag:start:#1}}
+\newcommand{\ChangeTagEnd}[1]{\linelabel{changetag:end:#1}}
 \setcounter{figure}{0}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \setcounter{table}{0}
@@ -108,7 +111,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title[Title_supporting_information]
   {Supporting Information\\
-  Water Need Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
+  Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some journals require a list of abbreviations or keywords to be
@@ -123,6 +126,7 @@
 %% executed automatically.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\linenumbers
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Start the main part of the manuscript here.
@@ -167,7 +171,7 @@ Therefore, from Eqs.~\ref{eqn:s4} and \ref{eqn:s5}, the damping coefficient is r
 \end{equation}
 \subsectionpart{sensitivity-comparison}{Comparison of Sensitivity between Conventional and Proposed Methods}
 
-We compared the sensitivity of slip length measurements between conventional contact-mode AFM and the proposed FM-AFM method. In contact-mode AFM, the cantilever deflection \(x\) is measured as a sensor voltage, and the relationship between the deflection sensor voltage \(V_x\) and \(x\) is expressed using the sensitivity \(s\) as \(x = sV_x\). Furthermore, to determine the viscous drag in Eq.~\ref{eqn:hydrodynamic force} from the restoring force of the cantilever, \(kx\) (\(k\) is the spring constant), the following relation holds:
+\ChangeTagStart{r2_4_fstar_function_si}We compared the sensitivity of slip length measurements between conventional contact-mode AFM and the proposed FM-AFM method. In contact-mode AFM, the cantilever deflection \(x\) is measured as a sensor voltage, and the relationship between the deflection sensor voltage \(V_x\) and \(x\) is expressed using the sensitivity \(s\) as \(x = sV_x\). Furthermore, to determine the viscous drag in Eq.~\ref{eqn:hydrodynamic force} from the restoring force of the cantilever, \(kx\) (\(k\) is the spring constant), the following relation holds:
 \begin{equation}
   F = -ksV_x = -\frac{6\pi\eta R^2 \dot{h}}{h} f^{*}(h, b_t, b_s).
   \tag{S7}
@@ -179,7 +183,7 @@ In contrast, in the FM-AFM method, the oscillation amplitude \(A\) is recorded a
   \tag{S8}
   \label{eqn:s8}
 \end{equation}
-Here, the measurement sensitivity is defined as the change in signal voltage with respect to the substrate slip length, \(\partial V/\partial b_s\). Differentiating Eqs.~\ref{eqn:s7} and \ref{eqn:s8} yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
+\ChangeTagEnd{r2_4_fstar_function_si}Here, the measurement sensitivity is defined as the change in signal voltage with respect to the substrate slip length, \(\partial V/\partial b_s\). Differentiating Eqs.~\ref{eqn:s7} and \ref{eqn:s8} yields the sensitivities for each method, \(S_{\text{contact}}\) and \(S_{\text{FM}}\):
 \begin{equation}
   S_{\text{contact}} = \frac{\partial V_x}{\partial b_s} = -\frac{6\pi\eta R^2 \dot{h}}{k s h}\frac{\partial f^{*}}{\partial b_s}.
   \tag{S9}
@@ -202,7 +206,7 @@ The sensitivity ratio was calculated to be \(S_{\text{FM}}/S_{\text{contact}} = 
 
 \subsubsection{A. Fabrication of Hydrophilic/Hydrophobic Composite Substrates}
 
-A thermally grown silica surface on a Si wafer was spin-coated with an electron-beam resist (ZEP520A, ZEON Corporation, Japan) at \SI{5000}{\per\minute} to form a \SI{300}{\nano\metre}-thick film. Using an electron-beam lithography system (JSM-6360, JEOL Ltd., Japan / BEAM DRAW, Tokyo Technology Inc., Japan), square patterns of \SI{1}{\micro\metre}\(\times\)\SI{1}{\micro\metre} were patterned with a pitch of \SI{2}{\micro\metre}, and the resist in the exposed areas was removed during development. Subsequently, a \SI{5}{\nano\metre}-thick indium tin oxide (ITO) film was deposited by magnetron sputtering (MS-4B-3T, Cosmo System Co., Ltd., Japan). The electron-beam resist was then lifted off by rinsing in dimethylacetamide for \SI{5}{\minute}, leaving ITO patches on the silica substrate. The patterned ITO substrate was treated with \(\mathrm{O}_2\) plasma (PR500, Yamato Scientific Co., Japan) and then immersed in a \SI{1}{\milli\mole\per\litre} ethanol solution of 1H,1H,2H,2H-perfluorooctanephosphonic acid (FOPA) for \SI{1}{\hour} to form a self-assembled monolayer (SAM). Since FOPA SAMs are easily hydrolyzed on silica but remain stable on ITO surfaces and maintain hydrophobicity in water for several hours \cite{Thissen2012-xt, Jo2011-nw}, the fabricated composite substrate was immersed in water for \SI{3}{\hour} to selectively remove FOPA from the silica surface. Contact angles of the hydrophilic and hydrophobic regions were evaluated immediately before the FM-AFM measurements using reference substrates prepared by the same process as the corresponding regions of the composite substrate.
+A thermally grown silica surface on a Si wafer was spin-coated with an electron-beam resist (ZEP520A, ZEON Corporation, Japan) at \SI{5000}{\per\minute} to form a \SI{300}{\nano\metre}-thick film. Using an electron-beam lithography system (JSM-6360, JEOL Ltd., Japan / BEAM DRAW, Tokyo Technology Inc., Japan), square patterns of \SI{1}{\micro\metre}\(\times\)\SI{1}{\micro\metre} were patterned with a pitch of \SI{2}{\micro\metre}, and the resist in the exposed areas was removed during development. Subsequently, a \SI{5}{\nano\metre}-thick indium tin oxide (ITO) film was deposited by magnetron sputtering (MS-4B-3T, Cosmo System Co., Ltd., Japan). The electron-beam resist was then lifted off by rinsing in dimethylacetamide for \SI{5}{\minute}, leaving ITO patches on the silica substrate. The patterned ITO substrate was treated with \(\mathrm{O}_2\) plasma (PR500, Yamato Scientific Co., Japan) and then immersed in a \SI{1}{\milli\mole\per\litre} ethanol solution of 1H,1H,2H,2H-perfluorooctanephosphonic acid (FOPA) for \SI{1}{\hour} to form a self-assembled monolayer (SAM). Since FOPA SAMs are easily hydrolyzed on silica but remain stable on ITO surfaces and maintain hydrophobicity in water for several hours \cite{Thissen2012-xt, Jo2011-nw}, the fabricated composite substrate was immersed in water for \SI{3}{\hour} to selectively remove FOPA from the silica surface. \ChangeTagStart{r2_13_contact_angle_timing_si}Contact angles of the hydrophilic and hydrophobic regions were evaluated immediately before the FM-AFM measurements using reference substrates that underwent the corresponding \(\mathrm{O}_2\)-plasma treatment, FOPA/ethanol-solution immersion, and subsequent water-immersion steps used to prepare the composite substrate.\ChangeTagEnd{r2_13_contact_angle_timing_si}
 
 \subsubsection{B. Fabrication of Teflon Substrates}
 
@@ -311,6 +315,7 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
 }%
 \end{table}
 
+\ChangeTagStart{r2_6_tip_calibration_fit_si}\ChangeTagStart{r2_7_nanobubble_fit_si}
 \begin{figure}[p]
   \centering
   \includegraphics[width=0.6\linewidth]{figs/HOPG_strong_force.png}
@@ -319,12 +324,15 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
   }
   \label{figS:HOPG_strong_force}
 \end{figure}
+\ChangeTagEnd{r2_7_nanobubble_fit_si}\ChangeTagEnd{r2_6_tip_calibration_fit_si}
 
 \begin{figure}[p]
   \centering
   \includegraphics[width=1.0\linewidth]{figs/DLC_bubble.png}
   \caption{
-    Representative damping-coefficient fitting curves for (a) tip slip-length calibration on an atmospheric-plasma-treated DLC substrate and (b) slip-length extraction directly above a nanobubble. The mean absolute errors were \SI{0.016}{\micro\newton\second\per\metre} and \SI{0.014}{\micro\newton\second\per\metre} for (a) and (b), respectively.
+    Representative damping-coefficient fitting curves for (a) a atmospheric-plasma-treated DLC substrate and (b) a location above a nanobubble.
+    The slip lengths shown in the panels were obtained from these representative single-point fits and therefore do not necessarily coincide with the mean values reported in the main text: \(0.0\pm1.2~\mathrm{nm}\) for DLC and \(345.3\pm23.7~\mathrm{nm}\) for nanobubbles.
+    The mean absolute errors were \SI{0.016}{\micro\newton\second\per\metre} and \SI{0.014}{\micro\newton\second\per\metre} for (a) and (b), respectively.
   }
   \label{figS:DLC_bubble_fit}
 \end{figure}
@@ -336,8 +344,9 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
   \label{figS:mapping_colormaps}
 \end{figure}
 
+\ChangeTagStart{r2_11_units_comparison_table_si}
 \begin{table}[p]
-  \caption{Comparison of measured slip lengths with values calculated from Eq.~\ref{eqn:slip length scaling} for the substrates investigated in this study. The mean absolute errors between the measured values and the calculated values over all entries are \SI{6.56}{\nano\metre} for \(C = \SI{0.41}{\nano\metre}\) and \SI{11.17}{\nano\metre} for \(C = \SI{6.0}{\nano\metre}\).}
+  \caption{Measured slip lengths and values calculated from Eq.~\ref{eqn:slip length scaling} for the substrates investigated in this study.}
   \label{tbl:contact_angle_slip}
   \centering
   \resizebox{\textwidth}{!}{%
@@ -357,6 +366,7 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
   \end{tabular}
   }
 \end{table}
+\ChangeTagEnd{r2_11_units_comparison_table_si}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The appropriate \bibliography command should be placed here.

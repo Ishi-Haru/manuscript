@@ -466,7 +466,8 @@ Thank you for raising this important point. We revised the discussion to clarify
 
 Changes:
 Revised the HOPG discussion to focus on the contact angle measured in this study rather than on the general wettability of pristine graphite.
-Clarified that hydrophobic adsorbates are unlikely to be the primary origin of the large HOPG slip length because the HOPG surface was freshly cleaved immediately before measurement and showed only moderate wettability.
+Added that the measured HOPG contact angle (\(\SI{59.0}{\degree}\)) is close to the contact angle reported for freshly cleaved HOPG by Kozbial et al. (\(\SI{64.4}{\degree}\)).
+Clarified that hydrophobic adsorbates are unlikely to be the primary origin of the large HOPG slip length because the HOPG surface was freshly cleaved immediately before measurement and showed moderate wettability comparable to freshly cleaved HOPG.
 Clarified that the localized nanobubble was analyzed separately and is not the origin of the slip length on the flat HOPG terrace.
 Added that the large slip length on the flat HOPG terrace is attributed to the low-friction graphite-water interface, consistent with MD studies reporting graphite slip lengths on the order of \(\SI{50}{\nano\metre}\).
 
@@ -528,4 +529,4 @@ Added that the large slip length on the flat HOPG terrace is attributed to the l
 - [x] Smooth flat surfaces において contact angle 120 degrees が near-maximum であるという主張を正当化する。
 - [x] Contact-angle measurements のタイミングと atmospheric exposure の影響を説明する。
 - [x] Hydrophilic surfaces に関するコンセンサス、および hydrophobic surfaces に関するコンセンサス欠如の主張を根拠づける。
-- [x] Pristine graphite の hydrophilicity に関する報告に対応し、HOPG で大きな slip length が得られた理由を説明する。
+- [x] Pristine graphite の hydrophilicity に関する報告に対応し、測定した HOPG の接触角が freshly cleaved HOPG の報告値と近いことを示したうえで、大きな slip length が得られた理由を説明する。

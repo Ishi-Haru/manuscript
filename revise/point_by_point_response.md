@@ -27,11 +27,10 @@ No changes were made to the manuscript.
 1. Firstly, the title of the paper is currently not wholly accurate. The word "Does" should be replaced with "Need", i.e., the title should be "Water Need Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping". This is because water does slip on graphite, so the authors cannot generally state that water does not slip on hydrophobic surfaces. Instead, the claim should be that water need not slip on hydrophobic surfaces.
 </span>
 
-Thank you for this helpful suggestion. As recommended, we revised the title from "Does Water Slip on Hydrophobic Surfaces? Insights from Slip Length Mapping" to "Water Need Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping."
+Thank you for this helpful suggestion. 
 
 Changes:
-Updated the manuscript title accordingly.
-Updated the title in the Supporting Information accordingly.
+変更なし
 
 <span style="color: #57ACFB; ">
 2. The authors need to contextualize their results vis-a-vis those of Secchi et al. (https://www.nature.com/articles/nature19315), who found massive radius-dependent water slippage in carbon nanotubes (CNTs), with slip lengths on the order of hundreds of nanometers. The authors should explain why there is massive slippage on CNTs but not on the surfaces they examined.

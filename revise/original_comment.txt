@@ -134,3 +134,15 @@ Novelty: High (suitable for Nano Letters)
 Broad interest: High (suitable for Nano Letters)
 
 Scholarly presentation: Moderate (not suitable for Nano Letters)
+
+reviewer 3
+
+We have received a late review after the decision was made and would like you to consider these comments. You can find them below. You may address this reviewer as Reviewer 3.
+
+
+Comments: (1)The work seems not support the title “Water Does Not Slip on Hydrophobic Surfaces”. The slip effect may be more obvious in the confined water region (such as water in the carbon nanotube), for which the Knudsen number is used to determine its impact.
+
+（2 (2) In recent work (Nature 2022, 602 (7895), 84– 90), the quantum friction was proposed for the water-carbon interaction. The following work ( Nano Lett. 2023, 23 (2), 580– 587; J. Phys. Chem. Lett. 2026, 17(10), 2792-2798) shows the thickness and defect of carbon material also have a significantly impact. All these mean the solid will have influence on the friction, which was not considered in the previous MD simulation.
+
+（3）  (3)    The developed experimental method for slip length measurement in present work shows its advantage, however, the conclusion of “Water Does Not Slip on Hydrophobic Surfaces” should be reconsidered, as the friction is influenced by many factors for both solid and liquid.
+

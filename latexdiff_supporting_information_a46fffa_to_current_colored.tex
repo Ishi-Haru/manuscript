@@ -1,7 +1,7 @@
 ﻿%DIF 1c1
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL tex_diff_tmp/supporting_information_old.tex   Mon Apr 27 23:44:58 2026
-%DIF ADD supporting_information.tex                    Mon Apr 27 21:41:13 2026
+%DIF DEL __latexdiff_old_supporting_information_a46fffa.tex   Sat May  2 03:24:12 2026
+%DIF ADD supporting_information.tex                           Sat May  2 03:10:49 2026
 %DIF < ﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %DIF -------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %DIF > 
@@ -24,10 +24,16 @@
 \usepackage{graphicx}
 \usepackage{xr} % For cross-referencing equations from main.tex
 \usepackage{multirow}
-%DIF 20a20
+%DIF 20a20-21
 \usepackage{lineno} %DIF > 
+\usepackage{color} %DIF > 
 %DIF -------
+\makeatletter
+\let\latexdifforigwritefile\@writefile
+\def\@writefile#1#2{}
 \externaldocument{main}
+\let\@writefile\latexdifforigwritefile
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If issues arise when submitting your manuscript, you may want to
@@ -42,7 +48,7 @@
 %% when typesetting).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand*\mycommand[1]{\texttt{\emph{#1}}}
-%DIF 35a36-37
+%DIF 35a37-38
 \newcommand{\ChangeTagStart}[1]{\linelabel{changetag:start:#1}} %DIF > 
 \newcommand{\ChangeTagEnd}[1]{\linelabel{changetag:end:#1}} %DIF > 
 %DIF -------
@@ -94,7 +100,7 @@
 {International Institute for Carbon-Neutral Energy Research (WPI-I2CNER), Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
 \author{Vishwanath Ganesan}
 \affiliation[UIUC MechSE]
-%DIF 83c86
+%DIF 83c87
 %DIF < {Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
@@ -103,31 +109,31 @@
 \affiliation[I2CNER]
 {International Institute for Carbon-Neutral Energy Research (WPI-I2CNER), Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
 \alsoaffiliation[UIUC MechSE]
-%DIF 88c91
+%DIF 88c92
 %DIF < {Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
 %DIF -------
 \alsoaffiliation[UIUC MRL]
-%DIF 90c93
+%DIF 90c94
 %DIF < {Materials Research Laboratory, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Materials Research Laboratory, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
 %DIF -------
 \alsoaffiliation[UIUC ECE]
-%DIF 92c95
+%DIF 92c96
 %DIF < {Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
 %DIF -------
 \alsoaffiliation[iSEE]
-%DIF 94c97
+%DIF 94c98
 %DIF < {Institute for Sustainability, Energy and Environment (iSEE), University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Institute for Sustainability, Energy and Environment (iSEE), University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
 %DIF -------
 \alsoaffiliation[ARC]
-%DIF 96c99
+%DIF 96c100
 %DIF < {Air Conditioning and Refrigeration Center, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Air Conditioning and Refrigeration Center, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
@@ -146,7 +152,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title[Title_supporting_information]
   {Supporting Information\\
-  Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
+%DIF 111c115
+%DIF <   Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
+%DIF -------
+  Hydrophobicity Does Not determine Water Slip Length: Insights from Slip Length Mapping} %DIF > 
+%DIF -------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some journals require a list of abbreviations or keywords to be
@@ -164,8 +174,8 @@
 %DIF CFONT PREAMBLE %DIF PREAMBLE
 \RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
 \DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf} %DIF PREAMBLE
-\providecommand{\DIFadd}[1]{{\protect\color{blue} #1}} %DIF PREAMBLE
-\providecommand{\DIFdel}[1]{} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue} \sf #1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red} \scriptsize #1}} %DIF PREAMBLE
 %DIF SAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddbegin}{} %DIF PREAMBLE
 \providecommand{\DIFaddend}{} %DIF PREAMBLE
@@ -175,7 +185,7 @@
 \providecommand{\DIFmodend}{} %DIF PREAMBLE
 %DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
-\providecommand{\DIFdelFL}[1]{} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
 \providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
 \providecommand{\DIFaddendFL}{} %DIF PREAMBLE
 \providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
@@ -211,16 +221,16 @@
 \LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelbegin}{} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelend}{} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
 \LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelbeginFL}{} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelendFL}{} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
 %DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
 \RequirePackage{listings} %DIF PREAMBLE
 \RequirePackage{color} %DIF PREAMBLE
@@ -241,6 +251,21 @@
 
 %DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
+% Custom latexdiff display: show current text and color additions only.
+\renewcommand{\DIFadd}[1]{{\protect\color{blue} #1}}
+\renewcommand{\DIFdel}[1]{}
+\renewcommand{\DIFaddFL}[1]{{\protect\color{blue} #1}}
+\renewcommand{\DIFdelFL}[1]{}
+\DeclareRobustCommand{\DIFaddbegin}{}
+\DeclareRobustCommand{\DIFaddend}{}
+\DeclareRobustCommand{\DIFdelbegin}{}
+\DeclareRobustCommand{\DIFdelend}{}
+\DeclareRobustCommand{\DIFaddbeginFL}{}
+\DeclareRobustCommand{\DIFaddendFL}{}
+\DeclareRobustCommand{\DIFdelbeginFL}{}
+\DeclareRobustCommand{\DIFdelendFL}{}
+\renewcommand{\DIFaddincludegraphics}[2][]{\DIFOincludegraphics[#1]{#2}}
+\renewcommand{\DIFdelincludegraphics}[2][]{}
 \begin{document}
 \DIFaddbegin \linenumbers
 \DIFaddend 
@@ -323,7 +348,7 @@ The sensitivity ratio was calculated to be \(S_{\text{FM}}/S_{\text{contact}} = 
 
 \subsubsection{A. Fabrication of Hydrophilic/Hydrophobic Composite Substrates}
 
-A thermally grown silica surface on a Si wafer was spin-coated with an electron-beam resist (ZEP520A, ZEON Corporation, Japan) at \SI{5000}{\per\minute} to form a \SI{300}{\nano\metre}-thick film. Using an electron-beam lithography system (JSM-6360, JEOL Ltd., Japan / BEAM DRAW, Tokyo Technology Inc., Japan), square patterns of \SI{1}{\micro\metre}\(\times\)\SI{1}{\micro\metre} were patterned with a pitch of \SI{2}{\micro\metre}, and the resist in the exposed areas was removed during development. Subsequently, a \SI{5}{\nano\metre}-thick indium tin oxide (ITO) film was deposited by magnetron sputtering (MS-4B-3T, Cosmo System Co., Ltd., Japan). The electron-beam resist was then lifted off by rinsing in dimethylacetamide for \SI{5}{\minute}, leaving ITO patches on the silica substrate. The patterned ITO substrate was treated with \(\mathrm{O}_2\) plasma (PR500, Yamato Scientific Co., Japan) and then immersed in a \SI{1}{\milli\mole\per\litre} ethanol solution of 1H,1H,2H,2H-perfluorooctanephosphonic acid (FOPA) for \SI{1}{\hour} to form a self-assembled monolayer (SAM). Since FOPA SAMs are easily hydrolyzed on silica but remain stable on ITO surfaces and maintain hydrophobicity in water for several hours \cite{Thissen2012-xt, Jo2011-nw}, the fabricated composite substrate was immersed in water for \SI{3}{\hour} to selectively remove FOPA from the silica surface. \DIFaddbegin \ChangeTagStart{r2_13_contact_angle_timing_si}\DIFadd{Contact angles of the hydrophilic and hydrophobic regions were evaluated immediately before the FM-AFM measurements using reference substrates that underwent the corresponding \(\mathrm{O}_2\)-plasma treatment, FOPA/ethanol-solution immersion, and subsequent water-immersion steps used to prepare the composite substrate.}\ChangeTagEnd{r2_13_contact_angle_timing_si}
+A thermally grown silica surface on a Si wafer was spin-coated with an electron-beam resist (ZEP520A, ZEON Corporation, Japan) at \SI{5000}{\per\minute} to form a \SI{300}{\nano\metre}-thick film. Using an electron-beam lithography system (JSM-6360, JEOL Ltd., Japan / BEAM DRAW, Tokyo Technology Inc., Japan), square patterns of \SI{1}{\micro\metre}\(\times\)\SI{1}{\micro\metre} were patterned with a pitch of \SI{2}{\micro\metre}, and the resist in the exposed areas was removed during development. Subsequently, a \SI{5}{\nano\metre}-thick indium tin oxide (ITO) film was deposited by magnetron sputtering (MS-4B-3T, Cosmo System Co., Ltd., Japan). The electron-beam resist was then lifted off by rinsing in dimethylacetamide for \SI{5}{\minute}, leaving ITO patches on the silica substrate. The patterned ITO substrate was treated with \(\mathrm{O}_2\) plasma (PR500, Yamato Scientific Co., Japan) and then immersed in a \SI{1}{\milli\mole\per\litre} ethanol solution of 1H,1H,2H,2H-perfluorooctanephosphonic acid (FOPA) for \SI{1}{\hour} to form a self-assembled monolayer (SAM). Since FOPA SAMs are easily hydrolyzed on silica but remain stable on ITO surfaces and maintain hydrophobicity in water for several hours \cite{Thissen2012-xt, Jo2011-nw}, the fabricated composite substrate was immersed in water for \SI{3}{\hour} to selectively remove FOPA from the silica surface. \DIFaddbegin \ChangeTagStart{r2_13_contact_angle_timing_si}\DIFadd{Contact angles of the hydrophilic and hydrophobic regions were evaluated immediately before the FM-AFM measurements using unpatterned reference substrates that underwent the corresponding \(\mathrm{O}_2\)-plasma treatment, FOPA/ethanol-solution immersion, and subsequent water-immersion steps used to prepare the composite substrate.}\ChangeTagEnd{r2_13_contact_angle_timing_si}
 \DIFaddend 
 
 \subsubsection{B. Fabrication of Teflon Substrates}
@@ -433,8 +458,7 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
 }%
 \end{table}
 
-\DIFaddbegin \ChangeTagStart{r2_6_tip_calibration_fit_si}\ChangeTagStart{r2_7_nanobubble_fit_si}
-\DIFaddend \begin{figure}[p]
+\begin{figure}[p]
   \centering
   \includegraphics[width=0.6\linewidth]{figs/HOPG_strong_force.png}
   \caption{
@@ -442,30 +466,33 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
   }
   \label{figS:HOPG_strong_force}
 \end{figure}
-\DIFaddbegin \ChangeTagEnd{r2_7_nanobubble_fit_si}\ChangeTagEnd{r2_6_tip_calibration_fit_si}
-\DIFaddend 
 
-\begin{figure}[p]
+\DIFaddbegin \ChangeTagStart{r2_6_tip_calibration_fit_si}\ChangeTagStart{r2_7_nanobubble_fit_si}
+\DIFaddend \begin{figure}[p]
   \centering
   \DIFaddbeginFL \includegraphics[width=1.0\linewidth]{figs/DLC_bubble.png}
   \caption{
-    \DIFaddFL{Representative damping-coefficient fitting curves for (a) a atmospheric-plasma-treated DLC substrate and (b) a location above a nanobubble.
+    \DIFaddFL{Representative damping-coefficient fitting curves for (a) an atmospheric-plasma-treated DLC substrate and (b) a location above a nanobubble.
     The slip lengths shown in the panels were obtained from these representative single-point fits and therefore do not necessarily coincide with the mean values reported in the main text: \(0.0\pm1.2~\mathrm{nm}\) for DLC and \(345.3\pm23.7~\mathrm{nm}\) for nanobubbles.
     The mean absolute errors were \SI{0.016}{\micro\newton\second\per\metre} and \SI{0.014}{\micro\newton\second\per\metre} for (a) and (b), respectively.
   }}
   \label{figS:DLC_bubble_fit}
 \end{figure}
+\ChangeTagEnd{r2_7_nanobubble_fit_si}\ChangeTagEnd{r2_6_tip_calibration_fit_si}
 
+\ChangeTagStart{non_sci_figs3_caption}
 \begin{figure}[p]
   \centering
   \DIFaddendFL \includegraphics[width=1.0\linewidth]{figs/mapping_colormaps.png}
-  \caption{ (a-d) Topography and (e-h) corresponding slip-length maps of (a, d) mica, (b, e) FDTS, (c, f) Teflon, and (d, h) HOPG. The \(R_a\) values were \SI{0.27}{\nano\metre}, \SI{0.29}{\nano\metre}, \SI{0.64}{\nano\metre}, and \SI{0.35}{\nano\metre} for each surface, respectively. Only the result for HOPG (d, h) was obtained in a \SI{10}{\milli\mole\per\litre} KCl solution and the others were in DI water.}
+  \caption{(\DIFdelbeginFL \DIFdelFL{a-d}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{a--d}\DIFaddendFL ) Topography and (\DIFdelbeginFL \DIFdelFL{e-h}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{e--h}\DIFaddendFL ) corresponding slip-length maps of (a, \DIFdelbeginFL \DIFdelFL{d}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{e}\DIFaddendFL ) mica, (b, \DIFdelbeginFL \DIFdelFL{e}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{f}\DIFaddendFL ) FDTS, (c, \DIFdelbeginFL \DIFdelFL{f}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{g}\DIFaddendFL ) Teflon, and (d, h) HOPG. The \(R_a\) values were \SI{0.27}{\nano\metre}, \SI{0.29}{\nano\metre}, \SI{0.64}{\nano\metre}, and \SI{0.35}{\nano\metre} for each surface, respectively. Only the result for HOPG (d, h) was obtained in a \SI{10}{\milli\mole\per\litre} KCl solution and the others were in DI water.}
   \label{figS:mapping_colormaps}
 \end{figure}
+\DIFaddbegin \ChangeTagEnd{non_sci_figs3_caption}
+\DIFaddend 
 
 \DIFaddbegin \ChangeTagStart{r2_11_units_comparison_table_si}
 \DIFaddend \begin{table}[p]
-  \caption{Measured \DIFdelbeginFL \DIFdelFL{contact angles and }\DIFdelendFL slip lengths \DIFdelbeginFL \DIFdelFL{of }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{and values calculated from Eq.~\ref{eqn:slip length scaling} for }\DIFaddendFL the substrates investigated in this study\DIFaddbeginFL \DIFaddFL{.}\DIFaddendFL }
+  \caption{Measured \DIFdelbeginFL \DIFdelFL{contact angles and }\DIFdelendFL slip lengths \DIFdelbeginFL \DIFdelFL{of }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{and values predicted by Eq.~\ref{eqn:slip length scaling} for }\DIFaddendFL the substrates investigated in this study\DIFaddbeginFL \DIFaddFL{.}\DIFaddendFL }
   \label{tbl:contact_angle_slip}
   \DIFdelbeginFL %DIFDELCMD < \begin{tabular}{lcc}
 %DIFDELCMD <     \hline
@@ -513,16 +540,16 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
   \resizebox{\textwidth}{!}{%
   \begin{tabular}{lcccc}
     \hline
-    Substrate & Contact Angle \(\theta\) (\si{\degree}) & Calculated \(b\), \(C = \SI{0.41}{\nano\metre}\) (\si{\nano\metre}) & Calculated \(b\), \(C = \SI{6.0}{\nano\metre}\) (\si{\nano\metre}) & Measured \(b\) (\si{\nano\metre}) \\
+    Substrate & Contact Angle (\si{\degree}) & \(b\) predicted by \(C = 0.41~\mathrm{nm}\) (nm) & \(b\) predicted by \(C = 6.0~\mathrm{nm}\) (nm) & Measured \(b\) (nm) \\
     \hline
-    Mica & \(< \SI{3}{\degree}\) & \(\sim\SI{0.10}{\nano\metre}\) & \(\sim\SI{1.50}{\nano\metre}\) & \(-1.7 \pm \SI{0.3}{\nano\metre}\) \\
-    Oxygen plasma-treated silica & \SI{28.1}{\degree} & \SI{0.12}{\nano\metre} & \SI{1.69}{\nano\metre} & \(-0.7 \pm \SI{0.6}{\nano\metre}\) \\
-    FDTS & \SI{97.9}{\degree} & \SI{0.55}{\nano\metre} & \SI{8.06}{\nano\metre} & \(-1.7 \pm \SI{0.2}{\nano\metre}\) \\
-    FOPA & \SI{105.0}{\degree} & \SI{0.75}{\nano\metre} & \SI{10.92}{\nano\metre} & \(-0.9 \pm \SI{0.6}{\nano\metre}\) \\
-    Teflon & \SI{111.1}{\degree} & \SI{1.00}{\nano\metre} & \SI{14.65}{\nano\metre} & \(0.8 \pm \SI{0.8}{\nano\metre}\) \\
-    HOPG (DI water) & \SI{59.0}{\degree} & \SI{0.18}{\nano\metre} & \SI{2.61}{\nano\metre} & \(43.2 \pm \SI{5.8}{\nano\metre}\) \\
-    HOPG (\SI{10}{\milli\mole\per\litre} KCl aq.) & \SI{62.8}{\degree} & \SI{0.19}{\nano\metre} & \SI{2.83}{\nano\metre} & \(-0.1 \pm \SI{0.7}{\nano\metre}\) \\
-    HOPG (\SI{10}{\milli\mole\per\litre} NaCl aq.) & \SI{57.0}{\degree} & \SI{0.17}{\nano\metre} & \SI{2.51}{\nano\metre} & \(-2.3 \pm \SI{0.6}{\nano\metre}\) \\
+    Mica & \(< 3\) & \(\sim 0.10\) & \(\sim 1.50\) & \(-1.7 \pm 0.3\) \\
+    Oxygen plasma-treated silica & \(28.1\) & \(0.12\) & \(1.69\) & \(-0.7 \pm 0.6\) \\
+    FDTS & \(97.9\) & \(0.55\) & \(8.06\) & \(-1.7 \pm 0.2\) \\
+    FOPA & \(105.0\) & \(0.75\) & \(10.92\) & \(-0.9 \pm 0.6\) \\
+    Teflon & \(111.1\) & \(1.00\) & \(14.65\) & \(0.8 \pm 0.8\) \\
+    HOPG (DI water) & \(59.0\) & \(0.18\) & \(2.61\) & \(43.2 \pm 5.8\) \\
+    HOPG (\(10\) mM KCl aq.) & \(62.8\) & \(0.19\) & \(2.83\) & \(-0.1 \pm 0.7\) \\
+    HOPG (\(10\) mM NaCl aq.) & \(57.0\) & \(0.17\) & \(2.51\) & \(-2.3 \pm 0.6\) \\
     \hline
   \end{tabular}
   }

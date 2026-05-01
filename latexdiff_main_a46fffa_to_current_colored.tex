@@ -1,7 +1,7 @@
 ﻿%DIF 1c1
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL tex_diff_tmp/main_old.tex   Mon Apr 27 23:44:58 2026
-%DIF ADD main.tex                    Mon Apr 27 21:59:17 2026
+%DIF DEL __latexdiff_old_main_a46fffa.tex   Sat May  2 03:24:12 2026
+%DIF ADD main.tex                           Sat May  2 03:10:31 2026
 %DIF < ﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %DIF -------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %DIF > 
@@ -26,10 +26,16 @@
 \usepackage{siunitx}
 \usepackage{graphicx}
 \usepackage{xr} % For cross-referencing from supporting_information.tex
-%DIF 19a20
+%DIF 19a20-21
 \usepackage{lineno} %DIF > 
+\usepackage{color} %DIF > 
 %DIF -------
+\makeatletter
+\let\latexdifforigwritefile\@writefile
+\def\@writefile#1#2{}
 \externaldocument{supporting_information}
+\let\@writefile\latexdifforigwritefile
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If issues arise when submitting your manuscript, you may want to
@@ -45,7 +51,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand*\mycommand[1]{\texttt{\emph{#1}}}
 \newcommand{\refsupppart}[1]{\ref{supppart:#1}}  % Helper to reference supporting info sections
-%DIF 35a37-49
+%DIF 35a38-50
 \newcommand{\ChangeTagStart}[1]{\linelabel{changetag:start:#1}} %DIF > 
 \newcommand{\ChangeTagEnd}[1]{\linelabel{changetag:end:#1}} %DIF > 
 \newcommand{\ChangeLineRange}[1]{lines~\ref{changetag:start:#1}--\ref{changetag:end:#1}} %DIF > 
@@ -53,8 +59,8 @@
 \makeatletter %DIF > 
 \renewcommand*\acs@keywords@print{% %DIF > 
   \ifx\@keywords\@empty\else %DIF > 
-    \section*{Keywords} %DIF > 
-    \@keywords %DIF > 
+    \acs@section*{Keywords} %DIF > 
+    \ChangeTagStart{non_sci_keywords_color}\@keywords\ChangeTagEnd{non_sci_keywords_color} %DIF > 
     \par\vspace{1em} %DIF > 
   \fi %DIF > 
 } %DIF > 
@@ -91,7 +97,7 @@
 {International Institute for Carbon-Neutral Energy Research (WPI-I2CNER), Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
 \author{Vishwanath Ganesan}
 \affiliation[UIUC MechSE]
-%DIF 66c81
+%DIF 66c82
 %DIF < {Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
@@ -100,31 +106,31 @@
 \affiliation[I2CNER]
 {International Institute for Carbon-Neutral Energy Research (WPI-I2CNER), Kyushu University, Nishi-Ku, Motooka 744, Fukuoka 819-0395, Japan}
 \alsoaffiliation[UIUC MechSE]
-%DIF 71c86
+%DIF 71c87
 %DIF < {Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Department of Mechanical Science and Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
 %DIF -------
 \alsoaffiliation[UIUC MRL]
-%DIF 73c88
+%DIF 73c89
 %DIF < {Materials Research Laboratory, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Materials Research Laboratory, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
 %DIF -------
 \alsoaffiliation[UIUC ECE]
-%DIF 75c90
+%DIF 75c91
 %DIF < {Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
 %DIF -------
 \alsoaffiliation[iSEE]
-%DIF 77c92
+%DIF 77c93
 %DIF < {Institute for Sustainability, Energy and Environment (iSEE), University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Institute for Sustainability, Energy and Environment (iSEE), University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
 %DIF -------
 \alsoaffiliation[ARC]
-%DIF 79c94
+%DIF 79c95
 %DIF < {Air Conditioning and Refrigeration Center, University of Illinois at Urbana-Champaign, Urbana, IL, USA}
 %DIF -------
 {Air Conditioning and Refrigeration Center, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA} %DIF > 
@@ -141,14 +147,18 @@
 %% a running title from the author: this should be supplied as an
 %% optional argument to \title.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[title]{Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
+%DIF 92c108
+%DIF < \title[title]{Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
+%DIF -------
+\title[title]{Hydrophobicity Does Not determine Water Slip Length: Insights from Slip Length Mapping} %DIF > 
+%DIF -------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some journals require a list of abbreviations or keywords to be
 %% supplied. These should be set up here, and will be printed after
 %% the title and author information, if needed.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%DIF 99-100c114-115
+%DIF 99-100c115-116
 %DIF < \abbreviations{IR,NMR,UV}
 %DIF < \keywords{American Chemical Society, \LaTeX}
 %DIF -------
@@ -164,8 +174,8 @@
 %DIF CFONT PREAMBLE %DIF PREAMBLE
 \RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
 \DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf} %DIF PREAMBLE
-\providecommand{\DIFadd}[1]{{\protect\color{blue} #1}} %DIF PREAMBLE
-\providecommand{\DIFdel}[1]{} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue} \sf #1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red} \scriptsize #1}} %DIF PREAMBLE
 %DIF SAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddbegin}{} %DIF PREAMBLE
 \providecommand{\DIFaddend}{} %DIF PREAMBLE
@@ -175,7 +185,7 @@
 \providecommand{\DIFmodend}{} %DIF PREAMBLE
 %DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
-\providecommand{\DIFdelFL}[1]{} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
 \providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
 \providecommand{\DIFaddendFL}{} %DIF PREAMBLE
 \providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
@@ -211,16 +221,16 @@
 \LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelbegin}{} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelend}{} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
 \LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelbeginFL}{} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelendFL}{} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
 %DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
 \RequirePackage{listings} %DIF PREAMBLE
 \RequirePackage{color} %DIF PREAMBLE
@@ -241,6 +251,21 @@
 
 %DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
+% Custom latexdiff display: show current text and color additions only.
+\renewcommand{\DIFadd}[1]{{\protect\color{blue} #1}}
+\renewcommand{\DIFdel}[1]{}
+\renewcommand{\DIFaddFL}[1]{{\protect\color{blue} #1}}
+\renewcommand{\DIFdelFL}[1]{}
+\DeclareRobustCommand{\DIFaddbegin}{}
+\DeclareRobustCommand{\DIFaddend}{}
+\DeclareRobustCommand{\DIFdelbegin}{}
+\DeclareRobustCommand{\DIFdelend}{}
+\DeclareRobustCommand{\DIFaddbeginFL}{}
+\DeclareRobustCommand{\DIFaddendFL}{}
+\DeclareRobustCommand{\DIFdelbeginFL}{}
+\DeclareRobustCommand{\DIFdelendFL}{}
+\renewcommand{\DIFaddincludegraphics}[2][]{\DIFOincludegraphics[#1]{#2}}
+\renewcommand{\DIFdelincludegraphics}[2][]{}
 \begin{document}
 \DIFaddbegin \linenumbers
 \DIFaddend 
@@ -263,15 +288,25 @@
 %% The abstract environment will automatically gobble the contents
 %% if an abstract is not used by the target journal.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{abstract}
-  While slip at solid-liquid interfaces has attracted broad interest, slip lengths reported in experiments—especially on hydrophobic surfaces (i.e. contact angles \(> \SI{90}{\degree}\))—vary widely due to surface topographical and chemical heterogeneity, hindering quantitative understanding of the true slip length. Using highly sensitive frequency-modulation atomic force microscopy, we achieved simultaneous nanoscale mapping of slip length and surface topography, with a 159-fold improvement in slip length detection sensitivity. True slip lengths measured on flat regions of various substrates were found to be almost zero, following a scaling rule predicted by molecular dynamics simulations. As the only exception, a large slip length of \(43.2 \pm \SI{5.8}{\nano\metre}\) was measured on graphite in deionized water, but it vanished upon immersion in electrolyte solutions. This unique behavior was rationalized by graphite's atomic-scale smoothness, chemical homogeneity, and ion adsorption. Our method experimentally advances a unified picture of fluid slip.
-\end{abstract}
+\DIFdelbegin %DIFDELCMD < \begin{abstract}
+%DIFDELCMD <   %%%
+\DIFdelend \DIFaddbegin 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ChangeTagStart{non_sci_abstract}\ChangeTagEnd{non_sci_abstract}\section*{\DIFadd{Abstract}}
+\DIFaddend While slip at solid-liquid interfaces has attracted broad interest, slip lengths reported in experiments—especially on hydrophobic surfaces (i.e. contact angles \(> \SI{90}{\degree}\))—vary widely due to surface topographical and chemical heterogeneity, hindering quantitative understanding of the true slip length. Using highly sensitive frequency-modulation atomic force microscopy, we achieved simultaneous nanoscale mapping of slip length and surface topography, with a 159-fold improvement in slip length detection sensitivity. True slip lengths measured on flat regions of various substrates were found to be almost zero, following a scaling rule predicted by molecular dynamics simulations. As the only exception, a large slip length of \(43.2 \pm \SI{5.8}{\nano\metre}\) was measured on graphite in deionized water, but it vanished upon immersion in electrolyte solutions. This unique behavior was rationalized by graphite's atomic-scale smoothness, chemical homogeneity, and ion adsorption. Our method experimentally advances a unified picture of fluid slip.
+\DIFdelbegin %DIFDELCMD < \end{abstract}
+%DIFDELCMD < %%%
+\DIFdelend 
+
+\DIFaddbegin \section*{\DIFadd{Keywords}}
+\ChangeTagStart{non_sci_keywords}\DIFadd{slip length, boundary slip, AFM, graphite, hydrophobic surface, nanobubble}\ChangeTagEnd{non_sci_keywords}
+
+\DIFaddend %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Start the main part of the manuscript here.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The no-slip boundary condition, which assumes that the fluid velocity at a solid wall is zero, has long been regarded as an implicit premise in fluid mechanics. However, recent experiments have reported the occurrence of boundary slip, where fluids slip along solid surfaces with a finite velocity \cite{Huang2007-kv, Chen2022-hs, Cross2018-bc, Zhu2012-wb, Vinogradova1995-ct, Vinogradova2003-gh, Li2022-qs}. Slip is quantified by the slip length \(b\), defined in terms of the slip flow velocity \(v_{s}\) and the shear rate \(\partial v / \partial z \), as follows \cite{Navier1827-nw}: 
+\DIFaddbegin \section*{}
+\DIFaddend The no-slip boundary condition, which assumes that the fluid velocity at a solid wall is zero, has long been regarded as an implicit premise in fluid mechanics. However, recent experiments have reported the occurrence of boundary slip, where fluids slip along solid surfaces with a finite velocity \cite{Huang2007-kv, Chen2022-hs, Cross2018-bc, Zhu2012-wb, Vinogradova1995-ct, Vinogradova2003-gh, Li2022-qs}. Slip is quantified by the slip length \(b\), defined in terms of the slip flow velocity \(v_{s}\) and the shear rate \(\partial v / \partial z \), as follows \cite{Navier1827-nw}: 
 \begin{equation}
   v_s = b \left( \frac{\partial v}{\partial z} \right)_{z=0}. \label{eqn:definition of slip length}
 \end{equation}
@@ -281,15 +316,15 @@ Solid-liquid friction is drastically reduced when slip occurs. For instance, the
 \begin{equation}
   b = \frac{C}{(1 + \cos \theta)^{2}}. \label{eqn:slip length scaling}
 \end{equation}
-\DIFaddbegin \ChangeTagStart{r1_1_prefactor_units_intro}\DIFaddend where \(C\) is a \DIFdelbegin \DIFdel{proportionality constant}\DIFdelend \DIFaddbegin \DIFadd{prefactor with dimensions of length}\DIFaddend . Slip lengths obtained from molecular dynamics (MD) simulations are well fit by Eq.~\ref{eqn:slip length scaling} with \DIFdelbegin \DIFdel{\(C = 0.41\)}\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{0.41}{\nano\metre}\)}\DIFaddend , indicating almost no slip even at intrinsic contact angles of \SI{120}{\degree}\DIFdelbegin \DIFdel{, which is the near-maximum achievable on a topographically smooth }\DIFdelend \DIFaddbegin \DIFadd{.}\ChangeTagEnd{r1_1_prefactor_units_intro} \ChangeTagStart{r2_12_contact_angle_upper_range_intro}\DIFadd{We use \(\SI{120}{\degree}\) as a representative upper-range value for chemically homogeneous smooth flat surfaces because \(-\mathrm{CF}_3\) groups have among the lowest surface free energies of common surface-terminating groups, and a surface with a hexagonal close-packed arrangement of \(-\mathrm{CF}_3\) groups gives the largest water contact angles attainable on a chemically homogeneous }\DIFaddend flat surface \cite{Nishino1999-dk}. \DIFaddbegin \ChangeTagEnd{r2_12_contact_angle_upper_range_intro} \ChangeTagStart{r1_1_prefactor_units_scaling}\DIFaddend In contrast, when experimental slip length data from various studies are compiled (Fig.~\ref{fgr:previous_slip_length}), they show significant deviation from the MD-predicted scaling law with \DIFdelbegin \DIFdel{\(C = 0.41\)}\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{0.41}{\nano\metre}\)}\DIFaddend . For example, Wu et al. compiled 11 experimental studies and reported \DIFdelbegin \DIFdel{$C=6.0$}\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{6.0}{\nano\metre}\)}\DIFaddend , corresponding to slip lengths of tens of nanometers above \SI{90}{\degree} \cite{Wu2016-vv}. We additionally incorporated 14 experimental studies into Wu et al.'s plot. The data deviated from the \DIFdelbegin \DIFdel{$C=0.41$ }\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{0.41}{\nano\metre}\) }\DIFaddend curve and even from the \DIFdelbegin \DIFdel{$C=6.0$ }\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{6.0}{\nano\metre}\) }\DIFaddend curve, particularly on hydrophobic surfaces.\DIFaddbegin \ChangeTagEnd{r1_1_prefactor_units_scaling} \DIFaddend Moreover, although not included in Fig.~\ref{fgr:previous_slip_length}, a much larger value ($\SI{\sim1}{\micro\metre}$) has been measured \cite{Tretheway2002-et}.
+\DIFaddbegin \ChangeTagStart{r1_1_prefactor_units_intro}\DIFaddend where \(C\) is a \DIFdelbegin \DIFdel{proportionality constant}\DIFdelend \DIFaddbegin \DIFadd{prefactor with dimensions of length}\DIFaddend . Slip lengths obtained from molecular dynamics (MD) simulations are well fit by Eq.~\ref{eqn:slip length scaling} with \DIFdelbegin \DIFdel{\(C = 0.41\)}\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{0.41}{\nano\metre}\)}\DIFaddend , indicating almost no slip even at intrinsic contact angles of \SI{120}{\degree}\DIFdelbegin \DIFdel{, which is }\DIFdelend \DIFaddbegin \DIFadd{.}\ChangeTagEnd{r1_1_prefactor_units_intro} \ChangeTagStart{r2_12_contact_angle_upper_range_intro}\DIFadd{A contact angle of approximately \(\SI{120}{\degree}\) is achieved on a surface where \(-\mathrm{CF}_3\) groups, which have the lowest surface free energy among surface-terminating groups, are arranged in a hexagonal close-packed structure, and is known as }\DIFaddend the near-maximum \DIFaddbegin \DIFadd{water contact angle }\DIFaddend achievable on a \DIFdelbegin \DIFdel{topographically smooth }\DIFdelend \DIFaddbegin \DIFadd{chemically homogeneous }\DIFaddend flat surface \cite{Nishino1999-dk}. \DIFaddbegin \ChangeTagEnd{r2_12_contact_angle_upper_range_intro} \DIFaddend In contrast, when experimental slip length data from various studies are compiled (Fig.~\ref{fgr:previous_slip_length}), they show significant deviation from the MD-predicted scaling law with \DIFdelbegin \DIFdel{\(C = 0.41\)}\DIFdelend \DIFaddbegin \ChangeTagStart{r1_1_prefactor_units_scaling}\DIFadd{\(C = \SI{0.41}{\nano\metre}\)}\DIFaddend . For example, Wu et al. compiled 11 experimental studies and reported \DIFdelbegin \DIFdel{$C=6.0$}\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{6.0}{\nano\metre}\)}\DIFaddend , corresponding to slip lengths of tens of nanometers above \SI{90}{\degree} \cite{Wu2016-vv}. We additionally incorporated 14 experimental studies into Wu et al.'s plot. The data deviated from the \DIFdelbegin \DIFdel{$C=0.41$ }\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{0.41}{\nano\metre}\) }\DIFaddend curve and even from the \DIFdelbegin \DIFdel{$C=6.0$ }\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{6.0}{\nano\metre}\) }\DIFaddend curve, particularly on hydrophobic surfaces.\DIFaddbegin \ChangeTagEnd{r1_1_prefactor_units_scaling} \DIFaddend Moreover, although not included in Fig.~\ref{fgr:previous_slip_length}, a much larger value ($\SI{\sim1}{\micro\metre}$) has been measured \cite{Tretheway2002-et}.
 
 \DIFaddbegin \ChangeTagStart{r1_1_prefactor_units_fig1}
 \DIFaddend \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\linewidth]{figs/slip_length_summary/previous_slip_length.png}
   \caption{
-    Experimental slip length data of solid-water interfaces from previous studies \cite{Bonaccurso2002-nf, Vinogradova2003-gh, Cho2004-it, Cottin-Bizonne2005-kj, Maali2008-rd, Bouzigues2008-xn, Cottin-Bizonne2008-nc, Lasne2008-qt, Bhushan2009-yz, Zhu2011-je, Jing2013-kn, Ortiz-Young2013-wc, Xue2015-tu, Ahmad2015-eb, Radha2016-bk, Zhang2021-tn, Keerthi2021-mz, Li2022-qs, Chen2022-hs, Han2025-qq} plotted as a function of contact angle. The red dashed line represents the theoretical curve given by Eq.~\ref{eqn:slip length scaling} with \DIFdelbeginFL \DIFdelFL{$C=0.41$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{\(C = \SI{0.41}{\nano\metre}\) }\DIFaddendFL and the blue dashed line corresponds to \DIFdelbeginFL \DIFdelFL{$C=6.0$}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{\(C = \SI{6.0}{\nano\metre}\)}\DIFaddendFL . The slip length values are summarized in Table~\ref{tbl:Previous_contact_angle_slip} of the Supporting Information.
-  }
+    Experimental slip length data of solid-water interfaces from previous studies \cite{Bonaccurso2002-nf, Vinogradova2003-gh, Cho2004-it, Cottin-Bizonne2005-kj, Maali2008-rd, Bouzigues2008-xn, Cottin-Bizonne2008-nc, Lasne2008-qt, Bhushan2009-yz, Zhu2011-je, Jing2013-kn, Ortiz-Young2013-wc, Xue2015-tu, Ahmad2015-eb, Radha2016-bk, Zhang2021-tn, Keerthi2021-mz, Li2022-qs, Chen2022-hs, Han2025-qq} plotted as a function of contact angle. The red dashed line represents the theoretical curve given by Eq.~\ref{eqn:slip length scaling} with \DIFdelbeginFL \DIFdelFL{$C=0.41$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{\(C = \SI{0.41}{\nano\metre}\) }\DIFaddendFL and the blue dashed line corresponds to \DIFdelbeginFL \DIFdelFL{$C=6.0$}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{\(C = \SI{6.0}{\nano\metre}\)}\DIFaddendFL . The slip length values are summarized in Table~\ref{tbl:Previous_contact_angle_slip} of the Supporting Information. \DIFaddbeginFL \DIFaddFL{Adapted with permission from ref \citenum{Wu2016-vv}. Copyright 2016 Society of Petroleum Engineers.
+  }\DIFaddendFL }
   \label{fgr:previous_slip_length}
 \end{figure}
 \DIFaddbegin \ChangeTagEnd{r1_1_prefactor_units_fig1}
@@ -315,22 +350,21 @@ F_h=-\gamma_{\text{tip}} \dot{h}=-\frac{6\pi\eta R^2 \dot{h}}{h} f^* (\DIFaddbeg
 - \frac{(C+h)(C-A)}{C^2}\ln\left(1+\frac{C}{h}\right)
 \right], \label{eqn:fstar}
 }\end{align}
-\DIFadd{where the auxiliary quantities \(A\), \(B\), and \(C\) are defined as
-}\begin{align}
+\DIFadd{where the auxiliary quantities \(A\), \(B\), and \(C\) are defined as}\ChangeTagEnd{r2_4_fstar_function_definition}
+\begin{align}
 \DIFadd{A }&\DIFadd{= b_t + b_s, \notag }\\
 \DIFadd{B }&\DIFadd{= 2 \left( b_t + b_s
     + \sqrt{b_t^2 - b_t b_s + b_s^2} \right), \notag }\\
 \DIFadd{C }&\DIFadd{= 2 \left( b_t + b_s
     - \sqrt{b_t^2 - b_t b_s + b_s^2} \right). \label{eqn:fstar_abc}
 }\end{align}
-\ChangeTagEnd{r2_4_fstar_function_definition}
 \DIFaddend In conventional contact-mode AFM, \(F_h\) is determined from the static deflection of the cantilever and the viscous drag scales with \(R^2\) as shown in Eq.~\ref{eqn:hydrodynamic force}. Consequently, when the probe radius is reduced, the detection sensitivity rapidly decreases. Although the smallest probe radius reported to date is \(R = \SI{1.9}{\micro\metre}\) \cite{Vinogradova2003-gh}, probe tips with radii of approximately \(\SI{10}{\micro\metre}\) \cite{Li2022-qs} are typically used, and further miniaturization remains challenging.
 
 To overcome this limitation, we employ FM-AFM \cite{Albrecht1991-wp}, in which the cantilever is continuously oscillated at its resonance frequency. In this mode, the energy dissipated by viscous drag is quantified as the damping coefficient \(\gamma\). Because the resonance amplifies the viscous drag, the sensitivity to it is significantly enhanced, thereby compensating for the signal-to-noise degradation proportional to \(R^2\). Then, \(\gamma_{\text{tip}}\) can be obtained from the oscillation amplitudes \(A_{\text{bulk}}\) and \(A(h)\) (see Supporting Information  \ref{supppart:amplitude-decay} for details):
 \begin{equation}
 \gamma_{\text{tip}} (h,b_t,b_s)=\gamma_{\text{bulk}} \left(\frac{A_{\text{bulk}}}{A(h)} -1\right). \label{eqn:damping coefficient amplitude}
 \end{equation}
-where the subscript "bulk" denotes the value at sufficiently large \(h\). \DIFaddbegin \ChangeTagStart{r2_3_eq3_eq4_derivation_eq4}\DIFadd{This relation follows from \(\gamma_{\text{total}}=\gamma_{\text{tip}}+\gamma_{\text{bulk}}\), \(Q=k/(\omega\gamma_{\text{total}})\), and the proportionality \(A\propto Q\) for constant drive power, as derived in the Supporting Information.}\ChangeTagEnd{r2_3_eq3_eq4_derivation_eq4} \DIFaddend In conventional FM-AFM, the oscillation amplitude is kept constant (\(A(h) = A_{\text{bulk}}\) = const.) by an automatic gain control (AGC) circuit. However, in our method, the AGC is turned off and instead the drive power is kept constant, allowing the amplitude reduction \(A(h)\) to directly reflect the magnitude of the damping coefficient \(\gamma_{\text{tip}}\). This offers the advantage that the reliability of the slip-length measurement is not limited by the performance of the AGC. Extracting the coefficient of \(\dot{h}\) from Eq.~\ref{eqn:hydrodynamic force}, the damping coefficient can be expressed as
+where the subscript "bulk" denotes the value at sufficiently large \(h\). \DIFaddbegin \ChangeTagStart{r2_3_eq3_eq4_derivation_eq4}\DIFadd{This relation follows from \(\gamma_{\text{total}}=\gamma_{\text{tip}}+\gamma_{\text{bulk}}\), \(Q=k/(\omega\gamma_{\text{total}})\), and the proportionality \(A\propto Q\) for constant drive power, as derived in Supporting Information~\ref{supppart:amplitude-decay}.}\ChangeTagEnd{r2_3_eq3_eq4_derivation_eq4} \DIFaddend In conventional FM-AFM, the oscillation amplitude is kept constant (\(A(h) = A_{\text{bulk}}\) = const.) by an automatic gain control (AGC) circuit. However, in our method, the AGC is turned off and instead the drive power is kept constant, allowing the amplitude reduction \(A(h)\) to directly reflect the magnitude of the damping coefficient \(\gamma_{\text{tip}}\). This offers the advantage that the reliability of the slip-length measurement is not limited by the performance of the AGC. Extracting the coefficient of \(\dot{h}\) from Eq.~\ref{eqn:hydrodynamic force}, the damping coefficient can be expressed as
 \begin{equation}
 \gamma_{\text{tip}} (h,b_t,b_s)=\frac{6\pi\eta R^2}{h} f^* (\DIFaddbegin \DIFadd{h,}\DIFaddend b_t,b_s). \label{eqn:damping coefficient slip}
 \end{equation}
@@ -340,7 +374,7 @@ Slip length \(b_s\) is then obtained by fitting Eq.~\ref{eqn:damping coefficient
 \DIFaddend \begin{figure}[h]
   \centering
   \includegraphics[width=1.0\linewidth]{figs/schematics_of_measurement.png}
-  \caption{(a) Total damping coefficient \(\gamma_{\text{total}}\) as a function of probe tip-sample distance \(h\) measured at an HOPG-deionized water interface. Blue dots indicate the experimental data. The black dashed and red solid lines represent theoretical curves for a no-slip boundary condition (\(b_s = 0\)) and a fitted slip length (\(b_s = \SI{43.2}{\nano\metre}\)), respectively. \DIFaddbeginFL \DIFaddFL{The mean absolute error was \(\SI{0.0141}{\micro\newton\second\per\metre}\). }\DIFaddendFL (b, c) SEM images of the probe with a diamond-like carbon spherical tip. (d) Schematic illustration of the simultaneous mapping of slip length and topography using FM-AFM. The color bar indicates the total damping coefficient.}
+  \caption{(a) Total damping coefficient \(\gamma_{\text{total}}\) as a function of probe tip-sample distance \(h\) measured at an HOPG-deionized water interface. Blue dots indicate the experimental data. The black dashed and red solid lines represent theoretical curves for a no-slip boundary condition (\(b_s = 0\)) and a fitted slip length (\(b_s = \SI{43.2}{\nano\metre}\)), respectively. \DIFaddbeginFL \DIFaddFL{The mean absolute error for the fit was \(\SI{0.014}{\micro\newton\second\per\metre}\). }\DIFaddendFL (b, c) SEM images of the probe with a diamond-like carbon spherical tip. (d) Schematic illustration of the simultaneous mapping of slip length and topography using FM-AFM. The color bar indicates the total damping coefficient.}
   \label{fgr:schematics_of_measurement}
 \end{figure}
 \DIFaddbegin \ChangeTagEnd{r2_5_goodness_fit_errorbars_fig2}
@@ -350,7 +384,7 @@ In Fig.~\ref{fgr:schematics_of_measurement}(a), we show a representative damping
 
 Next, we extended this method to perform simultaneous nanoscale mapping of slip length and surface topography. A schematic of the measurement principle and representative three-dimensional maps of the damping coefficient are shown in Fig.~\ref{fgr:schematics_of_measurement}(d). Measurements were performed using the ZXY scan mode of an SPM-8100FM (Shimadzu Corp., Japan) equipped with a custom-built photothermal excitation system and closed-loop feedback scanner. At each \((x, y)\) pixel on the sample plane, the probe was scanned in the \(z\)-direction while recording the cantilever deflection, amplitude, and frequency-shift. The topography was reconstructed from the deflection, whereas the slip length was determined from the damping coefficient using Eq.~\ref{eqn:damping coefficient slip}. 
 
-Slip length mapping was first carried out on HOPG and on a hydrophilic-hydrophobic composite substrate (oxygen-plasma-treated-silica-1H,1H,2H,2H-perfluorooctanephosphonic acid, FOPA; the fabrication procedures are in Supporting Information \ref{supppart:materials}-A). \DIFaddbegin \ChangeTagStart{r2_13_contact_angle_timing}\DIFaddend The contact angles of deionized-water droplets \DIFdelbegin \DIFdel{, measured separately on the }\DIFdelend \DIFaddbegin \DIFadd{were measured immediately before the FM-AFM measurements on reference }\DIFaddend hydrophilic and hydrophobic \DIFdelbegin \DIFdel{surfaces, were }\DIFdelend \DIFaddbegin \DIFadd{substrates prepared using the same process as the corresponding regions of the composite substrate, yielding }\DIFaddend \(\SI{28}{\degree}\) and \(\SI{105}{\degree}\), respectively.\DIFaddbegin \ChangeTagEnd{r2_13_contact_angle_timing} \DIFaddend The composite substrate enabled us to test artificially fabricated patterns, whereas HOPG, with its atomically flat terraces and step structures \cite{Chang1991-fz}, served as a natural reference surface for verifying nanoscale spatial resolution. \DIFdelbegin \DIFdel{Prior to }\DIFdelend \DIFaddbegin \DIFadd{Immediately before }\DIFaddend measurement, the HOPG surface was freshly cleaved with Scotch tape to expose a clean surface. Before each measurement, the cantilever was hydrophilized by atmospheric plasma treatment. In all measurements, the cantilever was controlled to oscillate with an amplitude of \(\SI{2}{\nano\metre}\). We calibrated the slip length of the probe tip by measuring a symmetric system (\(b_t = b_s\)) using an atmospheric-plasma-treated diamond-like carbon (DLC) substrate, yielding a slip length of \(b_t = b_s = 0.0 \pm \SI{1.2}{\nano\metre}\)\DIFaddbegin \DIFadd{; }\ChangeTagStart{r2_6_tip_calibration_fit}\DIFadd{a representative fitting curve is shown in Fig.~\ref{figS:DLC_bubble_fit}(a)}\ChangeTagEnd{r2_6_tip_calibration_fit}\DIFaddend .
+Slip length mapping was first carried out on HOPG and on a hydrophilic-hydrophobic composite substrate (oxygen-plasma-treated-silica-1H,1H,2H,2H-perfluorooctanephosphonic acid, FOPA; the fabrication procedures are in Supporting Information \ref{supppart:materials}-A). The contact angles of deionized-water droplets \DIFdelbegin \DIFdel{, measured separately on the }\DIFdelend \DIFaddbegin \ChangeTagStart{r2_13_contact_angle_timing}\DIFadd{were measured immediately before the FM-AFM measurements on unpatterned reference }\DIFaddend hydrophilic and hydrophobic \DIFdelbegin \DIFdel{surfaces, were }\DIFdelend \DIFaddbegin \DIFadd{substrates prepared using the same process as the corresponding regions of the composite substrate, yielding }\DIFaddend \(\SI{28}{\degree}\) and \(\SI{105}{\degree}\), respectively.\DIFaddbegin \ChangeTagEnd{r2_13_contact_angle_timing} \DIFaddend The composite substrate enabled us to test artificially fabricated patterns, whereas HOPG, with its atomically flat terraces and step structures \cite{Chang1991-fz}, served as a natural reference surface for verifying nanoscale spatial resolution. \DIFdelbegin \DIFdel{Prior to }\DIFdelend \DIFaddbegin \DIFadd{Immediately before }\DIFaddend measurement, the HOPG surface was freshly cleaved with Scotch tape to expose a clean surface. Before each measurement, the cantilever was hydrophilized by atmospheric plasma treatment. In all measurements, the cantilever was controlled to oscillate with an amplitude of \(\SI{2}{\nano\metre}\). We calibrated the slip length of the probe tip by measuring a symmetric system (\(b_t = b_s\)) using an atmospheric-plasma-treated diamond-like carbon (DLC) substrate, yielding a slip length of \(b_t = b_s = 0.0 \pm \SI{1.2}{\nano\metre}\)\DIFaddbegin \DIFadd{; }\ChangeTagStart{r2_6_tip_calibration_fit}\DIFadd{a representative fitting curve is shown in Fig.~\ref{figS:DLC_bubble_fit}(a)}\ChangeTagEnd{r2_6_tip_calibration_fit}\DIFaddend .
 
 \DIFaddbegin \ChangeTagStart{r2_5_goodness_fit_errorbars_fig4}\ChangeTagEnd{r2_5_goodness_fit_errorbars_fig4}
 \ChangeTagStart{r2_12_contact_angle_upper_range_fig4}\ChangeTagEnd{r2_12_contact_angle_upper_range_fig4}
@@ -364,22 +398,22 @@ Slip length mapping was first carried out on HOPG and on a hydrophilic-hydrophob
 
 Figure~\ref{fgr:mapping_results} clearly demonstrates that the present method enables simultaneous nanoscale visualization of topography and slip length. The topography image on HOPG in Fig.~\ref{fgr:mapping_results}(a) not only reveals the presence of fine terrace structures \(\sim\SI{100}{\nano\metre}\) in width, but also resolves single graphene steps with heights of \(\SI{0.34}{\nano\metre}\) \cite{Franklin1951-hy}. On the flat area of the HOPG surface, a large slip length of \(43.2 \pm \SI{5.8}{\nano\metre}\) was obtained (Fig.~\ref{fgr:mapping_results}(b)). Remarkably, a spherical region with significantly increased slip length compared with the surrounding area appeared, as indicated by the white triangle. As shown in Fig.~\ref{figS:HOPG_strong_force}, when the tip was strongly pressed against the surface, the spherical region disappeared in the height image and the underlying HOPG substrate became visible. This suggests that the region is covered by a soft matter. Because a positive frequency shift corresponds to repulsive forces, the observed enhancement indicates that the hydrophilized probe experienced repulsion when pushing this region, a characteristic response to nanobubbles \cite{Teshima2018-cx, Teshima2020-vr}. The object exhibited a contact radius of \(\SI{72.3}{\nano\metre}\), a height of \(\SI{22.2}{\nano\metre}\), and a contact angle of \(\SI{146}{\degree}\), which are in good agreement with values typically reported in previous studies \cite{Zhang2014-ng, Wang2015-yj}. From these, we conclude that this feature is a nanobubble formed incidentally upon immersion. The slip length at the gas--liquid interface directly above a nanobubble was evaluated to be \(345.3 \pm \SI{23.7}{\nano\meter}\), \DIFdelbegin \DIFdel{which is }\DIFdelend \DIFaddbegin \DIFadd{and }\ChangeTagStart{r2_7_nanobubble_fit}\DIFadd{a representative fitting curve is shown in Fig.~\ref{figS:DLC_bubble_fit}(b)}\ChangeTagEnd{r2_7_nanobubble_fit}\DIFadd{. This value is }\DIFaddend significantly larger than that on the surrounding HOPG surface, while remaining smaller than the slip length expected for an ideal free surface. Further characterization of slip on surface nanobubbles, including the validity of the measured value, remains an interesting topic for future studies.
 
-In Fig.~\ref{fgr:mapping_results}(d), FOPA patches, only \(\SI{5}{\nano\metre}\) in height, are clearly visualized, and their boundaries exhibit a distinct increase in slip length (Fig.~\ref{fgr:mapping_results}(e)) because the gap beneath the step facilitates fluid flow when the probe contacts the substrate \cite{Ybert2007-jv}. This increase was also confirmed in the cross-sectional profiles of the topography and slip length (Fig.~\ref{fgr:mapping_results}(f)), which clearly show a rise in slip length at the edges of the patch. Therefore, the larger slip lengths observed near the edges represent apparent rather than intrinsic slip. On the flat silica and FOPA regions, slip lengths of \(-0.7 \pm \SI{0.6}{\nano\metre}\) and \(-0.9 \pm \SI{0.6}{\nano\metre}\), respectively, were obtained, both indicating a no-slip boundary condition, which contradicts many experimental studies reporting larger slip lengths on hydrophobic surfaces \cite{Tretheway2002-et, Cho2004-it, Bouzigues2008-xn, Cottin-Bizonne2008-nc, Lasne2008-qt, Bhushan2009-yz, Jing2013-kn, Zhang2021-tn, Li2022-qs, Han2025-qq}. \DIFaddbegin \ChangeTagStart{r2_8_negative_slip}\DIFadd{A negative slip length formally means that the extrapolated zero-velocity plane lies on the liquid side of the geometrical solid-liquid interface. Such small offsets likely reflect the propagation of systematic uncertainties in the probe radius, spring constant, and distance origin into the fitted \(b_s\). Because the surfaces other than HOPG consistently yielded slip lengths close to zero, these apparent offsets caused by error propagation are sufficiently small compared with the slip lengths observed on slippery surfaces.}\ChangeTagEnd{r2_8_negative_slip} \DIFaddend Thus, we hypothesize that the previously reported large slip lengths may have resulted from the effects of surface structures or nanobubbles, and therefore represent apparent slip lengths rather than intrinsic ones. In particular, it is well known that surface nanobubbles are readily generated on hydrophobic surfaces upon immersion, whereas they do not form on hydrophilic surfaces \cite{Yang2003-mh, Agrawal2005-oo}. Therefore, on hydrophobic surfaces, the measured slip length can vary markedly depending on the presence and surface density of nanobubbles, whereas it is expected to remain close to zero regardless of the experimental conditions on hydrophilic surfaces. This is consistent with the observed trend in Fig.~\ref{fgr:previous_slip_length}.
+In Fig.~\ref{fgr:mapping_results}(d), FOPA patches, only \(\SI{5}{\nano\metre}\) in height, are clearly visualized, and their boundaries exhibit a distinct increase in slip length (Fig.~\ref{fgr:mapping_results}(e)) because the gap beneath the step facilitates fluid flow when the probe contacts the substrate \cite{Ybert2007-jv}. This increase was also confirmed in the cross-sectional profiles of the topography and slip length (Fig.~\ref{fgr:mapping_results}(f)), which clearly show a rise in slip length at the edges of the patch. Therefore, the larger slip lengths observed near the edges represent apparent rather than intrinsic slip. On the flat silica and FOPA regions, slip lengths of \(-0.7 \pm \SI{0.6}{\nano\metre}\) and \(-0.9 \pm \SI{0.6}{\nano\metre}\), respectively, were obtained, both indicating a no-slip boundary condition, which contradicts many experimental studies reporting larger slip lengths on hydrophobic surfaces \cite{Tretheway2002-et, Cho2004-it, Bouzigues2008-xn, Cottin-Bizonne2008-nc, Lasne2008-qt, Bhushan2009-yz, Jing2013-kn, Zhang2021-tn, Li2022-qs, Han2025-qq}. \DIFaddbegin \ChangeTagStart{r2_8_negative_slip}\DIFadd{A negative slip length formally means that the extrapolated zero-velocity plane lies on the liquid side of the geometrical solid-liquid interface. Such small offsets likely reflect the propagation of systematic uncertainties in the probe radius, spring constant, and distance origin into the fitted \(b_s\). Because the surfaces other than HOPG consistently yielded slip lengths close to zero, these apparent offsets caused by error propagation are sufficiently small compared with the slip length observed on the slippery surface.}\ChangeTagEnd{r2_8_negative_slip} \DIFaddend Thus, we hypothesize that the previously reported large slip lengths may have resulted from the effects of surface structures or nanobubbles, and therefore represent apparent slip lengths rather than intrinsic ones. In particular, it is well known that surface nanobubbles are readily generated on hydrophobic surfaces upon immersion, whereas they do not form on hydrophilic surfaces \cite{Yang2003-mh, Agrawal2005-oo}. Therefore, on hydrophobic surfaces, the measured slip length can vary markedly depending on the presence and surface density of nanobubbles, whereas it is expected to remain close to zero regardless of the experimental conditions on hydrophilic surfaces. This is consistent with the observed trend in Fig.~\ref{fgr:previous_slip_length}.
 
 Next, we systematically measured slip lengths on a variety of solid surfaces with contact angles ranging from \(\SI{3}{\degree}\) to \(\SI{111}{\degree}\). The substrates used were silica, DLC, muscovite mica, HOPG, Octadecyltrichlorosilane (OTS), FOPA, 1H,1H,2H,2H-perfluorodecyltriethoxysilane (FDTS), and Teflon. DLC, OTS, FOPA, and FDTS were coated on flat Si substrates. Among the flat surfaces, Teflon exhibits one of the largest intrinsic contact angles \cite{Sas2012-bl, Crick2010-zw}. The preparation of the Teflon substrate is described in the Supporting Information \ref{supppart:materials}-B.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.6\linewidth]{figs/scaling_result.png}
-  \caption{Systematic comparison of slip lengths on nanoscopically flat substrates with contact angles ranging from \SI{3}{\degree} to \SI{111}{\degree}. The error \DIFdelbeginFL \DIFdelFL{bar represents }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{bars represent }\DIFaddendFL the standard \DIFdelbeginFL \DIFdelFL{deviation}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{deviations of the slip lengths obtained from the \(128 \times 128\) pixels in each slip-length map}\DIFaddendFL . The blue and red dashed lines correspond to the theoretical scaling law of Eq.~\ref{eqn:slip length scaling} with \DIFdelbeginFL \DIFdelFL{\(C = 6.0\) }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{\(C = \SI{6.0}{\nano\metre}\) }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{\(C = 0.41\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{\(C = \SI{0.41}{\nano\metre}\)}\DIFaddendFL , respectively. The gray region represents contact angles \DIFdelbeginFL \DIFdelFL{that cannot be realized on real }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{above the approximate upper range expected for chemically homogeneous smooth }\DIFaddendFL flat surfaces \DIFaddbeginFL \DIFaddFL{without roughness-induced Cassie states}\DIFaddendFL . The \DIFdelbeginFL \DIFdelFL{slip length }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{corresponding topography and slip-length }\DIFaddendFL maps\DIFdelbeginFL \DIFdelFL{obtained on all }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{, together with }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{surfaces }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{measured nanoscale roughness values, }\DIFaddendFL are shown in Fig.~\ref{figS:mapping_colormaps}.}
+  \caption{Systematic comparison of slip lengths on nanoscopically flat substrates with contact angles ranging from \SI{3}{\degree} to \SI{111}{\degree}. The error \DIFdelbeginFL \DIFdelFL{bar represents }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{bars represent }\DIFaddendFL the standard \DIFdelbeginFL \DIFdelFL{deviation}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{deviations of the slip lengths obtained from the \(128 \times 128\) pixels in each slip-length map}\DIFaddendFL . The blue and red dashed lines correspond to the theoretical scaling law of Eq.~\ref{eqn:slip length scaling} with \DIFdelbeginFL \DIFdelFL{\(C = 6.0\) }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{\(C = \SI{6.0}{\nano\metre}\) }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{\(C = 0.41\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{\(C = \SI{0.41}{\nano\metre}\)}\DIFaddendFL , respectively. The gray region represents contact angles \DIFdelbeginFL \DIFdelFL{that cannot be realized on real }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{above the approximate upper range expected for chemically homogeneous }\DIFaddendFL flat surfaces. The \DIFdelbeginFL \DIFdelFL{slip length }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{corresponding topography and slip-length }\DIFaddendFL maps\DIFdelbeginFL \DIFdelFL{obtained on all }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{, together with }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{surfaces }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{measured nanoscale roughness values, }\DIFaddendFL are shown in Fig.~\ref{figS:mapping_colormaps}.}
   \label{fgr:scaling_result}
 \end{figure}
 
-Figure~\ref{fgr:scaling_result} presents the measured slip lengths on flat substrates. \DIFaddbegin \ChangeTagStart{r2_11_units_comparison_table}\DIFadd{The measured values and those calculated from Eq.~\ref{eqn:slip length scaling} with \(C = \SI{0.41}{\nano\metre}\) and \(C = \SI{6.0}{\nano\metre}\) for all substrates investigated in this study are summarized in Table~\ref{tbl:contact_angle_slip} of the Supporting Information.}\ChangeTagEnd{r2_11_units_comparison_table} \ChangeTagStart{r2_9_teflon_hopg_contrast}\DIFaddend Interestingly, on all the surfaces except HOPG, the slip lengths were almost zero, in good agreement with the MD-based scaling law in Eq.~\ref{eqn:slip length scaling} with \DIFdelbegin \DIFdel{\(C = 0.41\) }\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{0.41}{\nano\metre}\) }\DIFaddend \cite{Huang2008-xu}. This supports our interpretation that earlier experimental studies may have overestimated slip lengths due to the influence of nanoscale surface features. Even on the most hydrophobic sample (Teflon), the slip length was only \(0.8 \pm \SI{0.8}{\nano\metre}\), clearly indicating that the relation ``hydrophobic surfaces exhibit large slip'' does not hold.
+Figure~\ref{fgr:scaling_result} presents the measured slip lengths on flat substrates. \DIFaddbegin \ChangeTagStart{r2_11_units_comparison_table}\DIFadd{The measured values and those predicted by Eq.~\ref{eqn:slip length scaling} with \(C = \SI{0.41}{\nano\metre}\) and \(C = \SI{6.0}{\nano\metre}\) for all substrates investigated in this study are summarized in Table~\ref{tbl:contact_angle_slip} of the Supporting Information.}\ChangeTagEnd{r2_11_units_comparison_table} \ChangeTagStart{r2_9_teflon_hopg_contrast}\DIFaddend Interestingly, on all the surfaces except HOPG, the slip lengths were almost zero, in good agreement with the MD-based scaling law in Eq.~\ref{eqn:slip length scaling} with \DIFdelbegin \DIFdel{\(C = 0.41\) }\DIFdelend \DIFaddbegin \DIFadd{\(C = \SI{0.41}{\nano\metre}\) }\DIFaddend \cite{Huang2008-xu}. This supports our interpretation that earlier experimental studies may have overestimated slip lengths due to the influence of nanoscale surface features. Even on the most hydrophobic sample (Teflon), the slip length was only \(0.8 \pm \SI{0.8}{\nano\metre}\), clearly indicating that the relation ``hydrophobic surfaces exhibit large slip'' does not hold.
 
 In contrast, only HOPG (contact angle \(\SI{59.0}{\degree}\)) exhibited a markedly large slip length of \(43.2 \pm \SI{5.8}{\nano\metre}\), inconsistent with the scaling law. \DIFdelbegin \DIFdel{However, previous }\DIFdelend \DIFaddbegin \ChangeTagStart{r2_15_hopg_contact_angle}\DIFadd{The HOPG surface was freshly cleaved immediately before measurement and showed only moderate wettability, with a contact angle close to that reported for freshly cleaved HOPG (\(\SI{64.4}{\degree}\)) \cite{Kozbial2016-kk}. Therefore, it is unlikely to have been contaminated by hydrophobic adsorbates. The localized nanobubble observed in Fig.~\ref{fgr:mapping_results}(b) was analyzed separately and did not contribute to the slip length measured on the flat HOPG terrace. Therefore, we attribute the slip length on the flat HOPG terrace to the low-friction graphite-water interface.}\ChangeTagEnd{r2_15_hopg_contact_angle} \DIFadd{Previous }\DIFaddend MD studies have reported the uniqueness of graphite: its atomic-scale smoothness drastically reduces friction, leading to the slip length on the order of \(\SI{50}{\nano\metre}\) \cite{Wagemann2017-bk, Kannam2012-jx}. Although mica also has an atomically smooth surface, unlike graphite, which is composed solely of carbon atoms, its surface consists of four elements (K, Si, Al, and O). Such atomic-scale chemical heterogeneity leads to a more strongly corrugated interfacial energy landscape, as predicted by ab initio MD \cite{Tocci2014-es}, resulting in an extremely small slip length. Therefore, our experimental results are in good agreement with past simulations.\DIFaddbegin \ChangeTagEnd{r2_9_teflon_hopg_contrast}
 
-\ChangeTagStart{r2_2_secchi_cnt_comparison}\DIFadd{The large slip length observed on planar HOPG should also be distinguished from the massive, radius-dependent water slippage reported inside carbon nanotubes (CNTs). Secchi et al. reported exceptionally large CNT slip lengths in cylindrical nanoscale confinement and noted that slip lengths inside CNTs are consistently much larger than those measured on planar hydrophobic and graphite surfaces, where \(b\) is typically at most a few tens of nanometers\cite{Secchi2016-ks}. Thus, the CNT results are not inconsistent with our conclusion for nanoscopically flat planar surfaces.}\ChangeTagEnd{r2_2_secchi_cnt_comparison}
+\ChangeTagStart{r2_2_secchi_cnt_comparison}\DIFadd{The large slip length observed on planar HOPG should also be distinguished from the massive slippage reported inside carbon nanotubes (CNTs)\cite{Secchi2016-ks}. As Secchi et al. demonstrated, the slip length can reach several hundred nanometers due to a curvature-enhanced effect, whereas it is much smaller on a non-curved plane, on the order of several tens of nanometers. Our results on planar HOPG are quantitatively consistent with the slip length reported by Secchi et al. for planar graphite\cite{Secchi2016-ks}.}\ChangeTagEnd{r2_2_secchi_cnt_comparison}
 \DIFaddend 
 
 Interestingly, the slip length on HOPG decreased to \(-0.1 \pm \SI{0.7}{\nano\metre}\) when measured in a \(\SI{10}{\milli\mole\per\litre}\) KCl solution, indicating a no-slip boundary condition. This is likely due to interfacial charging and ion adsorption in the electrolyte solution. A recent MD study reported that even a slight charge on graphene surfaces (\(\sim\SI{20}{\milli\volt}\)) reduces the slip length from \(\SI{45}{\nano\metre}\) to \(\SI{2}{\nano\metre}\) in an electrolyte solution \cite{Xie2020-as}. One major mechanism is that K\(^+\) ions selectively adsorb onto the charged graphene surface and, through their structured hydration shells, strongly pin water molecules to the surface \cite{Mu2021-wm}. Because actual graphene surfaces typically have a surface potential of \(\sim\SI{20}{\milli\volt}\) \cite{Paruchuri2004-iu}, adding electrolyte is expected to significantly suppress slip. A similar reduction was observed in a \(\SI{10}{\milli\mole\per\litre}\) NaCl solution (not shown in Fig.~\ref{fgr:scaling_result}, see Table~\ref{tbl:contact_angle_slip} in Supporting Information). To our knowledge, this is the first experimental result that verifying the effect of ion adsorption on slip predicted by MD simulations. Paradoxically, these results suggest that controlling surface charge may offer a route to enhancing slip on graphite/graphene and potentially achieving appreciable slip on other surfaces, which we will investigate in future work.

@@ -18,6 +18,7 @@
 \usepackage{xr} % For cross-referencing equations from main.tex
 \usepackage{multirow}
 \usepackage{lineno}
+\usepackage{color}
 \externaldocument{main}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -206,7 +207,7 @@ The sensitivity ratio was calculated to be \(S_{\text{FM}}/S_{\text{contact}} = 
 
 \subsubsection{A. Fabrication of Hydrophilic/Hydrophobic Composite Substrates}
 
-A thermally grown silica surface on a Si wafer was spin-coated with an electron-beam resist (ZEP520A, ZEON Corporation, Japan) at \SI{5000}{\per\minute} to form a \SI{300}{\nano\metre}-thick film. Using an electron-beam lithography system (JSM-6360, JEOL Ltd., Japan / BEAM DRAW, Tokyo Technology Inc., Japan), square patterns of \SI{1}{\micro\metre}\(\times\)\SI{1}{\micro\metre} were patterned with a pitch of \SI{2}{\micro\metre}, and the resist in the exposed areas was removed during development. Subsequently, a \SI{5}{\nano\metre}-thick indium tin oxide (ITO) film was deposited by magnetron sputtering (MS-4B-3T, Cosmo System Co., Ltd., Japan). The electron-beam resist was then lifted off by rinsing in dimethylacetamide for \SI{5}{\minute}, leaving ITO patches on the silica substrate. The patterned ITO substrate was treated with \(\mathrm{O}_2\) plasma (PR500, Yamato Scientific Co., Japan) and then immersed in a \SI{1}{\milli\mole\per\litre} ethanol solution of 1H,1H,2H,2H-perfluorooctanephosphonic acid (FOPA) for \SI{1}{\hour} to form a self-assembled monolayer (SAM). Since FOPA SAMs are easily hydrolyzed on silica but remain stable on ITO surfaces and maintain hydrophobicity in water for several hours \cite{Thissen2012-xt, Jo2011-nw}, the fabricated composite substrate was immersed in water for \SI{3}{\hour} to selectively remove FOPA from the silica surface. \ChangeTagStart{r2_13_contact_angle_timing_si}Contact angles of the hydrophilic and hydrophobic regions were evaluated immediately before the FM-AFM measurements using reference substrates that underwent the corresponding \(\mathrm{O}_2\)-plasma treatment, FOPA/ethanol-solution immersion, and subsequent water-immersion steps used to prepare the composite substrate.\ChangeTagEnd{r2_13_contact_angle_timing_si}
+A thermally grown silica surface on a Si wafer was spin-coated with an electron-beam resist (ZEP520A, ZEON Corporation, Japan) at \SI{5000}{\per\minute} to form a \SI{300}{\nano\metre}-thick film. Using an electron-beam lithography system (JSM-6360, JEOL Ltd., Japan / BEAM DRAW, Tokyo Technology Inc., Japan), square patterns of \SI{1}{\micro\metre}\(\times\)\SI{1}{\micro\metre} were patterned with a pitch of \SI{2}{\micro\metre}, and the resist in the exposed areas was removed during development. Subsequently, a \SI{5}{\nano\metre}-thick indium tin oxide (ITO) film was deposited by magnetron sputtering (MS-4B-3T, Cosmo System Co., Ltd., Japan). The electron-beam resist was then lifted off by rinsing in dimethylacetamide for \SI{5}{\minute}, leaving ITO patches on the silica substrate. The patterned ITO substrate was treated with \(\mathrm{O}_2\) plasma (PR500, Yamato Scientific Co., Japan) and then immersed in a \SI{1}{\milli\mole\per\litre} ethanol solution of 1H,1H,2H,2H-perfluorooctanephosphonic acid (FOPA) for \SI{1}{\hour} to form a self-assembled monolayer (SAM). Since FOPA SAMs are easily hydrolyzed on silica but remain stable on ITO surfaces and maintain hydrophobicity in water for several hours \cite{Thissen2012-xt, Jo2011-nw}, the fabricated composite substrate was immersed in water for \SI{3}{\hour} to selectively remove FOPA from the silica surface. \ChangeTagStart{r2_13_contact_angle_timing_si}Contact angles of the hydrophilic and hydrophobic regions were evaluated immediately before the FM-AFM measurements using unpatterned reference substrates that underwent the corresponding \(\mathrm{O}_2\)-plasma treatment, FOPA/ethanol-solution immersion, and subsequent water-immersion steps used to prepare the composite substrate.\ChangeTagEnd{r2_13_contact_angle_timing_si}
 
 \subsubsection{B. Fabrication of Teflon Substrates}
 
@@ -315,7 +316,6 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
 }%
 \end{table}
 
-\ChangeTagStart{r2_6_tip_calibration_fit_si}\ChangeTagStart{r2_7_nanobubble_fit_si}
 \begin{figure}[p]
   \centering
   \includegraphics[width=0.6\linewidth]{figs/HOPG_strong_force.png}
@@ -324,35 +324,38 @@ Radha et al. 2016\cite{Radha2016-bk} & Channel & Graphene & $55$--$85$ & $60$ \\
   }
   \label{figS:HOPG_strong_force}
 \end{figure}
-\ChangeTagEnd{r2_7_nanobubble_fit_si}\ChangeTagEnd{r2_6_tip_calibration_fit_si}
 
+\ChangeTagStart{r2_6_tip_calibration_fit_si}\ChangeTagStart{r2_7_nanobubble_fit_si}
 \begin{figure}[p]
   \centering
   \includegraphics[width=1.0\linewidth]{figs/DLC_bubble.png}
   \caption{
-    Representative damping-coefficient fitting curves for (a) a atmospheric-plasma-treated DLC substrate and (b) a location above a nanobubble.
+    Representative damping-coefficient fitting curves for (a) an atmospheric-plasma-treated DLC substrate and (b) a location above a nanobubble.
     The slip lengths shown in the panels were obtained from these representative single-point fits and therefore do not necessarily coincide with the mean values reported in the main text: \(0.0\pm1.2~\mathrm{nm}\) for DLC and \(345.3\pm23.7~\mathrm{nm}\) for nanobubbles.
     The mean absolute errors were \SI{0.016}{\micro\newton\second\per\metre} and \SI{0.014}{\micro\newton\second\per\metre} for (a) and (b), respectively.
   }
   \label{figS:DLC_bubble_fit}
 \end{figure}
+\ChangeTagEnd{r2_7_nanobubble_fit_si}\ChangeTagEnd{r2_6_tip_calibration_fit_si}
 
+\ChangeTagStart{non_sci_figs3_caption}
 \begin{figure}[p]
   \centering
   \includegraphics[width=1.0\linewidth]{figs/mapping_colormaps.png}
-  \caption{ (a-d) Topography and (e-h) corresponding slip-length maps of (a, d) mica, (b, e) FDTS, (c, f) Teflon, and (d, h) HOPG. The \(R_a\) values were \SI{0.27}{\nano\metre}, \SI{0.29}{\nano\metre}, \SI{0.64}{\nano\metre}, and \SI{0.35}{\nano\metre} for each surface, respectively. Only the result for HOPG (d, h) was obtained in a \SI{10}{\milli\mole\per\litre} KCl solution and the others were in DI water.}
+  \caption{(a--d) Topography and (e--h) corresponding slip-length maps of (a, e) mica, (b, f) FDTS, (c, g) Teflon, and (d, h) HOPG. The \(R_a\) values were \SI{0.27}{\nano\metre}, \SI{0.29}{\nano\metre}, \SI{0.64}{\nano\metre}, and \SI{0.35}{\nano\metre} for each surface, respectively. Only the result for HOPG (d, h) was obtained in a \SI{10}{\milli\mole\per\litre} KCl solution and the others were in DI water.}
   \label{figS:mapping_colormaps}
 \end{figure}
+\ChangeTagEnd{non_sci_figs3_caption}
 
 \ChangeTagStart{r2_11_units_comparison_table_si}
 \begin{table}[p]
-  \caption{Measured slip lengths and values calculated from Eq.~\ref{eqn:slip length scaling} for the substrates investigated in this study.}
+  \caption{Measured slip lengths and values predicted by Eq.~\ref{eqn:slip length scaling} for the substrates investigated in this study.}
   \label{tbl:contact_angle_slip}
   \centering
   \resizebox{\textwidth}{!}{%
   \begin{tabular}{lcccc}
     \hline
-    Substrate & Contact Angle \(\theta\) (\si{\degree}) & Calculated \(b\), \(C = \SI{0.41}{\nano\metre}\) (\si{\nano\metre}) & Calculated \(b\), \(C = \SI{6.0}{\nano\metre}\) (\si{\nano\metre}) & Measured \(b\) (\si{\nano\metre}) \\
+    Substrate & Contact Angle \(\theta\) (\si{\degree}) & \(b\) predicted by \(C = \SI{0.41}{\nano\metre}\) (\si{\nano\metre}) & \(b\) predicted by \(C = \SI{6.0}{\nano\metre}\) (\si{\nano\metre}) & Measured \(b\) (\si{\nano\metre}) \\
     \hline
     Mica & \(< \SI{3}{\degree}\) & \(\sim\SI{0.10}{\nano\metre}\) & \(\sim\SI{1.50}{\nano\metre}\) & \(-1.7 \pm \SI{0.3}{\nano\metre}\) \\
     Oxygen plasma-treated silica & \SI{28.1}{\degree} & \SI{0.12}{\nano\metre} & \SI{1.69}{\nano\metre} & \(-0.7 \pm \SI{0.6}{\nano\metre}\) \\

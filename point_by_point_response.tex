@@ -6,6 +6,7 @@
 \usepackage{refcount}
 \usepackage{enumitem}
 \usepackage{color}
+\usepackage{graphicx}
 \externaldocument[main-]{build/main}
 \externaldocument[si-]{build/supporting_information}
 
@@ -43,6 +44,8 @@ We thank the editor and reviewers for their careful evaluation of our manuscript
 
 {\color{black}\section*{Reviewer 1}}
 
+We sincerely thank the reviewer for the positive evaluation of our work and for recommending publication as is. We are grateful for the reviewer’s comment that our manuscript is well written and helps settle long-standing controversies in the field. We respond to the two minor comments below.
+
 % checked
 
 \ReviewerComment{1}{The prefactor \(C\) of equation 2 has units of length and is given by \(C = 0.41\) nm.}
@@ -54,15 +57,17 @@ Thank you for pointing this out. We revised the manuscript to clarify that the p
 \begin{itemize}
   \item \ChangeText{main}{r1_1_prefactor_units_intro}{Clarified in the main text that \(C\) is a prefactor with dimensions of length.}
   \item \ChangeText{main}{r1_1_prefactor_units_scaling}{Updated the scaling-law prefactors to include nanometer units.}
-  \item Updated the corresponding units in the Fig. 1 caption.
+  \item \ChangeText{main}{r1_1_prefactor_units_fig1}{Updated the corresponding units in the Fig. 1 caption.}
 \end{itemize}
 
 % checked
 
 \ReviewerComment{2}{The scaling law in equation 2 was derived for non-polar surfaces that interact with water only via dispersion or Lennard-Jones interactions, that means that hydrophilic surfaces were created by large dispersion attraction. In the recent publication ``Subnanometer Interfacial Hydrodynamics: Spatially Resolved Viscosity and Surface Friction'' Carlson et al., Nano Lett. 2025, 25, 15605--15612 MD simulations were used to model polar surfaces where small contact angles are created by polar surface groups, which is more realistic. The fit of the friction coefficient is for these systems better represented by an exponential, not by a power law. For the non-polar surfaces the authors are mostly interested this does not make a difference, but for future studies this could be relevant.}
-Thank you for this helpful comment. We will keep it in mind for future work on polar surfaces.
+Thank you very much for your helpful comment. Our method is also capable of measuring polar surfaces, and we are in fact planning to study such surfaces in the near future. In that context, the paper you pointed out will be very useful. Thank you again for bringing it to our attention.
 
 {\color{black}\section*{Reviewer 2}}
+
+We sincerely thank the reviewer for the careful reading of our manuscript and for the constructive comments. We respond to each point below.
 
 % checked
 
@@ -84,7 +89,7 @@ Thank you for this important suggestion. We now clarify that the massive, radius
 % checked
 
 \ReviewerComment{3}{The derivation of eq. 3 and 4 must be provided along with the paper and the symbol hdot must be explained in the main text, including how it is measured experimentally.}
-Thank you for pointing this out. We have revised the main text to clarify the origin of Eqs. 3 and 4 and to define \(\dot{h}\). Equation 3 is the lubrication-theory expression for the hydrodynamic force between a sphere and a plane with slip boundary conditions, and we now explicitly cite Vinogradova for this result. Because the full derivation is lengthy, we refer readers to the original theoretical work. For Eq. 4, the derivation is lengthy for Letter journal; we have added a concise explanation in the main text that it follows from \(\gamma_{\text{total}}=\gamma_{\text{tip}}+\gamma_{\text{bulk}}\), \(Q=k/(\omega\gamma_{\text{total}})\), and the proportionality \(A\propto Q\) under constant drive power. We also now define \(\dot{h}\) as the time derivative of the measured probe-substrate distance \(h(t)\), calculated numerically from the measured \(h(t)\) data.
+Thank you for pointing this out. We have revised the main text to clarify the origin of Eqs. 3 and 4 and to define \(\dot{h}\). Equation 3 is the lubrication-theory expression for the hydrodynamic force between a sphere and a plane with slip boundary conditions, and we now cite the original theoretical work by Vinogradova for this result. Because the full derivation is lengthy for a Letter journal, we refer readers to the original theoretical work. For the same reason, we have provided the derivation of Eq. 4 in the Supporting Information. To help readers follow the main argument, we have added a concise explanation in the main text stating that Eq. 4 follows from the relation \(\gamma_{\text{total}}=\gamma_{\text{tip}}+\gamma_{\text{bulk}}\), \(Q=k/(\omega\gamma_{\text{total}})\), and the proportionality \(A\propto Q\) under constant drive power. A more detailed derivation is beyond the scope of the present Letter, and we plan to present it separately in a future paper. We also now define \(\dot{h}\) as the time derivative of the measured probe-substrate distance \(h(t)\), calculated numerically from the measured \(h(t)\) data.
 
 % checked
 
@@ -97,14 +102,14 @@ Thank you for pointing this out. We have revised the main text to clarify the or
 % checked
 
 \ReviewerComment{4}{The authors mention that the ``Slip length bs is then obtained by fitting Eq. 5 to a damping-coefficient-tip-sample distance curve with bs as the fitting parameter.'' However, the functional form of \(f^*\) in Eq. 5 is not provided, making it unclear as to how bs can be extracted. This omission must be clarified and the form of \(f^*\) must be derived and mentioned in the paper.}
-Thank you for pointing out this omission. We have revised the main text to explicitly provide the functional form of the correction factor \(f^*\) used in Eq. 5. The revised manuscript now gives \(f^*(h,b_t,b_s)\) together with the auxiliary quantities \(A\), \(B\), and \(C\).
+Thank you for pointing out this omission. We have revised the main text to explicitly provide the functional form of the correction factor \(f^*\), which was used in Eqs. 3 and 5 in the original manuscript. Specifically, \(f^*(h,b_t,b_s)\) is now given as Eq. 4, and the auxiliary quantities \(A\), \(B\), and \(C\) are defined in Eq. 5 of the revised manuscript.
 
 % checked
 
 \Changes
 \begin{itemize}
   \item \ChangeText{main}{r2_4_fstar_function_definition}{Added the explicit functional form of \(f^*(h,b_t,b_s)\) and defined \(A\), \(B\), and \(C\).}
-  \item Updated the notation from \(f^{*}(b_t, b_s)\) to \(f^{*}(h, b_t, b_s)\) in Eqs. S7 and S8.
+  \item Updated the notation from \(f^{*}(b_t, b_s)\) to \(f^{*}(h, b_t, b_s)\) in Eqs. 3, 7, S7, and S8.
 \end{itemize}
 
 % checked
@@ -116,40 +121,35 @@ Thank you for this helpful suggestion. Because the \(R^2\) value is not necessar
 
 \Changes
 \begin{itemize}
-  \item Added mean absolute error for the fit in the caption of Fig.~\ref{main-fgr:schematics_of_measurement}.
+  \item \ChangeText{main}{r2_5_goodness_fit_errorbars_fig2}{Added the mean absolute error for the fit in the caption of Fig.~\ref{main-fgr:schematics_of_measurement}.}
   \item Clarified in the Fig.~\ref{main-fgr:scaling_result} caption that the error bars are standard deviations calculated from the pixel-wise slip-length values in each map.
 \end{itemize}
 
 % checked
 
-\ReviewerComment{6}{The authors state that ``We calibrated the slip length of the probe tip by measuring a symmetric system (\(b_t = b_s\)) using an atmospheric-plasma-treated diamond-like carbon (DLC) substrate, yielding a slip length of \(b_t = b_s = 0.0 \pm 1.2\) nm.'' The authors should show the fit plot for this case, similar to what they did in Figure 2a.}
-Thank you for this suggestion. We have added a representative fitting plot for the atmospheric-plasma-treated DLC substrate to the Supporting Information. The added figure shows the measured damping coefficient, the no-slip curve, and the fitted curve, and the mean absolute error of this representative fit was \(\SI{0.016}{\micro\newton\second\per\metre}\).
+\ReviewerComment{6 and 7}{The authors state that ``We calibrated the slip length of the probe tip by measuring a symmetric system (\(b_t = b_s\)) using an atmospheric-plasma-treated diamond-like carbon (DLC) substrate, yielding a slip length of \(b_t = b_s = 0.0 \pm 1.2\) nm.'' The authors should show the fit plot for this case, similar to what they did in Figure 2a. Plots should also be shown for the fit used to extract the slip length of 345.3 nm above the nanobubble, as mentioned towards the end of page 8.}
+Thank you for the suggestions. We have added representative fitting plots for the atmospheric-plasma-treated DLC substrate and nanobubble, as shown in Fig. R1(a) and (b), respectively. The plots show the measured damping coefficient, the curve for the case of no slip, and the fitted curve. The mean absolute errors of these fits were \(\SI{0.016}{\micro\newton\second\per\metre}\) and \(\SI{0.014}{\micro\newton\second\per\metre}\), respectively.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/DLC_bubble.png}
+  \caption{Representative damping-coefficient fitting curves for (a) an atmospheric-plasma-treated DLC substrate and (b) a location above a nanobubble.}
+  \label{figR:DLC_bubble_fit}
+\end{figure}
 
 % checked
 
 \Changes
 \begin{itemize}
-  \item \ChangeText{main}{r2_6_tip_calibration_fit}{Added a main-text reference to the new Supporting Information fitting plot.}
-  \item Added the representative DLC fitting plot as Fig.~\ref{si-figS:DLC_bubble_fit} and reported its mean absolute error.
-\end{itemize}
-
-% checked
-
-\ReviewerComment{7}{Plots should also be shown for the fit used to extract the slip length of 345.3 nm above the nanobubble, as mentioned towards the end of page 8.}
-Thank you for pointing this out. We have added a representative fitting plot for the nanobubble slip-length extraction to the Supporting Information. The added figure shows the measured damping coefficient directly above the nanobubble, together with the no-slip curve and the fitted curve, and the mean absolute error of this representative fit was \(\SI{0.014}{\micro\newton\second\per\metre}\).
-
-% checked
-
-\Changes
-\begin{itemize}
-  \item \ChangeText{main}{r2_7_nanobubble_fit}{Added a main-text reference to the nanobubble fitting plot.}
-  \item Added the representative nanobubble fitting plot as Fig.~\ref{si-figS:DLC_bubble_fit} and reported its mean absolute error.
+  \item Added the representative fitting plots for DLC and nanobubble (Fig. R1(a, b)) as Fig.~\ref{si-figS:DLC_bubble_fit}(a, b) in the Supporting Information.
+  \item \ChangeText{main}{r2_6_tip_calibration_fit}{Added a main-text reference to the new DLC fitting plot.}
+  \item \ChangeText{main}{r2_7_nanobubble_fit}{Added a main-text reference to the new nanobubble fitting plot.}
 \end{itemize}
 
 % checked
 
 \ReviewerComment{8}{Why are negative slip lengths obtained on the flat silica and FOPA regions? What is the physical meaning of a negative slip length? Isn't the lowest value of the slip length 0?}
-Thank you for raising this point. A negative slip length formally means that the extrapolated zero-velocity plane lies on the liquid side of the geometrical solid-liquid interface. In the present measurements, we do not interpret the small negative values on silica and FOPA as physically meaningful negative slip. Rather, they likely reflect small apparent offsets caused by the propagation of systematic uncertainties in the probe radius, spring constant, and distance origin into the fitted \(b_s\). Because all surfaces other than HOPG consistently yielded slip lengths close to zero, these offsets are sufficiently small compared with the slip lengths observed on slippery surfaces.
+Thank you for raising this point. A negative slip length formally means that the extrapolated zero-velocity plane lies on the liquid side of the geometrical solid-liquid interface. In the present measurements, we do not interpret the small negative values on silica and FOPA as physically meaningful negative slip. Rather, they likely reflect small apparent offsets caused by the propagation of systematic uncertainties in the probe radius, spring constant, and distance origin into the fitted \(b_s\). Because all surfaces other than HOPG consistently yielded slip lengths close to zero, these offsets are sufficiently small compared with the slip length observed on the slippery surface.
 
 % checked
 
@@ -161,19 +161,12 @@ Thank you for raising this point. A negative slip length formally means that the
 % checked
 
 \ReviewerComment{9}{Why is the water slip length 0.8 nm on Teflon but 43.2 on HOPG, despite Teflon expected to have a higher contact angle of water than HOPG?}
-Thank you for raising this important point. The difference between Teflon and HOPG cannot be explained by contact angle alone. Slip length is governed by interfacial friction, which depends strongly on the atomic-scale structure and chemical uniformity of the solid-water interface. Although Teflon is more hydrophobic, it does not provide the atomically smooth and chemically homogeneous crystalline interface characteristic of graphite. We therefore attribute the large slip length on HOPG to the low-friction graphite-water interface, supporting our conclusion that slip on flat surfaces is controlled more strongly by atomic-scale interfacial structure than by macroscopic wettability.
-
-% checked
-
-\Changes
-\begin{itemize}
-  \item \ChangeText{main}{r2_9_teflon_hopg_contrast}{Updated the discussion on the origin of the larger slip length on graphite.}
-\end{itemize}
+Thank you for raising this important point. This is precisely one of the key claims of our paper. More specifically, the difference in slip length between Teflon and HOPG cannot be explained by the contact angle. Slip length is governed by interfacial friction, which depends strongly on the atomic-scale structure and chemical uniformity of the solid-water interface. Although Teflon is more hydrophobic, it does not provide the atomically smooth and chemically homogeneous crystalline interface characteristic of graphite. We therefore attribute the large slip length on HOPG not to wettability, but to the low-friction graphite-water interface. Several previous MD simulations have suggested the importance of atomic-scale geometrical and chemical homogeneity at the interface (Ref. 19) and the independence of wettability on solid surfaces with contact angles below \(\SI{120}{\degree}\) (Ref. 16). To the best of our knowledge, however, our study is the first to experimentally verify these predictions. This point is discussed in lines 197--217 of the revised manuscript.
 
 % checked
 
 \ReviewerComment{10}{Figure 4 presents a systematic comparison of slip lengths on nanoscopically flat substrates. How is it proved that these surfaces are nanoscopically flat? The authors need to provide some proof using AFM measurements.}
-Thank you for this suggestion. We agree that it is important to clearly indicate where the surface topography data can be found. AFM topography maps for the nanoscopically flat substrates are provided in the Supporting Information, together with the corresponding slip-length maps. We have revised the Fig. 4 caption to explicitly direct readers to these topography data and the measured nanoscale roughness values. The measured \(R_a\) values were \(\SI{0.27}{\nano\metre}\), \(\SI{0.29}{\nano\metre}\), \(\SI{0.64}{\nano\metre}\), and \(\SI{0.35}{\nano\metre}\) for mica, FDTS, Teflon, and HOPG, respectively, confirming that these substrates are nanoscopically flat.
+We apologize for the confusion. AFM topography maps for the nanoscopically flat substrates are provided in the Supporting Information as Fig. S3, together with the corresponding slip-length maps. We have revised the Fig. 4 caption to explicitly direct readers to these topography data and the measured nanoscale roughness values. The measured \(R_a\) values were \(\SI{0.27}{\nano\metre}\), \(\SI{0.29}{\nano\metre}\), \(\SI{0.64}{\nano\metre}\), and \(\SI{0.35}{\nano\metre}\) for mica, FDTS, Teflon, and HOPG, respectively, confirming that these substrates are nanoscopically flat.
 
 % checked
 
@@ -185,39 +178,39 @@ Thank you for this suggestion. We agree that it is important to clearly indicate
 % checked
 
 \ReviewerComment{11}{For eq. 2, the units of \(b\) must be specified for completeness. The authors also must provide a table of the calculated \(b\) (from eq. 2) and the measured \(b\) from their experiments for all the surfaces examined in this work.}
-Thank you for pointing this out. We have revised the manuscript to clarify that both \(b\) and the prefactor \(C\) in Eq. 2 have dimensions of length. We have also expanded the Supporting Information table to compare, for every substrate investigated in this study, the experimentally measured slip length with the values calculated from Eq. 2 using both scaling constants.
+Thank you for pointing this out. We have revised the manuscript to clarify that both \(b\) and the prefactor \(C\) in Eq. 2 have dimensions of length. We have also expanded Table S2 of the Supporting Information to compare, for every substrate investigated in this study, the experimentally measured slip length with the values predicted by Eq. 2 using both scaling constants.
 
 % checked
 
 \Changes
 \begin{itemize}
   \item \ChangeText{main}{r2_11_units_comparison_table}{Added a main-text reference to the comparison table.}
-  \item \ChangeText{si}{r2_11_units_comparison_table_si}{Added calculated slip lengths for both scaling constants and reported mean absolute errors in the Supporting Information table~\ref{si-tbl:contact_angle_slip} caption.}
+  \item \ChangeText{si}{r2_11_units_comparison_table_si}{Added slip lengths predicted by both scaling constants in Supporting Information Table~\ref{si-tbl:contact_angle_slip}.}
 \end{itemize}
 
 % checked
 
 \ReviewerComment{12}{How can the authors claim that a water contact angle of 120 degrees is the near-maximum achievable on a topographically smooth flat surface? Ref. 21 mentions that ``This value is considered to be the lowest surface free energy of any solid, based on the hexagonal closed alignment of --CF3 groups on the surface.'' Thus, for surfaces with other than CF3 groups, the contact angle could be higher. Also, the presence of CF3 groups would make the surface topographically rough, as compared to say, graphite.}
-Thank you for this careful comment. The \(-\mathrm{CF}_3\) group has the lowest surface free energy among common surface-terminating groups, and a surface on which \(-\mathrm{CF}_3\) groups are arranged in a hexagonal close-packed structure gives the largest water contact angles attainable on a chemically homogeneous flat surface, approximately \(\SI{120}{\degree}\). Thus, this value is a representative upper range for topographically smooth flat surfaces. We also revised the Fig. 4 caption accordingly.
+Thank you for the valuable comment. As noted in Ref. 21, the \(-\mathrm{CF}_3\) group has the lowest surface free energy among surface-terminating groups, and thus a surface on which \(-\mathrm{CF}_3\) groups are arranged in a hexagonal close-packed structure gives the largest water contact angles attainable on a chemically homogeneous flat surface, approximately \(\SI{120}{\degree}\). Thus, this value is the near-maximum achievable on topographically smooth flat surfaces. To our knowledge, no chemically and geometrically homogeneous surface with an intrinsic water contact angle exceeding \(\SI{130}{\degree}\) has been reported. Also, as you noted, surfaces bearing \(-\mathrm{CF}_3\) groups are topographically rougher than graphite. However, as shown in Fig. S3, the surface roughness of Teflon is \(\SI{0.64}{\nano\metre}\), which is larger than that of graphite, \(\SI{0.35}{\nano\metre}\), but still sufficiently flat and therefore does not affect the contact angle. We also revised the caption of Fig. 4 accordingly.
 
 % checked
 
 \Changes
 \begin{itemize}
   \item \ChangeText{main}{r2_12_contact_angle_upper_range_intro}{Revised the main-text statement so that \(\SI{120}{\degree}\) is not presented as an absolute maximum.}
-  \item Revised the Fig.~\ref{main-fgr:scaling_result} caption to describe the gray region as an approximate upper range for chemically homogeneous smooth flat surfaces.
+  \item Revised the Fig.~\ref{main-fgr:scaling_result} caption to describe the gray region as an approximate upper range for chemically homogeneous flat surfaces.
 \end{itemize}
 
 % checked
 
 \ReviewerComment{13}{The authors mention that ``The contact angles of deionized-water droplets, measured separately on the hydrophilic and hydrophobic surfaces, were 28 degrees and 105 degrees, respectively.'' How quickly were these measurements done since exposure to the atmosphere can change the contact angle, particularly for hydrophilic surfaces?}
-Thank you for raising this point. We have revised the manuscript to clarify how the contact angles of the hydrophilic and hydrophobic regions were measured. Because the patterned regions in the composite substrate were too small for direct droplet measurements, the contact angles were measured immediately before the FM-AFM measurements using reference substrates prepared by reproducing the relevant surface-treatment steps used for the composite substrate. Specifically, the reference substrates were prepared by \(\mathrm{O}_2\)-plasma treatment, FOPA/ethanol-solution immersion and water immersion. We added this detail to the Supporting Information.
+Thank you for raising this point. We have revised the manuscript to clarify how the contact angles of the hydrophilic and hydrophobic regions were measured. The contact angles were measured immediately before the FM-AFM measurements. Because the patterned regions in the composite substrate were too small for contact angle measurements, we performed the measurements on unpatterned reference substrates prepared using the same surface-treatment procedures as those used for the composite substrate. We added this detail to the Supporting Information.
 
 % checked
 
 \Changes
 \begin{itemize}
-  \item \ChangeText{main}{r2_13_contact_angle_timing}{Clarified in the main text that contact angles were measured immediately before FM-AFM measurements using reference substrates prepared by the same process as the corresponding composite-substrate regions.}
+  \item \ChangeText{main}{r2_13_contact_angle_timing}{Clarified in the main text that contact angles were measured immediately before FM-AFM measurements using unpatterned reference substrates prepared by the same process as the corresponding composite-substrate regions.}
   \item \ChangeText{si}{r2_13_contact_angle_timing_si}{Added the corresponding procedural detail to the Supporting Information.}
 \end{itemize}
 
@@ -236,7 +229,7 @@ Thank you for pointing this out. We have revised the introduction to substantiat
 % checked
 
 \ReviewerComment{15}{Pristine graphite is actually hydrophilic as revealed in the last decade (\url{https://pubs.acs.org/doi/full/10.1021/acs.accounts.6b00447}). How do the authors then explain the relatively large water slip length seen on HOPG in their measurements? Is it due to hydrophobic molecules adsorbed on the surface, or due to nanobubbles, as they have speculated in some other cases in the paper?}
-Thank you for raising this important point. We revised the discussion to clarify the origin of the large slip length observed on HOPG. The HOPG surface was freshly cleaved immediately before measurement and showed moderate wettability (\(\SI{59.0}{\degree}\)), close to the value reported for freshly cleaved HOPG by Kozbial et al. (\(\SI{64.4}{\degree}\)). This makes hydrophobic adsorbates unlikely to be the primary origin of the large slip length. We also clarified that the localized nanobubble observed in Fig.~\ref{main-fgr:mapping_results}(b) was analyzed separately and did not contribute to the slip length measured on the flat HOPG terrace. HOPG exhibits large slip because its atomically flat and chemically homogeneous crystalline surface forms a low-friction interface with water.
+Thank you for raising this important point. We revised the discussion to clarify the origin of the large slip length observed on HOPG. The HOPG surface was freshly cleaved immediately before measurement and showed moderate wettability (\(\SI{59.0}{\degree}\)), close to the value reported for freshly cleaved HOPG by Kozbial et al. (\(\SI{64.4}{\degree}\)). This makes hydrophobic adsorbates unlikely to be the primary origin of the large slip length. We also clarified that the localized nanobubble observed in Fig.~\ref{main-fgr:mapping_results}(b) was analyzed separately and did not contribute to the slip length measured on the flat HOPG terrace. HOPG exhibits large slip because its atomically flat and chemically homogeneous crystalline surface forms a low-friction interface with water, as discussed in our response to question 9.
 
 % checked
 
@@ -269,6 +262,16 @@ Thank you for raising this important point. We revised the discussion to clarify
 \Changes
 \begin{itemize}
   \item tmp
+\end{itemize}
+
+{\color{black}\section*{Non-scientific changes}}
+
+We have also addressed the non-scientific editorial comments where the required correction was unambiguous.
+
+\Changes
+\begin{itemize}
+  \item \ChangeText{main}{non_sci_keywords_color}{Colored the Keywords text as a revised part.}
+  \item \ChangeText{si}{non_sci_figs3_caption}{Corrected the panel combinations in the Fig. S3 caption.}
 \end{itemize}
 
 \end{document}

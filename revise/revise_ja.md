@@ -530,3 +530,6 @@ Added that the large slip length on the flat HOPG terrace is attributed to the l
 - [x] Contact-angle measurements のタイミングと atmospheric exposure の影響を説明する。
 - [x] Hydrophilic surfaces に関するコンセンサス、および hydrophobic surfaces に関するコンセンサス欠如の主張を根拠づける。
 - [x] Pristine graphite の hydrophilicity に関する報告に対応し、測定した HOPG の接触角が freshly cleaved HOPG の報告値と近いことを示したうえで、大きな slip length が得られた理由を説明する。
+
+## Reviewer 3
+いろいろな要素が効く可能性があるが、少なくとも濡れ性が滑りを決定しているわけではない。これを返信のところとconclusionに書く。

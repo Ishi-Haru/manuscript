@@ -16,13 +16,13 @@ Source: `teacher_pdf_comments.md`
 
 ### 冒頭・Reviewer 1 前
 
-- [ ] Reviewer 3 の推薦文・コメント全文を、Reviewer 1 の回答に入る前の謝辞として反映する。
+- [x] Reviewer 3 の推薦文・コメント全文を、Reviewer 1 の回答に入る前の謝辞として反映する。
   - 対応コメント: Comment 2
   - 目的: 査読してもらったことへの謝意を述べたうえで Question 1 に進む。
 
 ### Reviewer 1
 
-- [ ] Reviewer 1 comment 1 の `Changes` 行番号を確認する。
+- [x] Reviewer 1 comment 1 の `Changes` 行番号を確認する。
   - 対応コメント: Comment 3
   - 確認候補: `49-52` が何を指しているか、既存の line 表記と照合する。
 
@@ -36,7 +36,7 @@ Source: `teacher_pdf_comments.md`
 - [x] Reviewer 2 冒頭も Reviewer 1 と同様の始め方にする。
   - 対応コメント: Comment 5
 
-- [ ] Reviewer 2 comment 2 の CNT 回答を再考する。
+- [x] Reviewer 2 comment 2 の CNT 回答を再考する。
   - 対応コメント: Comment 6, Comment 7
   - 必須観点: “Why there is massive slippage on CNTs” に明示的に答える。
   - 表現修正: `CNT slip length` が不自然なら `slip length in CNTs` などに変更する。
@@ -56,7 +56,7 @@ Source: `teacher_pdf_comments.md`
 - [x] Reviewer 2 comment 5 の Fig. 2 caption 対応に `[for the fit]` を明記する。
   - 対応コメント: Comment 15
 
-- [ ] Reviewer 2 comments 6 と 7 をまとめて回答する。
+- [x] Reviewer 2 comments 6 と 7 をまとめて回答する。
   - 対応コメント: Comment 16
   - `point_by_point_response.tex` 内にも新規図を `Fig. R1` として紹介する。
   - `Changes:` では `Fig. R1(a, b)` を `Fig. S2(a, b)` として SI に追加した、と書く。
@@ -101,7 +101,7 @@ Source: `teacher_pdf_comments.md`
   - 対応コメント: Comment 1
   - 非科学的・事務的な修正項目への回答をここにまとめる。
 
-- [ ] Non-scientific changes の項目 4 に対する回答を教員案に沿って作る。
+- [x] Non-scientific changes の項目 4 に対する回答を教員案に沿って作る。
   - 対応コメント: Comment 1
   - 注意: 図の改変は Wu et al. 由来部分のみで、他はデータをまとめたものなら、追加データ源の許可が必要かどうかを慎重に表現する。
 
@@ -119,7 +119,7 @@ Source: `teacher_pdf_comments.md`
   - 対応コメント: Comment 1
   - ユーザー指示により、この項目は今回の Codex 作業対象から外す。
 
-- [ ] Fig. 1 caption に credit line を追加する。
+- [x] Fig. 1 caption に credit line を追加する。
   - 対応コメント: Comment 1
   - 追加案:
     `Adapted with permission from ref XX. Copyright XXXX [Publisher]. Additional experimental data were taken from refs YY-ZZ.`
@@ -153,12 +153,12 @@ Source: `teacher_pdf_comments.md`
 - [x] Hydrophobic surfaces の consensus に関する記述に、`leaving the intrinsic slip length on hydrophobic surfaces unresolved` の趣旨を必要に応じて反映する。
   - 対応コメント: Comment 30
 
-- [ ] HOPG / graphite 関連の議論で、question 9 への回答参照に相当する表現を整える。
+- [x] HOPG / graphite 関連の議論で、question 9 への回答参照に相当する表現を整える。
   - 対応コメント: Comment 31
 
 ## 3. supporting_information.tex の修正
 
-- [ ] Fig. S2 を確認し、DLC と nanobubble の representative fitting plots が `(a, b)` として正しく入っているか確認する。
+- [x] Fig. S2 を確認し、DLC と nanobubble の representative fitting plots が `(a, b)` として正しく入っているか確認する。
   - 対応コメント: Comment 16
   - Fig. S2(b) が `bs = 217.8 nm` のデータなら、`345.3 ± 23.7 nm` に近いデータ・図へ差し替え可能か確認する。
   - データや図ファイルが見つからない場合はユーザーに確認する。
@@ -189,7 +189,7 @@ Source: `teacher_pdf_comments.md`
 
 ## 5. ユーザー確認が必要そうな点
 
-- [ ] Fig. S2(b) の差し替えに使う、`345.3 ± 23.7 nm` に近い nanobubble fitting curve の元データまたは図ファイルがあるか。
-- [ ] Fig. 1 caption の `ref XX`, `Copyright XXXX [Publisher]`, `refs YY-ZZ` に入れる正確な文献番号・出版社・年。
-- [ ] Non-scientific changes の章に含める項目の範囲。
-- [ ] `Abstract` 見出しの文字サイズ変更を、TeXマクロで対応するか、差分PDF上の見た目だけを調整するか。
+- [x] Fig. S2(b) の差し替えに使う、`345.3 ± 23.7 nm` に近い nanobubble fitting curve の元データまたは図ファイルがあるか。
+- [x] Fig. 1 caption の `ref XX`, `Copyright XXXX [Publisher]`, `refs YY-ZZ` に入れる正確な文献番号・出版社・年。
+- [x] Non-scientific changes の章に含める項目の範囲。
+- [x] `Abstract` 見出しの文字サイズ変更を、TeXマクロで対応するか、差分PDF上の見た目だけを調整するか。

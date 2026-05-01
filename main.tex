@@ -43,7 +43,7 @@
 \renewcommand*\acs@keywords@print{%
   \ifx\@keywords\@empty\else
     \acs@section*{Keywords}
-    \ChangeTagStart{non_sci_keywords_color}{\color{blue}\@keywords}\ChangeTagEnd{non_sci_keywords_color}
+    \ChangeTagStart{non_sci_keywords_color}\@keywords\ChangeTagEnd{non_sci_keywords_color}
     \par\vspace{1em}
   \fi
 }
@@ -105,7 +105,7 @@
 %% a running title from the author: this should be supplied as an
 %% optional argument to \title.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[title]{Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
+\title[title]{Hydrophobicity Does Not determine Water Slip Length: Insights from Slip Length Mapping}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some journals require a list of abbreviations or keywords to be
@@ -140,14 +140,18 @@
 %% The abstract environment will automatically gobble the contents
 %% if an abstract is not used by the target journal.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{abstract}
-  While slip at solid-liquid interfaces has attracted broad interest, slip lengths reported in experiments—especially on hydrophobic surfaces (i.e. contact angles \(> \SI{90}{\degree}\))—vary widely due to surface topographical and chemical heterogeneity, hindering quantitative understanding of the true slip length. Using highly sensitive frequency-modulation atomic force microscopy, we achieved simultaneous nanoscale mapping of slip length and surface topography, with a 159-fold improvement in slip length detection sensitivity. True slip lengths measured on flat regions of various substrates were found to be almost zero, following a scaling rule predicted by molecular dynamics simulations. As the only exception, a large slip length of \(43.2 \pm \SI{5.8}{\nano\metre}\) was measured on graphite in deionized water, but it vanished upon immersion in electrolyte solutions. This unique behavior was rationalized by graphite's atomic-scale smoothness, chemical homogeneity, and ion adsorption. Our method experimentally advances a unified picture of fluid slip.
-\end{abstract}
+
+\ChangeTagStart{non_sci_abstract}\ChangeTagEnd{non_sci_abstract}\section*{Abstract}
+While slip at solid-liquid interfaces has attracted broad interest, slip lengths reported in experiments—especially on hydrophobic surfaces (i.e. contact angles \(> \SI{90}{\degree}\))—vary widely due to surface topographical and chemical heterogeneity, hindering quantitative understanding of the true slip length. Using highly sensitive frequency-modulation atomic force microscopy, we achieved simultaneous nanoscale mapping of slip length and surface topography, with a 159-fold improvement in slip length detection sensitivity. True slip lengths measured on flat regions of various substrates were found to be almost zero, following a scaling rule predicted by molecular dynamics simulations. As the only exception, a large slip length of \(43.2 \pm \SI{5.8}{\nano\metre}\) was measured on graphite in deionized water, but it vanished upon immersion in electrolyte solutions. This unique behavior was rationalized by graphite's atomic-scale smoothness, chemical homogeneity, and ion adsorption. Our method experimentally advances a unified picture of fluid slip.
+
+\section*{Keywords}
+\ChangeTagStart{non_sci_keywords}slip length, boundary slip, AFM, graphite, hydrophobic surface, nanobubble\ChangeTagEnd{non_sci_keywords}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Start the main part of the manuscript here.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section*{}
 The no-slip boundary condition, which assumes that the fluid velocity at a solid wall is zero, has long been regarded as an implicit premise in fluid mechanics. However, recent experiments have reported the occurrence of boundary slip, where fluids slip along solid surfaces with a finite velocity \cite{Huang2007-kv, Chen2022-hs, Cross2018-bc, Zhu2012-wb, Vinogradova1995-ct, Vinogradova2003-gh, Li2022-qs}. Slip is quantified by the slip length \(b\), defined in terms of the slip flow velocity \(v_{s}\) and the shear rate \(\partial v / \partial z \), as follows \cite{Navier1827-nw}: 
 \begin{equation}
   v_s = b \left( \frac{\partial v}{\partial z} \right)_{z=0}. \label{eqn:definition of slip length}
@@ -158,14 +162,14 @@ Solid-liquid friction is drastically reduced when slip occurs. For instance, the
 \begin{equation}
   b = \frac{C}{(1 + \cos \theta)^{2}}. \label{eqn:slip length scaling}
 \end{equation}
-\ChangeTagStart{r1_1_prefactor_units_intro}where \(C\) is a prefactor with dimensions of length. Slip lengths obtained from molecular dynamics (MD) simulations are well fit by Eq.~\ref{eqn:slip length scaling} with \(C = \SI{0.41}{\nano\metre}\), indicating almost no slip even at intrinsic contact angles of \SI{120}{\degree}.\ChangeTagEnd{r1_1_prefactor_units_intro} \ChangeTagStart{r2_12_contact_angle_upper_range_intro}A contact angle of approximately \(\SI{120}{\degree}\) is achieved on a surface where \(-\mathrm{CF}_3\) groups, which have the lowest surface free energy among surface-terminating groups, are arranged in a hexagonal close-packed structure, and is known as the near-maximum water contact angle achievable on a chemically homogeneous flat surface \cite{Nishino1999-dk}. \ChangeTagEnd{r2_12_contact_angle_upper_range_intro} \ChangeTagStart{r1_1_prefactor_units_scaling}In contrast, when experimental slip length data from various studies are compiled (Fig.~\ref{fgr:previous_slip_length}), they show significant deviation from the MD-predicted scaling law with \(C = \SI{0.41}{\nano\metre}\). For example, Wu et al. compiled 11 experimental studies and reported \(C = \SI{6.0}{\nano\metre}\), corresponding to slip lengths of tens of nanometers above \SI{90}{\degree} \cite{Wu2016-vv}. We additionally incorporated 14 experimental studies into Wu et al.'s plot. The data deviated from the \(C = \SI{0.41}{\nano\metre}\) curve and even from the \(C = \SI{6.0}{\nano\metre}\) curve, particularly on hydrophobic surfaces.\ChangeTagEnd{r1_1_prefactor_units_scaling} Moreover, although not included in Fig.~\ref{fgr:previous_slip_length}, a much larger value ($\SI{\sim1}{\micro\metre}$) has been measured \cite{Tretheway2002-et}.
+\ChangeTagStart{r1_1_prefactor_units_intro}where \(C\) is a prefactor with dimensions of length. Slip lengths obtained from molecular dynamics (MD) simulations are well fit by Eq.~\ref{eqn:slip length scaling} with \(C = \SI{0.41}{\nano\metre}\), indicating almost no slip even at intrinsic contact angles of \SI{120}{\degree}.\ChangeTagEnd{r1_1_prefactor_units_intro} \ChangeTagStart{r2_12_contact_angle_upper_range_intro}A contact angle of approximately \(\SI{120}{\degree}\) is achieved on a surface where \(-\mathrm{CF}_3\) groups, which have the lowest surface free energy among surface-terminating groups, are arranged in a hexagonal close-packed structure, and is known as the near-maximum water contact angle achievable on a chemically homogeneous flat surface \cite{Nishino1999-dk}. \ChangeTagEnd{r2_12_contact_angle_upper_range_intro} In contrast, when experimental slip length data from various studies are compiled (Fig.~\ref{fgr:previous_slip_length}), they show significant deviation from the MD-predicted scaling law with \ChangeTagStart{r1_1_prefactor_units_scaling}\(C = \SI{0.41}{\nano\metre}\). For example, Wu et al. compiled 11 experimental studies and reported \(C = \SI{6.0}{\nano\metre}\), corresponding to slip lengths of tens of nanometers above \SI{90}{\degree} \cite{Wu2016-vv}. We additionally incorporated 14 experimental studies into Wu et al.'s plot. The data deviated from the \(C = \SI{0.41}{\nano\metre}\) curve and even from the \(C = \SI{6.0}{\nano\metre}\) curve, particularly on hydrophobic surfaces.\ChangeTagEnd{r1_1_prefactor_units_scaling} Moreover, although not included in Fig.~\ref{fgr:previous_slip_length}, a much larger value ($\SI{\sim1}{\micro\metre}$) has been measured \cite{Tretheway2002-et}.
 
 \ChangeTagStart{r1_1_prefactor_units_fig1}
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\linewidth]{figs/slip_length_summary/previous_slip_length.png}
   \caption{
-    Experimental slip length data of solid-water interfaces from previous studies \cite{Bonaccurso2002-nf, Vinogradova2003-gh, Cho2004-it, Cottin-Bizonne2005-kj, Maali2008-rd, Bouzigues2008-xn, Cottin-Bizonne2008-nc, Lasne2008-qt, Bhushan2009-yz, Zhu2011-je, Jing2013-kn, Ortiz-Young2013-wc, Xue2015-tu, Ahmad2015-eb, Radha2016-bk, Zhang2021-tn, Keerthi2021-mz, Li2022-qs, Chen2022-hs, Han2025-qq} plotted as a function of contact angle. The red dashed line represents the theoretical curve given by Eq.~\ref{eqn:slip length scaling} with \(C = \SI{0.41}{\nano\metre}\) and the blue dashed line corresponds to \(C = \SI{6.0}{\nano\metre}\). The slip length values are summarized in Table~\ref{tbl:Previous_contact_angle_slip} of the Supporting Information.
+    Experimental slip length data of solid-water interfaces from previous studies \cite{Bonaccurso2002-nf, Vinogradova2003-gh, Cho2004-it, Cottin-Bizonne2005-kj, Maali2008-rd, Bouzigues2008-xn, Cottin-Bizonne2008-nc, Lasne2008-qt, Bhushan2009-yz, Zhu2011-je, Jing2013-kn, Ortiz-Young2013-wc, Xue2015-tu, Ahmad2015-eb, Radha2016-bk, Zhang2021-tn, Keerthi2021-mz, Li2022-qs, Chen2022-hs, Han2025-qq} plotted as a function of contact angle. The red dashed line represents the theoretical curve given by Eq.~\ref{eqn:slip length scaling} with \(C = \SI{0.41}{\nano\metre}\) and the blue dashed line corresponds to \(C = \SI{6.0}{\nano\metre}\). The slip length values are summarized in Table~\ref{tbl:Previous_contact_angle_slip} of the Supporting Information. Adapted with permission from ref \citenum{Wu2016-vv}. Copyright 2016 Society of Petroleum Engineers.
   }
   \label{fgr:previous_slip_length}
 \end{figure}
@@ -190,7 +194,7 @@ f^* (h,b_t,b_s)
 - \frac{(C+h)(C-A)}{C^2}\ln\left(1+\frac{C}{h}\right)
 \right], \label{eqn:fstar}
 \end{align}
-where the auxiliary quantities \(A\), \(B\), and \(C\) are defined as
+where the auxiliary quantities \(A\), \(B\), and \(C\) are defined as\ChangeTagEnd{r2_4_fstar_function_definition}
 \begin{align}
 A &= b_t + b_s, \notag \\
 B &= 2 \left( b_t + b_s
@@ -198,7 +202,6 @@ B &= 2 \left( b_t + b_s
 C &= 2 \left( b_t + b_s
     - \sqrt{b_t^2 - b_t b_s + b_s^2} \right). \label{eqn:fstar_abc}
 \end{align}
-\ChangeTagEnd{r2_4_fstar_function_definition}
 In conventional contact-mode AFM, \(F_h\) is determined from the static deflection of the cantilever and the viscous drag scales with \(R^2\) as shown in Eq.~\ref{eqn:hydrodynamic force}. Consequently, when the probe radius is reduced, the detection sensitivity rapidly decreases. Although the smallest probe radius reported to date is \(R = \SI{1.9}{\micro\metre}\) \cite{Vinogradova2003-gh}, probe tips with radii of approximately \(\SI{10}{\micro\metre}\) \cite{Li2022-qs} are typically used, and further miniaturization remains challenging.
 
 To overcome this limitation, we employ FM-AFM \cite{Albrecht1991-wp}, in which the cantilever is continuously oscillated at its resonance frequency. In this mode, the energy dissipated by viscous drag is quantified as the damping coefficient \(\gamma\). Because the resonance amplifies the viscous drag, the sensitivity to it is significantly enhanced, thereby compensating for the signal-to-noise degradation proportional to \(R^2\). Then, \(\gamma_{\text{tip}}\) can be obtained from the oscillation amplitudes \(A_{\text{bulk}}\) and \(A(h)\) (see Supporting Information  \ref{supppart:amplitude-decay} for details):
@@ -253,7 +256,7 @@ Figure~\ref{fgr:scaling_result} presents the measured slip lengths on flat subst
 
 In contrast, only HOPG (contact angle \(\SI{59.0}{\degree}\)) exhibited a markedly large slip length of \(43.2 \pm \SI{5.8}{\nano\metre}\), inconsistent with the scaling law. \ChangeTagStart{r2_15_hopg_contact_angle}The HOPG surface was freshly cleaved immediately before measurement and showed only moderate wettability, with a contact angle close to that reported for freshly cleaved HOPG (\(\SI{64.4}{\degree}\)) \cite{Kozbial2016-kk}. Therefore, it is unlikely to have been contaminated by hydrophobic adsorbates. The localized nanobubble observed in Fig.~\ref{fgr:mapping_results}(b) was analyzed separately and did not contribute to the slip length measured on the flat HOPG terrace. Therefore, we attribute the slip length on the flat HOPG terrace to the low-friction graphite-water interface.\ChangeTagEnd{r2_15_hopg_contact_angle} Previous MD studies have reported the uniqueness of graphite: its atomic-scale smoothness drastically reduces friction, leading to the slip length on the order of \(\SI{50}{\nano\metre}\) \cite{Wagemann2017-bk, Kannam2012-jx}. Although mica also has an atomically smooth surface, unlike graphite, which is composed solely of carbon atoms, its surface consists of four elements (K, Si, Al, and O). Such atomic-scale chemical heterogeneity leads to a more strongly corrugated interfacial energy landscape, as predicted by ab initio MD \cite{Tocci2014-es}, resulting in an extremely small slip length. Therefore, our experimental results are in good agreement with past simulations.\ChangeTagEnd{r2_9_teflon_hopg_contrast}
 
-\ChangeTagStart{r2_2_secchi_cnt_comparison}The large slip length observed on planar HOPG should also be distinguished from the massive, radius-dependent water slippage reported inside carbon nanotubes (CNTs). Secchi et al. reported exceptionally large slip lengths in CNTs under cylindrical nanoscale confinement and noted that slip lengths inside CNTs are consistently much larger than those measured on planar hydrophobic and graphite surfaces, where \(b\) is typically at most a few tens of nanometers\cite{Secchi2016-ks}. Thus, the CNT results are not inconsistent with our conclusion for nanoscopically flat planar surfaces.\ChangeTagEnd{r2_2_secchi_cnt_comparison}
+\ChangeTagStart{r2_2_secchi_cnt_comparison}The large slip length observed on planar HOPG should also be distinguished from the massive slippage reported inside carbon nanotubes (CNTs)\cite{Secchi2016-ks}. As Secchi et al. demonstrated, the slip length can reach several hundred nanometers due to a curvature-enhanced effect, whereas it is much smaller on a non-curved plane, on the order of several tens of nanometers. Our results on planar HOPG are quantitatively consistent with the slip length reported by Secchi et al. for planar graphite\cite{Secchi2016-ks}.\ChangeTagEnd{r2_2_secchi_cnt_comparison}
 
 Interestingly, the slip length on HOPG decreased to \(-0.1 \pm \SI{0.7}{\nano\metre}\) when measured in a \(\SI{10}{\milli\mole\per\litre}\) KCl solution, indicating a no-slip boundary condition. This is likely due to interfacial charging and ion adsorption in the electrolyte solution. A recent MD study reported that even a slight charge on graphene surfaces (\(\sim\SI{20}{\milli\volt}\)) reduces the slip length from \(\SI{45}{\nano\metre}\) to \(\SI{2}{\nano\metre}\) in an electrolyte solution \cite{Xie2020-as}. One major mechanism is that K\(^+\) ions selectively adsorb onto the charged graphene surface and, through their structured hydration shells, strongly pin water molecules to the surface \cite{Mu2021-wm}. Because actual graphene surfaces typically have a surface potential of \(\sim\SI{20}{\milli\volt}\) \cite{Paruchuri2004-iu}, adding electrolyte is expected to significantly suppress slip. A similar reduction was observed in a \(\SI{10}{\milli\mole\per\litre}\) NaCl solution (not shown in Fig.~\ref{fgr:scaling_result}, see Table~\ref{tbl:contact_angle_slip} in Supporting Information). To our knowledge, this is the first experimental result that verifying the effect of ion adsorption on slip predicted by MD simulations. Paradoxically, these results suggest that controlling surface charge may offer a route to enhancing slip on graphite/graphene and potentially achieving appreciable slip on other surfaces, which we will investigate in future work.
 

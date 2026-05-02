@@ -49,6 +49,23 @@
   \end{quote}
   \color{blue}
 }
+\newcommand{\ReviewerCommentPair}[4]{%
+  \par\medskip\noindent
+  \begin{quote}\small\color{black}
+    \textbf{#1.} #2\par\vspace{0.25\baselineskip}
+    \textbf{#3.} #4
+  \end{quote}
+  \color{blue}
+}
+\newcommand{\ReviewerCommentTriple}[6]{%
+  \par\medskip\noindent
+  \begin{quote}\small\color{black}
+    \textbf{#1.} #2\par\vspace{0.25\baselineskip}
+    \textbf{#3.} #4\par\vspace{0.25\baselineskip}
+    \textbf{#5.} #6
+  \end{quote}
+  \color{blue}
+}
 
 \begin{document}
 
@@ -97,11 +114,11 @@ We sincerely thank the reviewer for the careful reading of our manuscript and fo
 % checked
 
 \ReviewerComment{1}{Firstly, the title of the paper is currently not wholly accurate. The word ``Does'' should be replaced with ``Need'', i.e., the title should be ``Water Need Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping''. This is because water does slip on graphite, so the authors cannot generally state that water does not slip on hydrophobic surfaces. Instead, the claim should be that water need not slip on hydrophobic surfaces.}
-Thank you for this constructive suggestion. We agree that the title needs clarification. We have revised the title to ``Hydrophobicity Does Not Determine Water Slip Length: Insights from Slip Length Mapping'' to clarify that wettability alone does not determine slip length on flat surfaces, while acknowledging that multiple factors influence interfacial friction.
+Thank you for this constructive suggestion. The pristine graphite used in our study had a water contact angle of 59.0°, and we therefore regard it as a hydrophilic surface. On the other hand, as also pointed out by Reviewer 3, interfacial friction (i.e., slip) can be influenced by many factors related to both the solid and the liquid. We cannot rule out the possibility that tuning such factors could enable water slip even on hydrophobic surfaces. Therefore, to emphasize our key finding that wettability itself does not affect the water slip length, as predicted by molecular dynamics simulations, and to better reflect the long-standing controversy regarding slip length on hydrophobic surfaces, we have revised the title to “Hydrophobicity Does Not Affect Water Slip Length: Insights from Slip Length Mapping.” We believe that the revised title is more accurate and appropriate.
 
 \Changes
 \begin{itemize}
-  \item Revised the manuscript title from ``Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping'' to ``Hydrophobicity Does Not Determine Water Slip Length: Insights from Slip Length Mapping''.
+  \item Revised the manuscript title from ``Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping'' to ``Hydrophobicity Does Not Affect Water Slip Length: Insights from Slip Length Mapping''.
 \end{itemize}
 
 % checked
@@ -134,13 +151,13 @@ Thank you for pointing this out. We have revised the main text to clarify the or
 % checked
 
 \ReviewerComment{4}{The authors mention that the ``Slip length bs is then obtained by fitting Eq. 5 to a damping-coefficient-tip-sample distance curve with bs as the fitting parameter.'' However, the functional form of \(f^*\) in Eq. 5 is not provided, making it unclear as to how bs can be extracted. This omission must be clarified and the form of \(f^*\) must be derived and mentioned in the paper.}
-Thank you for pointing out this omission. We have revised the main text to explicitly provide the functional form of the correction factor \(f^*\), which was used in Eqs. 3 and 5 in the original manuscript. Specifically, \(f^*(h,b_t,b_s)\) is now given as Eq. 4, and the auxiliary quantities \(A\), \(B\), and \(C\) are defined in Eq. 5 of the revised manuscript.
+We apologize for the lack of clarity caused by this omission. We have revised the main text to explicitly provide the functional form of the correction factor \(f^*\), which was used in Eqs. 3 and 5 in the original manuscript. Specifically, \(f^*(h, b_t, b_s)\) is now given as Eq. 4, and the auxiliary quantities \(A\), \(B\), and \(C\) are defined in Eq. 5 of the revised manuscript.
 
 % checked
 
 \Changes
 \begin{itemize}
-  \item \ChangeText{main}{r2_4_fstar_function_definition}{Added the explicit functional form of \(f^*(h,b_t,b_s)\) and defined \(A\), \(B\), and \(C\).}
+  \item \ChangeText{main}{r2_4_fstar_function_definition}{Added the explicit functional form of \(f^*(h, b_t, b_s)\) and defined \(A\), \(B\), and \(C\).}
   \item Updated the notation from \(f^{*}(b_t, b_s)\) to \(f^{*}(h, b_t, b_s)\) in Eqs. \ref{main-eqn:hydrodynamic force}, \ref{main-eqn:damping coefficient slip}, \ref{si-eqn:s7}, and \ref{si-eqn:s8}.
 \end{itemize}
 
@@ -159,8 +176,7 @@ Thank you for this helpful suggestion. Because the \(R^2\) value is not necessar
 
 % checked
 
-\ReviewerComment{6}{The authors state that ``We calibrated the slip length of the probe tip by measuring a symmetric system (\(b_t = b_s\)) using an atmospheric-plasma-treated diamond-like carbon (DLC) substrate, yielding a slip length of \(b_t = b_s = 0.0 \pm 1.2\) nm.''}
-\ReviewerComment{7}{The authors should show the fit plot for this case, similar to what they did in Figure 2a. Plots should also be shown for the fit used to extract the slip length of 345.3 nm above the nanobubble, as mentioned towards the end of page 8.}
+\ReviewerCommentPair{6}{The authors state that ``We calibrated the slip length of the probe tip by measuring a symmetric system (\(b_t = b_s\)) using an atmospheric-plasma-treated diamond-like carbon (DLC) substrate, yielding a slip length of \(b_t = b_s = 0.0 \pm 1.2\) nm.''}{7}{The authors should show the fit plot for this case, similar to what they did in Figure 2a. Plots should also be shown for the fit used to extract the slip length of 345.3 nm above the nanobubble, as mentioned towards the end of page 8.}
 Thank you for the suggestions. We have added representative fitting plots for the atmospheric-plasma-treated DLC substrate and nanobubble, as shown in Fig.~\ref{figR:DLC_bubble_fit}(a) and (b), respectively. The plots show the measured damping coefficient, the curve for the case of no slip, and the fitted curve. The mean absolute errors of these fits were \(\SI{0.016}{\micro\newton\second\per\metre}\) and \(\SI{0.014}{\micro\newton\second\per\metre}\), respectively.
 
 \begin{figure}[H]
@@ -232,7 +248,7 @@ Thank you for the valuable comment. As noted in Ref. 21, the \(-\mathrm{CF}_3\) 
 
 \Changes
 \begin{itemize}
-  \item \ChangeText{main}{r2_12_contact_angle_upper_range_intro}{Revised the main-text statement so that \(\SI{120}{\degree}\) is not presented as an absolute maximum.}
+  \item \ChangeText{main}{r2_12_contact_angle_upper_range_intro}{Revised the main-text statement according to the above discussion for clarity.}
   \item Revised the Fig.~\ref{main-fgr:scaling_result} caption to describe the gray region as an approximate upper range for chemically homogeneous flat surfaces.
 \end{itemize}
 
@@ -252,42 +268,38 @@ Thank you for raising this point. We have revised the manuscript to clarify how 
 % checked
 
 \ReviewerComment{14}{The authors need to substantiate the claim that ``compared with hydrophilic surfaces (i.e., contact angles \(< 90\) degree), there is no clear consensus on slip lengths for hydrophobic surfaces (i.e., contact angles \(> 90\) degree).'' They should also state what consensus there is in the field for hydrophilic surfaces, along with providing suitable references.}
-Thank you for pointing this out. We have revised the introduction to substantiate this statement more explicitly. The revised text now states that reported slip lengths on hydrophilic smooth surfaces are generally close to zero within experimental uncertainty, whereas values reported for hydrophobic surfaces scatter widely from near-zero to tens or even hundreds of nanometers, as summarized in Fig. 1. We also clarified that previous studies have attributed large apparent slip on hydrophobic surfaces to several different origins, including surface roughness, nanobubbles, and measurement artifacts, leaving the intrinsic slip length on hydrophobic surfaces unresolved.
+Thank you for pointing this out. We have revised the introduction to make the consensus for hydrophilic surfaces clearer. The revised text now states that reported slip lengths on hydrophilic surfaces are generally close to zero in both experimental and simulation studies, as shown in Fig. 1.
 
 % checked
 
 \Changes
 \begin{itemize}
-  \item \ChangeText{main}{r2_14_slip_consensus}{Clarified the near-no-slip consensus for hydrophilic smooth surfaces and the broad literature scatter for hydrophobic surfaces.}
+  \item \ChangeText{main}{r2_14_slip_consensus}{Clarified the near-no-slip consensus for hydrophilic smooth surfaces.}
 \end{itemize}
 
 % checked
 
 \ReviewerComment{15}{Pristine graphite is actually hydrophilic as revealed in the last decade (\url{https://pubs.acs.org/doi/full/10.1021/acs.accounts.6b00447}). How do the authors then explain the relatively large water slip length seen on HOPG in their measurements? Is it due to hydrophobic molecules adsorbed on the surface, or due to nanobubbles, as they have speculated in some other cases in the paper?}
-Thank you for raising this important point. We revised the discussion to clarify the origin of the large slip length observed on HOPG. The HOPG surface was freshly cleaved immediately before measurement and showed moderate wettability (\(\SI{59.0}{\degree}\)), close to the value reported for freshly cleaved HOPG by Kozbial et al. (\(\SI{64.4}{\degree}\)). This makes hydrophobic adsorbates unlikely to be the primary origin of the large slip length. We also clarified that the localized nanobubble observed in Fig.~\ref{main-fgr:mapping_results}(b) was analyzed separately and did not contribute to the slip length measured on the flat HOPG terrace. HOPG exhibits large slip because its atomically flat and chemically homogeneous crystalline surface forms a low-friction interface with water, as discussed in our response to question 9.
+Thank you for raising this important point. We revised the discussion to clarify the origin of the large slip length observed on HOPG. The HOPG surface was cleaved immediately before measurement and showed moderate wettability (\(\SI{59.0}{\degree}\)), close to the value reported for cleaved HOPG by Kozbial et al. (\(\SI{64.4}{\degree}\)). This makes hydrophobic adsorbates unlikely to be the primary origin of the large slip length. We also clarified that the localized nanobubble observed in Fig.~\ref{main-fgr:mapping_results}(b) was analyzed separately and thus did not contribute to the slip length measured on the flat HOPG terrace. HOPG exhibits large slip because its atomically flat and chemically homogeneous crystalline surface forms a low-friction interface with water, as discussed in our response to question 9.
 
 % checked
 
 \Changes
 \begin{itemize}
-  \item \ChangeText{main}{r2_15_hopg_contact_angle}{Clarified that the measured HOPG contact angle is close to the reported value for freshly cleaved HOPG, that hydrophobic adsorbates are unlikely to be the primary origin of the large HOPG slip length, and that the localized nanobubble was analyzed separately.}
+  \item \ChangeText{main}{r2_15_hopg_contact_angle}{Clarified that the measured HOPG contact angle is close to the reported value for cleaved HOPG, that hydrophobic adsorbates are unlikely to be the primary origin of the large HOPG slip length, and that the localized nanobubble was analyzed separately.}
 \end{itemize}
+
+\newpage
 
 {\color{black}\section*{Reviewer 3}}
 
-We sincerely thank the reviewer for the thoughtful comments. We respond to each point below.
+\ReviewerCommentTriple{1}{The work seems not support the title “Water Does Not Slip on Hydrophobic Surfaces”. The slip effect may be more obvious in the confined water region (such as water in the carbon nanotube), for which the Knudsen number is used to determine its impact.}{2}{In recent work (Nature 2022, 602 (7895), 84– 90), the quantum friction was proposed for the water-carbon interaction. The following work (Nano Lett. 2023, 23 (2), 580– 587; J. Phys. Chem. Lett. 2026, 17(10), 2792-2798) shows the thickness and defect of carbon material also have a significantly impact. All these mean the solid will have influence on the friction, which was not considered in the previous MD simulation.}{3}{The developed experimental method for slip length measurement in present work shows its advantage, however, the conclusion of “Water Does Not Slip on Hydrophobic Surfaces” should be reconsidered, as the friction is influenced by many factors for both solid and liquid.}
 
-\ReviewerComment{1}{The work seems not support the title “Water Does Not Slip on Hydrophobic Surfaces”. The slip effect may be more obvious in the confined water region (such as water in the carbon nanotube), for which the Knudsen number is used to determine its impact.}
-
-\ReviewerComment{2}{In recent work (Nature 2022, 602 (7895), 84– 90), the quantum friction was proposed for the water-carbon interaction. The following work ( Nano Lett. 2023, 23 (2), 580– 587; J. Phys. Chem. Lett. 2026, 17(10), 2792-2798) shows the thickness and defect of carbon material also have a significantly impact. All these mean the solid will have influence on the friction, which was not considered in the previous MD simulation.}
-
-\ReviewerComment{3}{The developed experimental method for slip length measurement in present work shows its advantage, however, the conclusion of “Water Does Not Slip on Hydrophobic Surfaces” should be reconsidered, as the friction is influenced by many factors for both solid and liquid.}
-
-We appreciate your thoughtful comments. We agree that interfacial friction depends on multiple factors including those you mention. However, our key finding is that on flat, chemically homogeneous surfaces, \emph{wettability alone does not determine slip length}. To better reflect this, we have revised the title to ``Hydrophobicity Does Not Determine Water Slip Length: Insights from Slip Length Mapping.'' This emphasizes that we are specifically examining the limited role of wettability on flat surfaces, while acknowledging the importance of other factors such as atomic-scale structure and confinement effects.
+We appreciate your thoughtful comments. We agree that interfacial friction can be influenced by many factors. Indeed, if such factors could be appropriately tuned, there remains a possibility that water slip could occur even on hydrophobic surfaces. In this sense, our original title, “Water Does Not Slip on Hydrophobic Surfaces,” was too strong. Our key finding is that, on chemically homogeneous flat surfaces, wettability does not affect the water slip length, thereby experimentally confirming a prediction from molecular dynamics simulations. Therefore, to better reflect our main finding and to emphasize the long-standing controversy regarding slip length on hydrophobic surfaces, we have revised the title to “Hydrophobicity Does Not Affect Water Slip Length: Insights from Slip Length Mapping.” We believe that the revised title more accurately and appropriately reflects our findings.
 
 \Changes
 \begin{itemize}
-  \item Revised the manuscript title from ``Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping'' to ``Hydrophobicity Does Not Determine Water Slip Length: Insights from Slip Length Mapping''.
+  \item Revised the manuscript title from ``Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping'' to ``Hydrophobicity Does Not Affect Water Slip Length: Insights from Slip Length Mapping''.
 \end{itemize}
 
 {\color{black}\section*{Non-scientific changes}}

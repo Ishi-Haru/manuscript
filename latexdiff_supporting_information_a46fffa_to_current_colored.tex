@@ -1,7 +1,7 @@
 ﻿%DIF 1c1
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL __latexdiff_old_supporting_information_a46fffa.tex   Sat May  2 03:24:12 2026
-%DIF ADD supporting_information.tex                           Sat May  2 03:10:49 2026
+%DIF DEL .latexdiff_tmp\supporting_information_base.tex   Sat May  2 03:42:57 2026
+%DIF ADD supporting_information.tex                       Sat May  2 03:39:03 2026
 %DIF < ﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %DIF -------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %DIF > 
@@ -28,12 +28,7 @@
 \usepackage{lineno} %DIF > 
 \usepackage{color} %DIF > 
 %DIF -------
-\makeatletter
-\let\latexdifforigwritefile\@writefile
-\def\@writefile#1#2{}
 \externaldocument{main}
-\let\@writefile\latexdifforigwritefile
-\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If issues arise when submitting your manuscript, you may want to
@@ -155,7 +150,7 @@
 %DIF 111c115
 %DIF <   Water Does Not Slip on Hydrophobic Surfaces: Insights from Slip Length Mapping}
 %DIF -------
-  Hydrophobicity Does Not determine Water Slip Length: Insights from Slip Length Mapping} %DIF > 
+  Hydrophobicity Does Not Determine Water Slip Length: Insights from Slip Length Mapping} %DIF > 
 %DIF -------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -174,8 +169,8 @@
 %DIF CFONT PREAMBLE %DIF PREAMBLE
 \RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
 \DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf} %DIF PREAMBLE
-\providecommand{\DIFadd}[1]{{\protect\color{blue} \sf #1}} %DIF PREAMBLE
-\providecommand{\DIFdel}[1]{{\protect\color{red} \scriptsize #1}} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue} #1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{} %DIF PREAMBLE
 %DIF SAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddbegin}{} %DIF PREAMBLE
 \providecommand{\DIFaddend}{} %DIF PREAMBLE
@@ -185,7 +180,7 @@
 \providecommand{\DIFmodend}{} %DIF PREAMBLE
 %DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
 \providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
-\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{} %DIF PREAMBLE
 \providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
 \providecommand{\DIFaddendFL}{} %DIF PREAMBLE
 \providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
@@ -221,16 +216,16 @@
 \LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{} %DIF PREAMBLE
 \LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
 \LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
 \DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
-\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{} %DIF PREAMBLE
 %DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
 \RequirePackage{listings} %DIF PREAMBLE
 \RequirePackage{color} %DIF PREAMBLE
@@ -251,21 +246,6 @@
 
 %DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
-% Custom latexdiff display: show current text and color additions only.
-\renewcommand{\DIFadd}[1]{{\protect\color{blue} #1}}
-\renewcommand{\DIFdel}[1]{}
-\renewcommand{\DIFaddFL}[1]{{\protect\color{blue} #1}}
-\renewcommand{\DIFdelFL}[1]{}
-\DeclareRobustCommand{\DIFaddbegin}{}
-\DeclareRobustCommand{\DIFaddend}{}
-\DeclareRobustCommand{\DIFdelbegin}{}
-\DeclareRobustCommand{\DIFdelend}{}
-\DeclareRobustCommand{\DIFaddbeginFL}{}
-\DeclareRobustCommand{\DIFaddendFL}{}
-\DeclareRobustCommand{\DIFdelbeginFL}{}
-\DeclareRobustCommand{\DIFdelendFL}{}
-\renewcommand{\DIFaddincludegraphics}[2][]{\DIFOincludegraphics[#1]{#2}}
-\renewcommand{\DIFdelincludegraphics}[2][]{}
 \begin{document}
 \DIFaddbegin \linenumbers
 \DIFaddend 

@@ -4,7 +4,7 @@ import os
 base = os.path.dirname(os.path.abspath(__file__))
 files = [
     'TOC.png', 'mapping_results.png', 'mapping_colormaps.png',
-    'HOPG_strong_force.png', 'schematics_of_measurement.png', 'scaling_result.png'
+    'HOPG_strong_force.png', 'schematics_of_measurement.png', 'scaling_result.png', 'DLC_bubble.png'
 ]
 
 for fname in files:

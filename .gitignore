@@ -17,6 +17,7 @@
 *.xdv
 *.dvi
 *.ps
+*.pdf
 
 # Editor/OS
 .DS_Store
